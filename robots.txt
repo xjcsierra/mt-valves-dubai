@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://mt-valves-dubai.com/sitemap.xml
+Sitemap: https://xjcsierra.github.io/mt-valves-dubai/sitemap.xml
