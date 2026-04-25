@@ -94,7 +94,7 @@ img { display: block; max-width: 100%; height: auto; }
 header.main {
   background: white;
   border-bottom: 1px solid var(--line);
-  padding: 22px 0;
+  padding: 18px 0;
   position: sticky;
   top: 0;
   z-index: 100;
@@ -109,7 +109,7 @@ header.main {
   gap: 40px;
 }
 .brand-logo {
-  height: 76px;
+  height: 110px;
   display: block;
   flex-shrink: 0;
 }
@@ -135,13 +135,13 @@ header.main {
 .nav-main a.active::after {
   content: "";
   position: absolute;
-  bottom: -22px;
+  bottom: -18px;
   left: 0;
   right: 0;
   height: 3px;
   background: var(--mt-blue);
 }
-.nav-dropdown { position: relative; }
+.nav-dropdown { position: relative; padding-bottom: 18px; margin-bottom: -18px; }
 .nav-dropdown > a::after {
   content: " ▾";
   font-size: 0.7em;
@@ -149,7 +149,7 @@ header.main {
 }
 .nav-dropdown-menu {
   position: absolute;
-  top: calc(100% + 22px);
+  top: 100%;
   left: -20px;
   background: white;
   border: 1px solid var(--line);
@@ -157,10 +157,19 @@ header.main {
   box-shadow: 0 16px 40px rgba(15, 47, 92, 0.12);
   padding: 16px 0;
   min-width: 280px;
-  display: none;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-8px);
+  transition: opacity 0.18s ease, transform 0.18s ease, visibility 0s linear 0.18s;
   z-index: 110;
 }
-.nav-dropdown:hover .nav-dropdown-menu { display: block; }
+.nav-dropdown:hover .nav-dropdown-menu,
+.nav-dropdown-menu:hover {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  transition: opacity 0.18s ease, transform 0.18s ease, visibility 0s linear 0s;
+}
 .nav-dropdown-menu a {
   display: block;
   padding: 10px 24px;
@@ -587,43 +596,42 @@ header.main {
   text-align: center;
 }
 .certs-row {
-  display: flex;
-  justify-content: center;
-  gap: 50px;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 30px 20px;
   margin-top: 40px;
+  align-items: center;
+  justify-items: center;
 }
 .cert {
-  width: 96px;
-  height: 96px;
+  width: 100%;
+  max-width: 130px;
+  aspect-ratio: 1;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   background: white;
-  border: 1.5px solid var(--mt-blue-pale);
-  border-radius: 50%;
+  padding: 14px;
   transition: all 0.3s;
-  padding: 6px;
+  filter: grayscale(100%);
+  opacity: 0.65;
 }
 .cert:hover {
-  border-color: var(--mt-blue);
-  background: var(--mt-blue-pale);
-  transform: scale(1.05);
+  filter: grayscale(0%);
+  opacity: 1;
+  transform: scale(1.06);
 }
-.cert-t {
-  font-family: 'Barlow Condensed', sans-serif;
-  font-weight: 800;
-  font-size: 1.05rem;
-  color: var(--mt-blue);
-  line-height: 1;
+.cert img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
 }
-.cert-s {
-  font-size: 0.62rem;
-  color: var(--ink-soft);
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  margin-top: 4px;
+@media (max-width: 1100px) {
+  .certs-row { grid-template-columns: repeat(4, 1fr); }
+}
+@media (max-width: 700px) {
+  .certs-row { grid-template-columns: repeat(3, 1fr); gap: 20px 12px; }
+  .cert { padding: 10px; }
 }
 
 /* ========== CTA STRIP ========== */
@@ -1522,5 +1530,5 @@ footer ul li a:hover { color: var(--mt-blue-light); }
     padding-left: 20px;
     padding-right: 20px;
   }
-  .brand-logo { height: 56px; }
+  .brand-logo { height: 70px; }
 }
