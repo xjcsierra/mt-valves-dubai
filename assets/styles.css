@@ -118,18 +118,19 @@ header.main {
 .nav-main {
   display: flex;
   align-items: center;
-  gap: 36px;
+  gap: 28px;
 }
 .nav-main a {
   font-family: 'Barlow Condensed', sans-serif;
   font-weight: 500;
-  font-size: 1.05rem;
-  letter-spacing: 0.18em;
+  font-size: 1rem;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--ink);
   padding: 6px 0;
   position: relative;
   transition: color 0.2s;
+  white-space: nowrap;
 }
 .nav-main a:hover, .nav-main a.active { color: var(--mt-blue); }
 .nav-main a.active::after {
