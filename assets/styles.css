@@ -774,6 +774,12 @@ header.main {
 
 /* ========== CTA STRIP ========== */
 .cta-strip {
+  background: linear-gradient(90deg, var(--mt-blue) 0%, var(--mt-blue-dark) 100%);
+  color: white;
+  padding: 60px 0;
+  position: relative;
+  overflow: hidden;
+}
 
 /* ========== GCC COVERAGE MAP ========== */
 .coverage-section {
@@ -2183,13 +2189,6 @@ header.main {
 
 /* hide original .cta-strip (placeholder ref - real .cta-strip below stays) */
 
-
-  background: linear-gradient(90deg, var(--mt-blue) 0%, var(--mt-blue-dark) 100%);
-  color: white;
-  padding: 60px 0;
-  position: relative;
-  overflow: hidden;
-}
 .cta-strip-inner {
   max-width: 1400px;
   margin: 0 auto;
