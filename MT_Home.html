@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MT Valves Dubai · Industrial Valves &amp; Fittings · UAE & GCC</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --mt-blue: #1B3A6E; --mt-blue-dark: #0F2547; --mt-blue-light: #E8EFF8;
+  --mt-blue-50: #F4F7FB; --mt-blue-accent: #3D6FC2;
+  --gray-50: #FAFAFA; --gray-100: #F2F2F2; --gray-150: #ECECEC;
+  --gray-200: #E5E5E5; --gray-300: #D0D0D0; --gray-400: #A0A0A0;
+  --gray-600: #595959; --gray-700: #3F3F3F; --gray-800: #2A2A2A; --gray-900: #1A1A1A;
+  --green: #16A34A; --green-bg: #DCFCE7; --green-bd: #BBF7D0;
+  --amber: #D97706; --amber-bg: #FEF3C7;
+  --red: #DC2626; --red-bg: #FEE2E2;
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
+  --shadow-md: 0 4px 14px rgba(0,0,0,0.07);
+  --shadow-lg: 0 12px 32px rgba(0,0,0,0.10);
+  --radius-sm: 4px; --radius-md: 8px; --radius-lg: 12px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: 'IBM Plex Sans', -apple-system, sans-serif; color: var(--gray-800); line-height: 1.5; font-size: 15px; background: white; -webkit-font-smoothing: antialiased; }
+img { max-width: 100%; display: block; }
+a { color: var(--mt-blue); text-decoration: none; }
+a:hover { text-decoration: underline; }
+button { font-family: inherit; cursor: pointer; }
+
+/* Top bar */
+.top-bar { background: var(--gray-900); color: rgba(255,255,255,0.85); padding: 8px 0; font-size: 13px; }
+.top-bar-inner { max-width: 1280px; margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; align-items: center; }
+.top-bar a { color: rgba(255,255,255,0.85); }
+.top-bar a:hover { color: white; text-decoration: none; }
+.top-bar-left, .top-bar-right { display: flex; gap: 24px; align-items: center; }
+.lang-switch { display: flex; gap: 4px; align-items: center; font-size: 12px; }
+.lang-switch a { padding: 2px 8px; border-radius: 3px; }
+.lang-switch a.active { background: rgba(255,255,255,0.15); color: white; }
+
+/* Header */
+.header { background: white; border-bottom: 1px solid var(--gray-200); padding: 18px 0; position: sticky; top: 0; z-index: 100; }
+.header-inner { max-width: 1280px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; gap: 32px; }
+.logo-wrap { display: flex; align-items: baseline; gap: 8px; flex-shrink: 0; text-decoration: none; }
+.logo-wrap:hover { text-decoration: none; }
+.logo { font-weight: 700; font-size: 28px; color: var(--mt-blue); letter-spacing: -1px; line-height: 1; }
+.logo-tagline { font-size: 11px; color: var(--gray-600); font-weight: 500; letter-spacing: 0.5px; text-transform: uppercase; }
+.search-bar { flex: 1; max-width: 580px; position: relative; }
+.search-bar input { width: 100%; padding: 11px 16px; padding-right: 48px; border: 1px solid var(--gray-300); border-radius: var(--radius-sm); font-size: 14px; font-family: inherit; }
+.search-bar input:focus { outline: none; border-color: var(--mt-blue); }
+.search-bar button { position: absolute; right: 4px; top: 4px; background: var(--mt-blue); color: white; border: none; width: 38px; height: 36px; border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; }
+.header-actions { display: flex; gap: 20px; align-items: center; flex-shrink: 0; }
+.header-action { display: flex; flex-direction: column; align-items: center; gap: 2px; font-size: 11px; color: var(--gray-700); cursor: pointer; }
+.header-action svg { width: 22px; height: 22px; stroke-width: 1.6; }
+.cart-pill { background: var(--mt-blue); color: white; padding: 6px 14px; border-radius: 999px; font-size: 13px; font-weight: 500; display: flex; align-items: center; gap: 6px; }
+.cart-pill:hover { text-decoration: none; }
+
+/* Main nav */
+.main-nav { background: white; border-bottom: 1px solid var(--gray-200); }
+.nav-inner { max-width: 1280px; margin: 0 auto; padding: 0 24px; display: flex; gap: 4px; }
+.nav-item { padding: 14px 16px; color: var(--gray-700); text-decoration: none; font-weight: 500; font-size: 14px; border-bottom: 3px solid transparent; transition: all 0.15s; cursor: pointer; }
+.nav-item.active { color: var(--mt-blue); border-bottom-color: var(--mt-blue); }
+.nav-item:hover { color: var(--mt-blue); text-decoration: none; }
+.nav-item .chev { display: inline-block; margin-left: 4px; font-size: 9px; }
+.nav-quote { margin-left: auto; color: var(--mt-blue) !important; font-weight: 600 !important; }
+
+/* Buttons */
+.btn { padding: 12px 20px; border: none; border-radius: var(--radius-sm); font-family: inherit; font-size: 14px; font-weight: 600; cursor: pointer; transition: all 0.15s; display: inline-flex; align-items: center; justify-content: center; gap: 8px; text-decoration: none; line-height: 1; }
+.btn:hover { text-decoration: none; }
+.btn-primary { background: var(--mt-blue); color: white; }
+.btn-primary:hover { background: var(--mt-blue-dark); transform: translateY(-1px); box-shadow: var(--shadow-md); }
+.btn-secondary { background: white; color: var(--mt-blue); border: 2px solid var(--mt-blue); }
+.btn-secondary:hover { background: var(--mt-blue-light); }
+.btn-dark { background: var(--gray-900); color: white; }
+.btn-dark:hover { background: var(--gray-800); }
+.btn-ghost { background: transparent; color: var(--gray-700); border: 1px solid var(--gray-300); }
+.btn-ghost:hover { border-color: var(--mt-blue); color: var(--mt-blue); }
+.btn-sm { padding: 9px 14px; font-size: 13px; }
+.btn-lg { padding: 16px 28px; font-size: 16px; }
+
+/* Breadcrumb */
+.breadcrumb { max-width: 1280px; margin: 0 auto; padding: 16px 24px 8px; font-size: 13px; color: var(--gray-600); display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.breadcrumb a { color: var(--gray-600); }
+.breadcrumb a:hover { color: var(--mt-blue); }
+.breadcrumb .sep { color: var(--gray-300); }
+.breadcrumb .current { color: var(--gray-800); font-weight: 500; }
+
+/* Product card (universal) */
+.product-card { background: white; border: 1px solid var(--gray-200); border-radius: var(--radius-md); overflow: hidden; transition: all 0.15s; display: flex; flex-direction: column; }
+.product-card:hover { box-shadow: var(--shadow-md); border-color: var(--gray-400); transform: translateY(-2px); }
+.product-card-img { background: var(--gray-50); aspect-ratio: 1; display: flex; align-items: center; justify-content: center; padding: 24px; border-bottom: 1px solid var(--gray-150); position: relative; }
+.product-card-img img { max-width: 100%; max-height: 100%; object-fit: contain; }
+.product-card-img .placeholder { width: 80%; aspect-ratio: 1; background: var(--gray-150); border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; color: var(--gray-400); font-size: 11px; }
+.product-card-badge { position: absolute; top: 12px; left: 12px; background: var(--mt-blue); color: white; padding: 4px 10px; font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; border-radius: 3px; }
+.product-card-badge.bestseller { background: #F59E0B; }
+.product-card-badge.sale { background: var(--red); }
+.product-card-body { padding: 16px; flex: 1; display: flex; flex-direction: column; }
+.product-card-cat { font-size: 11px; color: var(--gray-600); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 6px; font-weight: 500; }
+.product-card-title { font-size: 14px; font-weight: 500; line-height: 1.35; margin-bottom: 8px; color: var(--gray-900); min-height: 38px; }
+.product-card-title a { color: inherit; }
+.product-card-title a:hover { color: var(--mt-blue); text-decoration: none; }
+.product-card-sku { font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: var(--gray-600); margin-bottom: 12px; display: flex; justify-content: space-between; align-items: center; }
+.product-card-sku .pn-tag { background: var(--gray-100); padding: 2px 6px; border-radius: 3px; font-size: 10px; }
+.product-card-specs { display: flex; flex-wrap: wrap; gap: 4px; margin-bottom: 12px; }
+.product-card-specs .spec-pill { background: var(--gray-100); color: var(--gray-700); padding: 3px 8px; font-size: 11px; border-radius: 3px; }
+.product-card-price { font-size: 22px; font-weight: 700; color: var(--gray-900); margin-bottom: 4px; letter-spacing: -0.5px; }
+.product-card-price small { font-size: 13px; color: var(--gray-600); font-weight: 500; }
+.product-card-price-vat { font-size: 11px; color: var(--gray-600); margin-bottom: 10px; }
+.product-card-stock { font-size: 11px; color: var(--green); margin-bottom: 14px; font-weight: 500; display: flex; align-items: center; gap: 4px; }
+.product-card-stock::before { content: ""; width: 7px; height: 7px; background: var(--green); border-radius: 50%; }
+.product-card-stock.low { color: var(--amber); }
+.product-card-stock.low::before { background: var(--amber); }
+.product-card-buttons { display: flex; flex-direction: column; gap: 6px; margin-top: auto; }
+
+/* Footer */
+.footer { background: var(--gray-900); color: rgba(255,255,255,0.7); margin-top: 80px; padding: 56px 0 24px; }
+.footer-inner { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
+.footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 40px; }
+.footer h4 { color: white; font-size: 13px; font-weight: 600; margin-bottom: 16px; text-transform: uppercase; letter-spacing: 0.6px; }
+.footer ul { list-style: none; }
+.footer li { margin-bottom: 8px; font-size: 13px; }
+.footer a { color: rgba(255,255,255,0.7); }
+.footer a:hover { color: white; text-decoration: underline; }
+.footer-bottom { padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.1); display: flex; justify-content: space-between; font-size: 12px; flex-wrap: wrap; gap: 12px; }
+.footer-logo { color: white; font-size: 22px; font-weight: 700; margin-bottom: 12px; letter-spacing: -1px; }
+.footer-tagline { font-size: 13px; line-height: 1.6; max-width: 360px; margin-bottom: 16px; }
+.footer-locations { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; font-size: 12px; }
+.footer-loc strong { color: white; display: block; margin-bottom: 4px; font-size: 13px; }
+
+/* Section */
+.section { padding: 64px 0; }
+.section-narrow { padding: 48px 0; }
+.container { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
+.section-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 32px; flex-wrap: wrap; gap: 16px; }
+.section-header h2 { font-size: 28px; font-weight: 600; color: var(--gray-900); letter-spacing: -0.5px; }
+.section-header .sub { font-size: 14px; color: var(--gray-600); margin-top: 4px; max-width: 520px; }
+.section-header-link { font-size: 14px; color: var(--mt-blue); font-weight: 500; }
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+  .top-bar-left a:nth-child(1), .top-bar-left a:nth-child(2) { display: none; }
+  .header-actions .header-action span { display: none; }
+  .search-bar { display: none; }
+  .nav-inner { overflow-x: auto; }
+  .nav-quote { margin-left: 0 !important; }
+  .container { padding: 0 16px; }
+  .section { padding: 40px 0; }
+  .section-header h2 { font-size: 22px; }
+  .footer-grid { grid-template-columns: 1fr; gap: 28px; }
+  .footer-locations { grid-template-columns: 1fr; }
+}
+
+/* Hero */
+.hero { position: relative; background: linear-gradient(135deg, var(--gray-900) 0%, var(--mt-blue-dark) 100%); color: white; padding: 80px 0 64px; overflow: hidden; }
+.hero::before { content: ""; position: absolute; top: 0; right: -10%; width: 60%; height: 100%; background: radial-gradient(circle at top right, rgba(41,125,224,0.4) 0%, transparent 70%); pointer-events: none; }
+.hero-inner { max-width: 1280px; margin: 0 auto; padding: 0 24px; position: relative; display: grid; grid-template-columns: 1.4fr 1fr; gap: 56px; align-items: center; }
+.hero-eyebrow { display: inline-block; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); padding: 6px 14px; font-size: 12px; font-weight: 500; letter-spacing: 0.5px; text-transform: uppercase; border-radius: 999px; margin-bottom: 24px; }
+.hero h1 { font-size: 52px; font-weight: 600; line-height: 1.05; letter-spacing: -1.5px; margin-bottom: 20px; }
+.hero h1 .accent { color: #93C5FD; font-weight: 500; }
+.hero-tagline { font-size: 18px; line-height: 1.5; color: rgba(255,255,255,0.8); margin-bottom: 32px; max-width: 540px; }
+.hero-ctas { display: flex; gap: 12px; margin-bottom: 48px; flex-wrap: wrap; }
+.hero-kpis { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; padding: 24px 0; border-top: 1px solid rgba(255,255,255,0.15); }
+.hero-kpi { padding-right: 24px; border-right: 1px solid rgba(255,255,255,0.15); }
+.hero-kpi:last-child { border-right: none; }
+.hero-kpi-num { font-size: 32px; font-weight: 700; line-height: 1; letter-spacing: -1px; margin-bottom: 4px; }
+.hero-kpi-label { font-size: 12px; color: rgba(255,255,255,0.7); text-transform: uppercase; letter-spacing: 0.5px; }
+
+.hero-visual { position: relative; }
+.hero-visual-card { background: rgba(255,255,255,0.05); backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.15); border-radius: var(--radius-lg); padding: 32px; }
+.hero-visual-card h3 { font-size: 13px; font-weight: 600; color: rgba(255,255,255,0.6); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 16px; }
+.cert-list { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 24px; }
+.cert-bubble { aspect-ratio: 1; background: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; color: var(--mt-blue); font-size: 13px; letter-spacing: -0.5px; }
+.hero-visual-card .stock-line { display: flex; justify-content: space-between; padding: 12px 0; border-top: 1px solid rgba(255,255,255,0.1); font-size: 13px; }
+.hero-visual-card .stock-line:last-child { border-bottom: 1px solid rgba(255,255,255,0.1); }
+.hero-visual-card .stock-line .label { color: rgba(255,255,255,0.7); }
+.hero-visual-card .stock-line .val { font-weight: 600; }
+
+/* Divisions */
+.divisions { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.division-card { background: var(--gray-50); border-radius: var(--radius-lg); padding: 40px; position: relative; overflow: hidden; transition: all 0.2s; cursor: pointer; min-height: 320px; display: flex; flex-direction: column; justify-content: space-between; border: 1px solid var(--gray-200); }
+.division-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); border-color: var(--mt-blue); }
+.division-card.g1 { background: linear-gradient(135deg, #DCFCE7 0%, #F4F9FE 100%); }
+.division-card.g2 { background: linear-gradient(135deg, #DBEAFE 0%, #F4F9FE 100%); }
+.division-tag { display: inline-block; background: white; padding: 4px 12px; border-radius: 999px; font-size: 11px; font-weight: 700; letter-spacing: 0.8px; margin-bottom: 12px; }
+.division-tag.g1 { color: var(--green); }
+.division-tag.g2 { color: var(--mt-blue); }
+.division-card h3 { font-size: 32px; font-weight: 600; line-height: 1.1; letter-spacing: -0.5px; color: var(--gray-900); margin-bottom: 12px; }
+.division-card p { font-size: 15px; color: var(--gray-700); line-height: 1.55; margin-bottom: 24px; }
+.division-stats { display: flex; gap: 24px; margin-bottom: 24px; }
+.division-stat { font-size: 13px; }
+.division-stat .num { font-size: 22px; font-weight: 700; color: var(--gray-900); display: block; line-height: 1; margin-bottom: 4px; }
+.division-stat .lbl { color: var(--gray-600); }
+
+/* Category grid */
+.category-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+.category-card { background: white; border: 1px solid var(--gray-200); border-radius: var(--radius-md); padding: 24px; text-align: center; transition: all 0.15s; cursor: pointer; text-decoration: none; color: inherit; display: block; }
+.category-card:hover { border-color: var(--mt-blue); box-shadow: var(--shadow-md); transform: translateY(-2px); text-decoration: none; }
+.category-card-img { background: var(--gray-50); aspect-ratio: 1; border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; padding: 24px; margin-bottom: 16px; }
+.category-card-img img { max-width: 80%; max-height: 80%; object-fit: contain; }
+.category-card h3 { font-size: 15px; font-weight: 600; color: var(--gray-900); margin-bottom: 6px; }
+.category-card .meta { font-size: 12px; color: var(--gray-600); }
+.category-card .meta strong { color: var(--mt-blue); }
+
+/* Best sellers grid (uses universal product-card) */
+.product-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.product-grid.cols-4 { grid-template-columns: repeat(4, 1fr); }
+
+/* Advantages */
+.advantages { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+.advantage { padding: 28px 24px; border-left: 3px solid var(--mt-blue); }
+.advantage-icon { width: 44px; height: 44px; background: var(--mt-blue-light); color: var(--mt-blue); border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; font-size: 22px; margin-bottom: 16px; }
+.advantage h3 { font-size: 17px; font-weight: 600; color: var(--gray-900); margin-bottom: 8px; }
+.advantage p { font-size: 14px; color: var(--gray-700); line-height: 1.55; }
+
+/* Where to buy */
+.where-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.where-card { background: white; border: 2px solid var(--gray-200); border-radius: var(--radius-lg); padding: 32px; text-align: center; transition: all 0.15s; }
+.where-card:hover { border-color: var(--mt-blue); transform: translateY(-2px); box-shadow: var(--shadow-md); }
+.where-card.featured { background: linear-gradient(135deg, var(--mt-blue) 0%, var(--mt-blue-dark) 100%); color: white; border-color: var(--mt-blue-dark); }
+.where-card.featured h3, .where-card.featured p { color: white; }
+.where-card-channel { font-size: 12px; text-transform: uppercase; letter-spacing: 0.8px; color: var(--gray-600); font-weight: 600; margin-bottom: 8px; }
+.where-card.featured .where-card-channel { color: rgba(255,255,255,0.8); }
+.where-card-logo { font-size: 28px; font-weight: 700; margin-bottom: 12px; letter-spacing: -1px; color: var(--gray-900); }
+.where-card.featured .where-card-logo { color: white; }
+.where-card h3 { font-size: 18px; margin-bottom: 8px; font-weight: 600; }
+.where-card p { font-size: 13px; line-height: 1.6; margin-bottom: 16px; color: var(--gray-700); }
+.where-card ul { list-style: none; text-align: left; margin-bottom: 20px; padding-left: 0; }
+.where-card li { font-size: 13px; padding: 6px 0; border-top: 1px solid var(--gray-150); }
+.where-card.featured li { border-top-color: rgba(255,255,255,0.15); }
+.where-card li::before { content: "✓ "; color: var(--green); font-weight: 700; margin-right: 6px; }
+.where-card.featured li::before { color: #93FF93; }
+
+/* News */
+.news-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 20px; }
+.news-card { background: white; border: 1px solid var(--gray-200); border-radius: var(--radius-md); overflow: hidden; transition: all 0.15s; cursor: pointer; }
+.news-card:hover { box-shadow: var(--shadow-md); border-color: var(--gray-400); }
+.news-card-img { background: linear-gradient(135deg, var(--mt-blue) 0%, var(--mt-blue-dark) 100%); aspect-ratio: 16/9; display: flex; align-items: end; padding: 24px; color: white; }
+.news-card-img.alt { background: linear-gradient(135deg, var(--gray-700) 0%, var(--gray-900) 100%); }
+.news-card-body { padding: 24px; }
+.news-card-tag { font-size: 11px; color: var(--mt-blue); font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px; }
+.news-card h3 { font-size: 18px; font-weight: 600; line-height: 1.3; color: var(--gray-900); margin-bottom: 8px; }
+.news-card p { font-size: 13px; color: var(--gray-700); line-height: 1.55; margin-bottom: 12px; }
+.news-card .meta { font-size: 12px; color: var(--gray-400); }
+.news-card-featured h3 { font-size: 24px; }
+
+/* Newsletter */
+.newsletter { background: var(--gray-900); color: white; padding: 48px 0; }
+.newsletter-inner { max-width: 800px; margin: 0 auto; padding: 0 24px; text-align: center; }
+.newsletter h2 { font-size: 28px; font-weight: 600; margin-bottom: 12px; letter-spacing: -0.5px; }
+.newsletter p { font-size: 15px; color: rgba(255,255,255,0.7); margin-bottom: 24px; max-width: 540px; margin-left: auto; margin-right: auto; }
+.newsletter-form { display: flex; gap: 8px; max-width: 480px; margin: 0 auto; }
+.newsletter-form input { flex: 1; padding: 14px 18px; border: 1px solid rgba(255,255,255,0.15); background: rgba(255,255,255,0.05); color: white; border-radius: var(--radius-sm); font-size: 14px; font-family: inherit; }
+.newsletter-form input::placeholder { color: rgba(255,255,255,0.5); }
+.newsletter-form input:focus { outline: none; border-color: var(--mt-blue); background: rgba(255,255,255,0.1); }
+
+@media (max-width: 1024px) {
+  .hero-inner { grid-template-columns: 1fr; gap: 40px; }
+  .hero h1 { font-size: 40px; }
+  .divisions { grid-template-columns: 1fr; }
+  .category-grid { grid-template-columns: repeat(3, 1fr); }
+  .product-grid, .product-grid.cols-4 { grid-template-columns: repeat(2, 1fr); }
+  .advantages { grid-template-columns: repeat(2, 1fr); }
+  .where-grid { grid-template-columns: 1fr; }
+  .news-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 640px) {
+  .hero h1 { font-size: 32px; }
+  .hero-kpis { grid-template-columns: repeat(2, 1fr); gap: 24px; }
+  .hero-kpi { border-right: none !important; padding-right: 0; }
+  .category-grid { grid-template-columns: repeat(2, 1fr); }
+  .product-grid, .product-grid.cols-4 { grid-template-columns: 1fr; }
+  .advantages { grid-template-columns: 1fr; }
+  .newsletter-form { flex-direction: column; }
+}
+</style>
+</head>
+<body>
+
+<!-- Top bar -->
+<div class="top-bar">
+  <div class="top-bar-inner">
+    <div class="top-bar-left">
+      <a href="#">🚚 Free shipping on orders over AED 500</a>
+      <a href="#">📍 Dubai Industrial City Hub</a>
+      <a href="tel:+971500000000">📞 +971 50 000 0000</a>
+    </div>
+    <div class="top-bar-right">
+      <a href="#">Help</a>
+      <a href="#">Track Order</a>
+      <a href="#">B2B Login</a>
+      <div class="lang-switch">
+        <a href="#" class="active">EN</a>
+        <a href="#">AR</a>
+        <a href="#">ES</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="header">
+  <div class="header-inner">
+    <a href="MT_Home.html" class="logo-wrap">
+      <span class="logo">MT</span>
+      <span class="logo-tagline">Valves &amp; Fittings · Dubai</span>
+    </a>
+    <div class="search-bar">
+      <input type="search" placeholder="Search SKU, model or description (e.g. 4114015, ball valve PN-30…)">
+      <button aria-label="Search">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+      </button>
+    </div>
+    <div class="header-actions">
+      <a href="#" class="header-action">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        <span>Account</span>
+      </a>
+      <a href="#" class="header-action">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+        <span>Quotes</span>
+      </a>
+      <a href="MT_Cart_Quote.html" class="cart-pill">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.7 13.4a2 2 0 002 1.6h9.7a2 2 0 002-1.6L23 6H6"/></svg>
+        <span id="cart-count-pill">3 · AED 287.55</span>
+      </a>
+    </div>
+  </div>
+</header>
+
+<!-- Main nav -->
+<nav class="main-nav">
+  <div class="nav-inner">
+    <a class="nav-item active" href="MT_Listing.html">Hidrosanitario <span class="chev">▼</span></a>
+    <a class="nav-item ">Industrial <span class="chev">▼</span></a>
+    <a class="nav-item ">Inoxidable <span class="chev">▼</span></a>
+    <a class="nav-item">Spare Parts</a>
+    <a class="nav-item">Best Sellers Dubai</a>
+    <a class="nav-item">Certifications</a>
+    <a class="nav-item">Where to Buy</a>
+    <a class="nav-item nav-quote" href="MT_Cart_Quote.html">📋 Request Quote</a>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <span class="hero-eyebrow">🇪🇸 Manufactured in Spain · 🇦🇪 Stocked in Dubai</span>
+      <h1>European-grade <span class="accent">valves &amp; fittings</span><br>delivered across the GCC.</h1>
+      <p class="hero-tagline">Direct from MT's Dubai logistics hub: 224 references in stock, 12 international certifications, 48-hour delivery to UAE / 72-hour to GCC. Competitive pricing on Amazon, Noon and B2B direct.</p>
+      <div class="hero-ctas">
+        <a href="MT_Listing.html" class="btn btn-primary btn-lg">Browse Catalogue →</a>
+        <a href="MT_Cart_Quote.html" class="btn btn-ghost btn-lg" style="background:rgba(255,255,255,0.1);color:white;border-color:rgba(255,255,255,0.3)">📋 Request Quote</a>
+      </div>
+      <div class="hero-kpis">
+        <div class="hero-kpi"><div class="hero-kpi-num">224</div><div class="hero-kpi-label">SKUs in Dubai</div></div>
+        <div class="hero-kpi"><div class="hero-kpi-num">25,936</div><div class="hero-kpi-label">Units in stock</div></div>
+        <div class="hero-kpi"><div class="hero-kpi-num">48h</div><div class="hero-kpi-label">GCC Delivery</div></div>
+        <div class="hero-kpi"><div class="hero-kpi-num">1994</div><div class="hero-kpi-label">Founded</div></div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-visual-card">
+        <h3>12 International Certifications</h3>
+        <div class="cert-list">
+          <div class="cert-bubble">CE</div>
+          <div class="cert-bubble">DVG</div>
+          <div class="cert-bubble">ACS</div>
+          <div class="cert-bubble">WRA</div>
+          <div class="cert-bubble">AEN</div>
+          <div class="cert-bubble">KIW</div>
+          <div class="cert-bubble">WM</div>
+          <div class="cert-bubble">+5</div>
+        </div>
+        <div class="stock-line"><span class="label">Live Dubai stock</span><span class="val">25,936 units</span></div>
+        <div class="stock-line"><span class="label">Inventory value</span><span class="val">AED 1.57M</span></div>
+        <div class="stock-line"><span class="label">Last shipment</span><span class="val">Apr 2026</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <div>
+        <h2>Two Commercial Divisions</h2>
+        <div class="sub">MT's catalogue is organised by application context — the same family tree we use for tagging, pricing and channel strategy.</div>
+      </div>
+    </div>
+    <div class="divisions">
+      <a href="MT_Listing.html" class="division-card g1" style="text-decoration:none">
+        <div>
+          <span class="division-tag g1">🟢 G1 · Hidrosanitario</span>
+          <h3>Plumbing &amp; Sanitary</h3>
+          <p>Brass valves and fittings for residential plumbing, hotel MEP installations, and irrigation networks across the GCC. PN-25 / PN-30 ball valves, check valves, angle valves, gate valves and bibcocks.</p>
+        </div>
+        <div>
+          <div class="division-stats">
+            <div class="division-stat"><span class="num">152</span><span class="lbl">SKUs in stock</span></div>
+            <div class="division-stat"><span class="num">8</span><span class="lbl">Sub-families</span></div>
+            <div class="division-stat"><span class="num">DVGW</span><span class="lbl">Potable certified</span></div>
+          </div>
+          <span class="btn btn-primary">Browse G1 Hidrosanitario →</span>
+        </div>
+      </a>
+      <a href="MT_Listing.html" class="division-card g2" style="text-decoration:none">
+        <div>
+          <span class="division-tag g2">🔵 G2 · Industrial</span>
+          <h3>Industrial &amp; HVAC</h3>
+          <p>Cast iron and stainless steel components for industrial processes, HVAC water networks and chilled water systems. Wafer butterfly valves Gold series, double-disc check valves, flanged ball valves and resilient seat gate valves.</p>
+        </div>
+        <div>
+          <div class="division-stats">
+            <div class="division-stat"><span class="num">80</span><span class="lbl">SKUs in stock</span></div>
+            <div class="division-stat"><span class="num">8</span><span class="lbl">Sub-families</span></div>
+            <div class="division-stat"><span class="num">PN-16/40</span><span class="lbl">Pressure ratings</span></div>
+          </div>
+          <span class="btn btn-primary">Browse G2 Industrial →</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="section section-narrow" style="background:var(--gray-50)">
+  <div class="container">
+    <div class="section-header">
+      <div>
+        <h2>Shop by Category</h2>
+        <div class="sub">All 224 references organised by valve type. Each category includes detailed technical filters (size, connection, pressure rating, certifications).</div>
+      </div>
+      <a class="section-header-link" href="MT_Listing.html">View full catalogue →</a>
+    </div>
+    <div class="category-grid">
+      <a href="MT_Listing.html" class="category-card">
+        <div class="category-card-img"><img src="https://d7rh5s3nxmpy4.cloudfront.net/CMP8164/2/4222-4222.jpg" alt="Ball Valves" onerror="this.style.opacity=0.3"></div>
+        <h3>Ball Valves</h3>
+        <div class="meta"><strong>134</strong> references · 14,350 units in stock</div>
+      </a>
+<a href="MT_Listing.html" class="category-card">
+        <div class="category-card-img"><img src="https://d7rh5s3nxmpy4.cloudfront.net/CMP8164/19/5114.jpg" alt="Butterfly Valves" onerror="this.style.opacity=0.3"></div>
+        <h3>Butterfly Valves</h3>
+        <div class="meta"><strong>12</strong> references · 150 units in stock</div>
+      </a>
+<a href="MT_Listing.html" class="category-card">
+        <div class="category-card-img"><img src="https://d7rh5s3nxmpy4.cloudfront.net/CMP8164/5/4114.jpg" alt="Check Valves" onerror="this.style.opacity=0.3"></div>
+        <h3>Check Valves</h3>
+        <div class="meta"><strong>32</strong> references · 2,678 units in stock</div>
+      </a>
+<a href="MT_Listing.html" class="category-card">
+        <div class="category-card-img"><img src="https://d7rh5s3nxmpy4.cloudfront.net/CMP8164/1/4113.jpg" alt="Gate Valves" onerror="this.style.opacity=0.3"></div>
+        <h3>Gate Valves</h3>
+        <div class="meta"><strong>11</strong> references · 648 units in stock</div>
+      </a>
+<a href="MT_Listing.html" class="category-card">
+        <div class="category-card-img"><img src="https://d7rh5s3nxmpy4.cloudfront.net/CMP8164/2/4409-4409.jpg" alt="Angle Valves" onerror="this.style.opacity=0.3"></div>
+        <h3>Angle Valves</h3>
+        <div class="meta"><strong>18</strong> references · 7,012 units in stock</div>
+      </a>
+<a href="MT_Listing.html" class="category-card">
+        <div class="category-card-img"><img src="https://d7rh5s3nxmpy4.cloudfront.net/CMP8164/5/5110-5110.jpg" alt="Y-Strainers" onerror="this.style.opacity=0.3"></div>
+        <h3>Y-Strainers</h3>
+        <div class="meta"><strong>5</strong> references · 75 units in stock</div>
+      </a>
+<a href="MT_Listing.html" class="category-card">
+        <div class="category-card-img"><img src="https://d7rh5s3nxmpy4.cloudfront.net/CMP8164/3/4111-4111_0.jpg" alt="Bibcocks" onerror="this.style.opacity=0.3"></div>
+        <h3>Bibcocks</h3>
+        <div class="meta"><strong>6</strong> references · 733 units in stock</div>
+      </a>
+<a href="MT_Listing.html" class="category-card">
+        <div class="category-card-img"><img src="https://d7rh5s3nxmpy4.cloudfront.net/CMP8164/2/5120-5120.jpg" alt="Expansion Joints" onerror="this.style.opacity=0.3"></div>
+        <h3>Expansion Joints</h3>
+        <div class="meta"><strong>14</strong> references · 290 units in stock</div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <div>
+        <h2>Best Sellers in Dubai</h2>
+        <div class="sub">The most demanded references at our Dubai hub. All in stock and ready for 48-hour GCC dispatch.</div>
+      </div>
+      <a class="section-header-link" href="MT_Listing.html">See all best sellers →</a>
+    </div>
+    <div class="product-grid">
+      <article class="product-card">
+        <div class="product-card-img"><div class="product-card-badge bestseller">⭐ Best Seller</div><img src="https://d7rh5s3nxmpy4.cloudfront.net/CMP8164/3/4402-4402.jpg" alt="Angle Valve With Ball Seal 1/2”x1/2”" onerror="this.style.opacity=0.3"></div>
+        <div class="product-card-body">
+          <div class="product-card-cat">Angle Valves</div>
+          <div class="product-card-title"><a href="MT_PDP_Mockup.html">Angle Valve With Ball Seal 1/2”x1/2”</a></div>
+          <div class="product-card-sku">SKU MT-440201515<span class="pn-tag">In stock</span></div>
+          <div class="product-card-price">AED 8.07 <small>incl. VAT</small></div>
+          <div class="product-card-stock">3,000 units · 48h delivery</div>
+          <div class="product-card-buttons">
+            <a href="MT_PDP_Mockup.html" class="btn btn-primary btn-sm">View product →</a>
+            <button class="btn btn-secondary btn-sm">Add to offer</button>
+          </div>
+        </div>
+      </article>
+<article class="product-card">
+        <div class="product-card-img"><div class="product-card-badge">High Stock</div><img src="https://d7rh5s3nxmpy4.cloudfront.net/CMP8164/2/4222-4222.jpg" alt="F-F Long Neck Ball Valve PN-30 Threaded End ‘carla’ 1/2”" onerror="this.style.opacity=0.3"></div>
+        <div class="product-card-body">
+          <div class="product-card-cat">Ball Valves</div>
+          <div class="product-card-title"><a href="MT_PDP_Mockup.html">F-F Long Neck Ball Valve PN-30 Threaded End ‘carla’ 1/2</a></div>
+          <div class="product-card-sku">SKU MT-4222015<span class="pn-tag">In stock</span></div>
+          <div class="product-card-price">AED 110.67 <small>incl. VAT</small></div>
+          <div class="product-card-stock">1,008 units · 48h delivery</div>
+          <div class="product-card-buttons">
+            <a href="MT_PDP_Mockup.html" class="btn btn-primary btn-sm">View product →</a>
+            <button class="btn btn-secondary btn-sm">Add to offer</button>
+          </div>
+        </div>
+      </article>
+<article class="product-card">
+        <div class="product-card-img"><div class="product-card-badge">High Stock</div><img src="https://d7rh5s3nxmpy4.cloudfront.net/CMP8164/1/4411.jpg" alt="Angle Valve Ball Seal Export Model 1/2”x3/8”" onerror="this.style.opacity=0.3"></div>
+        <div class="product-card-body">
+          <div class="product-card-cat">Angle Valves</div>
+          <div class="product-card-title"><a href="MT_PDP_Mockup.html">Angle Valve Ball Seal Export Model 1/2”x3/8”</a></div>
+          <div class="product-card-sku">SKU MT-441101510<span class="pn-tag">In stock</span></div>
+          <div class="product-card-price">AED 35.85 <small>incl. VAT</small></div>
+          <div class="product-card-stock">1,005 units · 48h delivery</div>
+          <div class="product-card-buttons">
+            <a href="MT_PDP_Mockup.html" class="btn btn-primary btn-sm">View product →</a>
+            <button class="btn btn-secondary btn-sm">Add to offer</button>
+          </div>
+        </div>
+      </article>
+<article class="product-card">
+        <div class="product-card-img"><img src="https://d7rh5s3nxmpy4.cloudfront.net/CMP8164/1/4422-4422.jpg" alt="Anti-limescale Angle Valve With Metal Handle 1/2”x3/8”" onerror="this.style.opacity=0.3"></div>
+        <div class="product-card-body">
+          <div class="product-card-cat">Angle Valves</div>
+          <div class="product-card-title"><a href="MT_PDP_Mockup.html">Anti-limescale Angle Valve With Metal Handle 1/2”x3/8”</a></div>
+          <div class="product-card-sku">SKU MT-442201510<span class="pn-tag">In stock</span></div>
+          <div class="product-card-price">AED 9.55 <small>incl. VAT</small></div>
+          <div class="product-card-stock">510 units · 48h delivery</div>
+          <div class="product-card-buttons">
+            <a href="MT_PDP_Mockup.html" class="btn btn-primary btn-sm">View product →</a>
+            <button class="btn btn-secondary btn-sm">Add to offer</button>
+          </div>
+        </div>
+      </article>
+<article class="product-card">
+        <div class="product-card-img"><img src="https://d7rh5s3nxmpy4.cloudfront.net/CMP8164/4/4215-4215.jpg" alt="F-F Non-return Valve Light Type With Metal Shutter 1/2”" onerror="this.style.opacity=0.3"></div>
+        <div class="product-card-body">
+          <div class="product-card-cat">Check Valves</div>
+          <div class="product-card-title"><a href="MT_PDP_Mockup.html">F-F Non-return Valve Light Type With Metal Shutter 1/2”</a></div>
+          <div class="product-card-sku">SKU MT-4215015<span class="pn-tag">In stock</span></div>
+          <div class="product-card-price">AED 94.05 <small>incl. VAT</small></div>
+          <div class="product-card-stock">504 units · 48h delivery</div>
+          <div class="product-card-buttons">
+            <a href="MT_PDP_Mockup.html" class="btn btn-primary btn-sm">View product →</a>
+            <button class="btn btn-secondary btn-sm">Add to offer</button>
+          </div>
+        </div>
+      </article>
+<article class="product-card">
+        <div class="product-card-img"><img src="https://d7rh5s3nxmpy4.cloudfront.net/CMP8164/4/4092-4092.jpg" alt="F-F Ball Valve PN-25 Blue Carbon Steel Handle 1/2”" onerror="this.style.opacity=0.3"></div>
+        <div class="product-card-body">
+          <div class="product-card-cat">Ball Valves</div>
+          <div class="product-card-title"><a href="MT_PDP_Mockup.html">F-F Ball Valve PN-25 Blue Carbon Steel Handle 1/2”</a></div>
+          <div class="product-card-sku">SKU MT-4092015<span class="pn-tag">In stock</span></div>
+          <div class="product-card-price">AED 49.50 <small>incl. VAT</small></div>
+          <div class="product-card-stock">405 units · 48h delivery</div>
+          <div class="product-card-buttons">
+            <a href="MT_PDP_Mockup.html" class="btn btn-primary btn-sm">View product →</a>
+            <button class="btn btn-secondary btn-sm">Add to offer</button>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section class="section section-narrow" style="background:var(--gray-50)">
+  <div class="container">
+    <div class="section-header">
+      <div>
+        <h2>The MT Advantage</h2>
+        <div class="sub">Why distributors and contractors across the GCC choose MT as their fluid-conduction partner.</div>
+      </div>
+    </div>
+    <div class="advantages">
+      <div class="advantage">
+        <div class="advantage-icon">🇪🇺</div>
+        <h3>European Quality</h3>
+        <p>Manufactured in Spain since 1994 under ISO 9001 &amp; 14001 certified processes across the entire chain.</p>
+      </div>
+      <div class="advantage">
+        <div class="advantage-icon">📦</div>
+        <h3>Local Stock in Dubai</h3>
+        <p>224 references and 25,936 units physically stocked at Dubai Industrial City. No more waiting weeks for European shipments.</p>
+      </div>
+      <div class="advantage">
+        <div class="advantage-icon">📋</div>
+        <h3>12 Certifications</h3>
+        <p>DVGW, WRAS, ACS, AENOR, KIWA, KOMO, SINTEF, PZH, EAC, WaterMark, CSTB, TÜV. CE marking standard.</p>
+      </div>
+      <div class="advantage">
+        <div class="advantage-icon">🚚</div>
+        <h3>Express GCC Delivery</h3>
+        <p>48-hour delivery within UAE, 72 hours across GCC (KSA, Oman, Qatar, Bahrain, Kuwait). Customs paperwork pre-aligned.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <div>
+        <h2>Three Ways to Order</h2>
+        <div class="sub">Choose how you want to buy MT products in the United Arab Emirates and across the GCC.</div>
+      </div>
+    </div>
+    <div class="where-grid">
+      <div class="where-card">
+        <div class="where-card-channel">Retail · UAE</div>
+        <div class="where-card-logo" style="color:#FF9900">amazon<span style="color:var(--gray-600)">.ae</span></div>
+        <h3>Shop on Amazon.ae</h3>
+        <p>Fast Prime delivery throughout the United Arab Emirates with card or cash-on-delivery payment.</p>
+        <ul>
+          <li>Prime same-day in Dubai &amp; Abu Dhabi</li>
+          <li>Buyer protection &amp; easy returns</li>
+          <li>Cash on delivery available</li>
+        </ul>
+        <a href="#" class="btn btn-primary" style="width:100%">Visit Amazon Store →</a>
+      </div>
+      <div class="where-card">
+        <div class="where-card-channel">Retail · UAE &amp; KSA</div>
+        <div class="where-card-logo" style="color:#FFD814">noon</div>
+        <h3>Shop on Noon</h3>
+        <p>Regional marketplace with same-week shipping across the United Arab Emirates and Saudi Arabia.</p>
+        <ul>
+          <li>UAE &amp; Saudi delivery</li>
+          <li>Multiple payment methods</li>
+          <li>Local Arabic support</li>
+        </ul>
+        <a href="#" class="btn btn-primary" style="width:100%">Visit Noon Store →</a>
+      </div>
+      <div class="where-card featured">
+        <div class="where-card-channel">B2B · GCC Distributors</div>
+        <div class="where-card-logo">MT B2B Direct</div>
+        <h3>Volume pricing &amp; project quotes</h3>
+        <p>For distributors, contractors and project specifiers — volume pricing, on-account payment and dedicated technical support.</p>
+        <ul>
+          <li>Volume &amp; project pricing</li>
+          <li>Consolidated GCC-wide shipments</li>
+          <li>Technical &amp; documentation support</li>
+          <li>30/60-day on-account terms</li>
+        </ul>
+        <a href="MT_Cart_Quote.html" class="btn" style="width:100%;background:white;color:var(--mt-blue)">Request Quote →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-narrow" style="background:var(--gray-50)">
+  <div class="container">
+    <div class="section-header">
+      <div>
+        <h2>Latest News &amp; Resources</h2>
+        <div class="sub">Press releases, product updates and technical guides from MT Dubai and the global brand.</div>
+      </div>
+      <a class="section-header-link" href="#">View all articles →</a>
+    </div>
+    <div class="news-grid">
+      <article class="news-card news-card-featured">
+        <div class="news-card-img">
+          <div>
+            <div style="font-size:11px;text-transform:uppercase;letter-spacing:0.6px;font-weight:600;opacity:0.8">⭐ Featured · Press release</div>
+            <div style="font-size:24px;font-weight:600;margin-top:8px">MT opens regional hub in Dubai</div>
+          </div>
+        </div>
+        <div class="news-card-body">
+          <div class="news-card-tag">Corporate · April 2026</div>
+          <h3>MT opens regional hub in Dubai to serve UAE and GCC markets</h3>
+          <p>A new logistics and commercial centre in Dubai Industrial City marks MT's direct entry into the United Arab Emirates and the wider Gulf market, with 224 references stocked locally for 48-hour GCC-wide dispatch.</p>
+          <div class="meta">Read more →</div>
+        </div>
+      </article>
+      <article class="news-card">
+        <div class="news-card-img alt">
+          <div style="font-size:13px;font-weight:600">Trade Shows</div>
+        </div>
+        <div class="news-card-body">
+          <div class="news-card-tag">Events · November 2025</div>
+          <h3>MT at Big 5 Global 2025: first contact with the Gulf market</h3>
+          <p>Four days at the Dubai World Trade Centre confirmed the demand for European-quality valves in the GCC.</p>
+          <div class="meta">Read more →</div>
+        </div>
+      </article>
+      <article class="news-card">
+        <div class="news-card-img alt">
+          <div style="font-size:13px;font-weight:600">New Product</div>
+        </div>
+        <div class="news-card-body">
+          <div class="news-card-tag">Catalogue · March 2026</div>
+          <h3>The new MT 2026 catalogue is now available</h3>
+          <p>A redesigned catalogue with all references organised by families, complete with images, specifications and certificates.</p>
+          <div class="meta">Read more →</div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="newsletter">
+  <div class="newsletter-inner">
+    <h2>Stay updated</h2>
+    <p>Get the latest news, product launches, technical guides and pricing updates from MT Valves &amp; Fittings — delivered to your inbox.</p>
+    <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Subscription confirmed (demo)')">
+      <input type="email" placeholder="your.email@company.com" required>
+      <button type="submit" class="btn btn-primary">Subscribe</button>
+    </form>
+    <div style="font-size:12px;color:rgba(255,255,255,0.5);margin-top:16px">By subscribing you agree to our privacy policy. Unsubscribe at any time.</div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo">MT Valves &amp; Fittings</div>
+        <div class="footer-tagline">Spanish manufacturer of valves and fittings for the canalisation and conduction of fluids. European quality, certified worldwide. Serving the GCC market direct from our Dubai logistics hub.</div>
+        <div class="footer-locations">
+          <div class="footer-loc">
+            <strong>🇦🇪 Dubai Hub</strong>
+            Dubai Industrial City<br>
+            Sun-Thu, 08:00-17:30 GST<br>
+            +971 50 000 0000
+          </div>
+          <div class="footer-loc">
+            <strong>🇪🇸 HQ</strong>
+            Pallejà, Barcelona<br>
+            Mon-Fri, 08:00-17:30 CET<br>
+            +34 936 804 980
+          </div>
+        </div>
+      </div>
+      <div>
+        <h4>Catalogue</h4>
+        <ul>
+          <li><a href="MT_Listing.html">Ball Valves</a></li>
+          <li><a href="MT_Listing.html">Butterfly Valves</a></li>
+          <li><a href="MT_Listing.html">Check Valves</a></li>
+          <li><a href="MT_Listing.html">Gate Valves</a></li>
+          <li><a href="MT_Listing.html">Angle Valves</a></li>
+          <li><a href="MT_Listing.html">Y-Strainers</a></li>
+          <li><a href="MT_Listing.html">Garden Bibcocks</a></li>
+          <li><a href="MT_Listing.html">Expansion Joints</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>For Business</h4>
+        <ul>
+          <li><a href="#">B2B Login</a></li>
+          <li><a href="MT_Cart_Quote.html">Request Quote</a></li>
+          <li><a href="#">Volume Pricing</a></li>
+          <li><a href="#">Become a Distributor</a></li>
+          <li><a href="#">Specifier Resources</a></li>
+          <li><a href="#">Technical Glossary</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Support</h4>
+        <ul>
+          <li><a href="#">Customer Service</a></li>
+          <li><a href="#">Shipping &amp; Returns</a></li>
+          <li><a href="#">Certifications</a></li>
+          <li><a href="#">Where to Buy</a></li>
+          <li><a href="#">Track Order</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 MT Valves &amp; Fittings, S.L. · All rights reserved · UAE Trade License [pending]</div>
+      <div>
+        <a href="#">Legal</a> · <a href="#">Privacy</a> · <a href="#">Cookies</a> · <a href="#">PDPL Compliance</a>
+      </div>
+    </div>
+  </div>
+</footer>
+</body></html>
