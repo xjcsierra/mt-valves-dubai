@@ -261,61 +261,272 @@ button { font-family: inherit; cursor: pointer; }
   .price-main { font-size: 32px; }
 }
 </style>
+
+<!-- MT Shell: header/footer assets -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+<link rel="alternate" hreflang="en" href="https://xjcsierra.github.io/mt-valves-dubai/MT_PDP_Mockup.html">
+<link rel="alternate" hreflang="ar" href="https://xjcsierra.github.io/mt-valves-dubai/ar/MT_PDP_Mockup.html">
+<link rel="alternate" hreflang="x-default" href="https://xjcsierra.github.io/mt-valves-dubai/MT_PDP_Mockup.html">
+
 </head>
 <body>
 
-<!-- Top bar -->
-<div class="top-bar">
-  <div class="top-bar-inner">
-    <div class="top-bar-left">
-      <a href="#"><svg width="14" height="14" fill="currentColor" style="vertical-align:-2px"><path d="M3 5h8v6H3z" fill="none" stroke="currentColor"/></svg> Free shipping on orders over AED 500</a>
-      <a href="#">📍 Dubai Industrial City Hub</a>
-      <a href="#">📞 +971 50 000 0000</a>
+<!-- Cert logos sprite -->
+<!--
+  MT Cert Logos Sprite
+  ====================
+  Colección de los 12 logos de certificaciones de MT como <symbol> SVG inline.
+  Uso: <svg width="140" height="90"><use href="#cert-wras"/></svg>
+
+  Diseño: cada logo en viewBox 200x110 (proporción 2:1.1) para uniformidad visual.
+  Colores: replicando paletas oficiales de cada certificadora.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
+
+  <!-- ============ WRAS ============ -->
+  <symbol id="cert-wras" viewBox="0 0 200 110">
+    <rect x="3" y="3" width="194" height="104" fill="white" stroke="#0F4C81" stroke-width="3" rx="4"/>
+    <!-- Gota de agua -->
+    <path d="M30 28 C 20 48, 20 62, 30 72 C 40 62, 40 48, 30 28 Z" fill="#1F7AB8"/>
+    <ellipse cx="30" cy="60" rx="5" ry="7" fill="#5BB3E0" opacity="0.85"/>
+    <!-- Texto WRAS -->
+    <text x="55" y="58" font-family="Arial Black, sans-serif" font-size="32" font-weight="900" fill="#0F4C81" letter-spacing="2">WRAS</text>
+    <text x="55" y="80" font-family="Arial, sans-serif" font-size="9" font-weight="700" fill="#1F7AB8" letter-spacing="2">APPROVED PRODUCT</text>
+  </symbol>
+
+  <!-- ============ KIWA ============ -->
+  <symbol id="cert-kiwa" viewBox="0 0 200 110">
+    <text x="80" y="65" font-family="Arial Black, sans-serif" font-size="38" font-weight="900" fill="#1A1A1A" text-anchor="middle" letter-spacing="0">kiwa</text>
+    <!-- Símbolo característico (forma de "wave") -->
+    <g transform="translate(122, 50)" fill="#1A1A1A">
+      <path d="M0 0 L 28 0 L 32 6 L 28 12 L 0 12 Z"/>
+      <path d="M0 16 L 24 16 L 28 22 L 24 28 L 0 28 Z"/>
+    </g>
+  </symbol>
+
+  <!-- ============ ACS ============ -->
+  <symbol id="cert-acs" viewBox="0 0 200 110">
+    <!-- Círculo exterior con texto curvo -->
+    <circle cx="100" cy="55" r="48" fill="white" stroke="#1F7AB8" stroke-width="1.5"/>
+    <circle cx="100" cy="55" r="44" fill="white" stroke="#1F7AB8" stroke-width="0.5"/>
+    <!-- Texto curvo simulado con líneas -->
+    <defs>
+      <path id="acs-circle" d="M 60 55 A 40 40 0 1 1 140 55" fill="none"/>
+      <path id="acs-circle-bottom" d="M 140 55 A 40 40 0 1 1 60 55" fill="none"/>
+    </defs>
+    <text font-family="Arial, sans-serif" font-size="7" font-weight="700" fill="#1F7AB8" letter-spacing="0.5">
+      <textPath href="#acs-circle" startOffset="50%" text-anchor="middle">ATTESTATION DE CONFORMITÉ</textPath>
+    </text>
+    <text font-family="Arial, sans-serif" font-size="7" font-weight="700" fill="#1F7AB8" letter-spacing="0.5">
+      <textPath href="#acs-circle-bottom" startOffset="50%" text-anchor="middle">SANITAIRE</textPath>
+    </text>
+    <!-- Estrella central -->
+    <g transform="translate(100, 50)" fill="#5BB3E0">
+      <polygon points="0,-15 4.5,-4.5 16,-4.5 6.5,2.5 10,13 0,6.5 -10,13 -6.5,2.5 -16,-4.5 -4.5,-4.5"/>
+    </g>
+    <!-- Texto ACS -->
+    <text x="100" y="80" font-family="Arial Black, sans-serif" font-size="14" font-weight="900" fill="#1F7AB8" text-anchor="middle" letter-spacing="2">ACS</text>
+  </symbol>
+
+  <!-- ============ DVGW ============ -->
+  <symbol id="cert-dvgw" viewBox="0 0 200 110">
+    <!-- Círculo segmentado característico -->
+    <circle cx="100" cy="50" r="38" fill="white" stroke="#999999" stroke-width="1"/>
+    <!-- 4 segmentos de color -->
+    <path d="M 100 12 A 38 38 0 0 1 138 50 L 100 50 Z" fill="#F08526"/>
+    <path d="M 138 50 A 38 38 0 0 1 100 88 L 100 50 Z" fill="#7BA9D2"/>
+    <path d="M 100 88 A 38 38 0 0 1 62 50 L 100 50 Z" fill="#999999"/>
+    <path d="M 62 50 A 38 38 0 0 1 100 12 L 100 50 Z" fill="#F08526"/>
+    <!-- Centro blanco -->
+    <circle cx="100" cy="50" r="22" fill="white"/>
+    <!-- Texto DVGW -->
+    <text x="100" y="48" font-family="Arial Black, sans-serif" font-size="11" font-weight="900" fill="#444444" text-anchor="middle">DVGW</text>
+    <text x="100" y="60" font-family="Arial, sans-serif" font-size="7" font-weight="400" fill="#888888" text-anchor="middle">product</text>
+    <!-- Etiqueta "product" abajo -->
+    <text x="100" y="102" font-family="Arial, sans-serif" font-size="9" font-weight="500" fill="#666666" text-anchor="middle" letter-spacing="0.5">product</text>
+  </symbol>
+
+  <!-- ============ TÜV Rheinland ============ -->
+  <symbol id="cert-tuv" viewBox="0 0 200 110">
+    <rect x="20" y="20" width="160" height="70" fill="white" stroke="#666666" stroke-width="1"/>
+    <!-- Triángulo TÜV característico -->
+    <g transform="translate(35, 32)">
+      <polygon points="20,5 35,30 5,30" fill="white" stroke="#1A1A1A" stroke-width="2"/>
+      <text x="20" y="25" font-family="Arial Black, sans-serif" font-size="11" font-weight="900" fill="#1A1A1A" text-anchor="middle">TÜV</text>
+      <circle cx="33" cy="8" r="2" fill="white" stroke="#1A1A1A" stroke-width="0.8"/>
+      <text x="33" y="10" font-family="Arial, sans-serif" font-size="3" fill="#1A1A1A" text-anchor="middle">R</text>
+    </g>
+    <text x="80" y="40" font-family="Arial, sans-serif" font-size="11" font-weight="700" fill="#1A1A1A">Rheinland</text>
+    <text x="80" y="55" font-family="Arial, sans-serif" font-size="6" fill="#666666">Sistema de Gestión</text>
+    <text x="80" y="64" font-family="Arial, sans-serif" font-size="6" fill="#666666">ISO 9001:2015</text>
+    <text x="80" y="73" font-family="Arial, sans-serif" font-size="6" fill="#666666">ISO 14001:2015</text>
+    <rect x="20" y="80" width="160" height="10" fill="#1A1A1A"/>
+    <text x="100" y="88" font-family="Arial, sans-serif" font-size="7" font-weight="700" fill="white" text-anchor="middle">CERTIFICADO</text>
+  </symbol>
+
+  <!-- ============ CSTB ============ -->
+  <symbol id="cert-cstb" viewBox="0 0 200 110">
+    <text x="100" y="65" font-family="Arial Black, sans-serif" font-size="40" font-weight="900" fill="#1F4F8C" text-anchor="middle" letter-spacing="3">CSTB</text>
+    <line x1="35" y1="78" x2="165" y2="78" stroke="#1F4F8C" stroke-width="1.5"/>
+    <text x="100" y="92" font-family="Arial, sans-serif" font-size="6" font-weight="500" fill="#1F4F8C" text-anchor="middle" letter-spacing="0.5">CENTRE SCIENTIFIQUE ET TECHNIQUE DU BÂTIMENT</text>
+  </symbol>
+
+  <!-- ============ KOMO ============ -->
+  <symbol id="cert-komo" viewBox="0 0 200 110">
+    <g transform="translate(35, 30)" fill="#1A1A1A" font-family="Arial Black, sans-serif" font-weight="900">
+      <text x="0" y="42" font-size="50" letter-spacing="-1">K</text>
+      <text x="34" y="42" font-size="50" letter-spacing="-1">O</text>
+      <text x="73" y="42" font-size="50" letter-spacing="-1">M</text>
+      <text x="118" y="42" font-size="50" letter-spacing="-1">O</text>
+    </g>
+    <text x="160" y="38" font-family="Arial, sans-serif" font-size="11" fill="#1A1A1A">®</text>
+  </symbol>
+
+  <!-- ============ SINTEF ============ -->
+  <symbol id="cert-sintef" viewBox="0 0 200 110">
+    <rect x="30" y="10" width="140" height="90" fill="white" stroke="#1F4F8C" stroke-width="2"/>
+    <text x="100" y="28" font-family="Arial, sans-serif" font-size="9" font-weight="700" fill="#1F4F8C" text-anchor="middle" letter-spacing="1">PRODUKTSERTIFIKAT</text>
+    <!-- Casita estilizada -->
+    <g transform="translate(100, 55)" fill="#1F4F8C">
+      <polygon points="-22,5 0,-15 22,5 22,18 -22,18"/>
+      <rect x="-3" y="-2" width="6" height="12" fill="white"/>
+      <rect x="-15" y="3" width="6" height="6" fill="white"/>
+      <rect x="9" y="3" width="6" height="6" fill="white"/>
+    </g>
+    <text x="100" y="85" font-family="Arial Black, sans-serif" font-size="11" font-weight="900" fill="#1F4F8C" text-anchor="middle">PS 3590</text>
+    <rect x="30" y="92" width="140" height="8" fill="#1F4F8C"/>
+    <text x="100" y="98" font-family="Arial, sans-serif" font-size="6" font-weight="700" fill="white" text-anchor="middle" letter-spacing="0.5">SINTEF Certification</text>
+  </symbol>
+
+  <!-- ============ AENOR ============ -->
+  <symbol id="cert-aenor" viewBox="0 0 200 110">
+    <!-- Marco AENOR -->
+    <rect x="20" y="20" width="160" height="70" fill="white" stroke="#1F4F8C" stroke-width="2" rx="4"/>
+    <text x="100" y="55" font-family="Arial Black, sans-serif" font-size="28" font-weight="900" fill="#1F4F8C" text-anchor="middle" letter-spacing="3">AENOR</text>
+    <line x1="35" y1="65" x2="165" y2="65" stroke="#1F4F8C" stroke-width="1"/>
+    <text x="100" y="78" font-family="Arial, sans-serif" font-size="6" font-weight="500" fill="#1F4F8C" text-anchor="middle" letter-spacing="1.5">ASOCIACIÓN ESPAÑOLA DE NORMALIZACIÓN</text>
+  </symbol>
+
+  <!-- ============ CE Marking ============ -->
+  <symbol id="cert-ce" viewBox="0 0 200 110">
+    <g transform="translate(60, 25)" fill="#1A1A1A">
+      <!-- Letra C: arco abierto a la derecha -->
+      <path d="M 30 0 A 30 30 0 1 0 30 60 L 30 50 A 20 20 0 1 1 30 10 Z"/>
+      <!-- Letra E: arco abierto con barra horizontal -->
+      <g transform="translate(45, 0)">
+        <path d="M 30 0 A 30 30 0 1 0 30 60 L 30 50 A 20 20 0 1 1 30 10 Z"/>
+        <rect x="22" y="27" width="13" height="6"/>
+      </g>
+    </g>
+    <text x="100" y="100" font-family="Arial, sans-serif" font-size="9" font-weight="600" fill="#1A1A1A" text-anchor="middle" letter-spacing="0.5">European Conformity</text>
+  </symbol>
+
+  <!-- ============ WaterMark ============ -->
+  <symbol id="cert-watermark" viewBox="0 0 200 110">
+    <circle cx="100" cy="50" r="38" fill="white" stroke="#0E7C3A" stroke-width="3"/>
+    <!-- Olas estilizadas -->
+    <path d="M 70 40 Q 80 35, 90 40 T 110 40 T 130 40" stroke="#1B96D5" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <path d="M 70 50 Q 80 45, 90 50 T 110 50 T 130 50" stroke="#1B96D5" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <!-- Tick verde -->
+    <path d="M 90 60 L 98 68 L 115 52" stroke="#0E7C3A" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="100" y="102" font-family="Arial Black, sans-serif" font-size="11" font-weight="900" fill="#0E7C3A" text-anchor="middle" letter-spacing="1">WaterMark</text>
+  </symbol>
+
+  <!-- ============ EAC ============ -->
+  <symbol id="cert-eac" viewBox="0 0 200 110">
+    <g transform="translate(100, 55)">
+      <!-- Letras EAC estilo bloque -->
+      <text x="0" y="10" font-family="Arial Black, sans-serif" font-size="36" font-weight="900" fill="#1A1A1A" text-anchor="middle" letter-spacing="2">EAC</text>
+    </g>
+    <text x="100" y="92" font-family="Arial, sans-serif" font-size="7" font-weight="600" fill="#1A1A1A" text-anchor="middle" letter-spacing="1">EURASIAN CONFORMITY</text>
+  </symbol>
+
+  <!-- ============ PZH ============ -->
+  <symbol id="cert-pzh" viewBox="0 0 200 110">
+    <circle cx="100" cy="48" r="32" fill="white" stroke="#C8102E" stroke-width="3"/>
+    <text x="100" y="55" font-family="Arial Black, sans-serif" font-size="20" font-weight="900" fill="#C8102E" text-anchor="middle" letter-spacing="1">PZH</text>
+    <text x="100" y="95" font-family="Arial, sans-serif" font-size="7" font-weight="600" fill="#C8102E" text-anchor="middle" letter-spacing="0.5">National Institute of Hygiene</text>
+  </symbol>
+
+</svg>
+
+
+<!-- =========== MT SHELL — TOPBAR + HEADER =========== -->
+<div class="mts-topbar">
+  <div class="mts-topbar-inner">
+    <div class="mts-topbar-left">
+      <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a>
+      <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+      <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg></a>
     </div>
-    <div class="top-bar-right">
-      <a href="#">Help</a>
-      <a href="#">Track Order</a>
-      <a href="#">B2B Login</a>
-      <div class="lang-switch">
-        <a href="#" class="active">EN</a>
-        <a href="#">AR</a>
-        <a href="#">ES</a>
+    <div class="mts-topbar-center">
+      <span>📞 +971 4 453 4693</span>
+      <span>📧 sales@mtmiddleeast.com</span>
+      <span><svg width="22" height="14" viewBox="0 0 12 6" xmlns="http://www.w3.org/2000/svg" style="display:inline-block;vertical-align:middle;border-radius:2px;flex-shrink:0;"><rect width="3" height="6" fill="#EF3340"/><rect x="3" width="9" height="2" fill="#00843D"/><rect x="3" y="2" width="9" height="2" fill="#FFFFFF"/><rect x="3" y="4" width="9" height="2" fill="#000000"/></svg> Jumeirah Lakes Towers</span>
+    </div>
+    <div class="topbar-right">
+      <a href="MT_PDP_Mockup.html" class=" active">EN</a>
+      <a href="ar/MT_PDP_Mockup.html" class="">AR</a>
+    </div>
+  </div>
+
+<div class="mts-mainheader">
+  <div class="mts-header-inner">
+    <a href="index.html" class="mts-brand-logo" aria-label="MT Valves & Fittings">
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="Capa_1" x="0px" y="0px" viewBox="0 0 500 500" style="enable-background:new 0 0 500 500;" xml:space="preserve"><style type="text/css">	.st0{fill:#96BCE5;}	.st1{clip-path:url(#SVGID_00000028293389285023033970000009576526279349472417_);fill:#3D75BA;}	.st2{fill:#3D75BA;}			.st3{clip-path:url(#SVGID_00000169523863405724927080000002316061180491850883_);fill:url(#SVGID_00000057128013713373848240000012295056972260004536_);}	.st4{clip-path:url(#SVGID_00000083807938995984377050000009384473108822567319_);fill:#3D75BA;}</style><g>	<polygon class="st0" points="280.44,129.84 300.47,189.96 320.23,189.96 280.19,310.21 340.31,310.21 380.36,189.96 440.47,189.96   460.5,129.84  "></polygon>	<g>		<defs>			<rect id="SVGID_1_" x="39.5" y="129.84" width="421" height="240.32"></rect>		</defs>		<clipPath id="SVGID_00000159447393895895634090000005042513252083627651_">			<use xlink:href="#SVGID_1_" style="overflow:visible;"></use>		</clipPath>		<path style="clip-path:url(#SVGID_00000159447393895895634090000005042513252083627651_);fill:#3D75BA;" d="M396,278.76h3.21   c3.75,0,6.78-1.28,6.78-4.39c0-2.74-1.96-4.57-6.25-4.57c-1.78,0-3.03,0.18-3.75,0.37V278.76z M395.82,295.58h-6.78V265.6   c2.67-0.37,6.43-0.91,11.24-0.91c5.53,0,8.03,0.91,9.99,2.38c1.78,1.28,3.03,3.47,3.03,6.4c0,3.65-2.67,6.03-6.07,7.13v0.37   c2.85,0.91,4.28,3.29,5.17,7.31c0.89,4.57,1.61,6.22,2.14,7.31h-7.14c-0.89-1.1-1.43-3.65-2.32-7.31   c-0.53-3.11-2.32-4.57-6.07-4.57h-3.21V295.58z M400.28,256.09c-12.67,0-22.49,10.78-22.49,23.95c0,13.35,9.82,23.95,22.85,23.95   c12.67,0.19,22.31-10.6,22.31-23.76c0-13.35-9.64-24.13-22.49-24.13H400.28z M400.64,250.06c16.6,0,29.8,13.16,29.8,29.98   c0,16.82-13.21,30.16-29.98,30.16c-16.77,0-30.16-13.34-30.16-30.16c0-16.82,13.39-29.98,30.16-29.98H400.64z"></path>	</g>	<path class="st2" d="M340.31,310.21h0.21l-0.1-0.32L340.31,310.21z M220.27,129.84l-30.15,90.53l-30.15-90.53H99.82L39.75,310.21  h60.12l30.02-90.15l30.02,90.15h0.28h59.84h0.28l30.04-90.19l29.93,89.87l30.06-90.26l-29.91-89.8H220.27z"></path>	<g>		<defs>			<path id="SVGID_00000106861127787646596650000013816297959637074086_" d="M340.31,310.21h0.21l-0.11-0.32L340.31,310.21z     M220.27,129.84l-30.15,90.53l-30.15-90.53H99.82L39.75,310.21h60.12l30.02-90.15l30.02,90.15h0.28h59.84h0.28l30.04-90.19    l29.93,89.87l30.06-90.26l-29.91-89.8H220.27z"></path>		</defs>		<clipPath id="SVGID_00000157298264236242306010000015723931376774020497_">			<use xlink:href="#SVGID_00000106861127787646596650000013816297959637074086_" style="overflow:visible;"></use>		</clipPath>					<linearGradient id="SVGID_00000116205097728882479350000011669946229960376448_" gradientUnits="userSpaceOnUse" x1="-53.3228" y1="674.7147" x2="-50.6375" y2="674.7147" gradientTransform="matrix(0 67.5744 67.5744 0 -45403.3125 3733.0935)">			<stop offset="0" style="stop-color:#3D75BA"></stop>			<stop offset="0.9763" style="stop-color:#322C68"></stop>			<stop offset="1" style="stop-color:#322C68"></stop>		</linearGradient>					<rect x="39.75" y="129.84" style="clip-path:url(#SVGID_00000157298264236242306010000015723931376774020497_);fill:url(#SVGID_00000116205097728882479350000011669946229960376448_);" width="300.77" height="180.37"></rect>	</g>	<g>		<defs>			<rect id="SVGID_00000110471337291933058870000015210727969065086902_" x="39.5" y="129.84" width="421" height="240.32"></rect>		</defs>		<clipPath id="SVGID_00000051345843617841486920000016333128194100502933_">			<use xlink:href="#SVGID_00000110471337291933058870000015210727969065086902_" style="overflow:visible;"></use>		</clipPath>		<path style="clip-path:url(#SVGID_00000051345843617841486920000016333128194100502933_);fill:#3D75BA;" d="M430.1,344.11   c0-4.9-1.51-9.28-8.57-9.28c-5.56,0-9.28,2.45-9.23,8.34c0.05,3.39,0.33,5.42,6.93,9.47c4.9,3.02,7.96,4.34,7.96,8.95   c0,3.91-1.93,6.03-5.89,6.03c-6.08,0-6.36-3.91-6.36-7.68h-3.11c-0.28,6.64,2.69,10.22,9.33,10.22c5.94,0,9.05-2.97,9.05-9.05   c0-6.6-4.29-7.49-8.48-10.5c-3.86-2.78-6.41-2.92-6.41-7.96c0-4,2.31-5.28,5.98-5.28c4.62,0,5.65,2.54,5.75,6.74H430.1z    M402.49,366.63c-1.6,0.61-3.77,0.99-6.36,0.99c-7.35,0-7.26-6.55-7.26-15.12c0-8.57-0.09-15.12,7.26-15.12   c4.76,0,6.69,2.35,6.69,6.83h3.01c0.14-6.6-3.2-9.37-9.7-9.37c-11.07,0-10.27,11.07-10.27,17.67s-0.8,17.67,10.27,17.67   c3.2,0,6.36-0.47,9.38-1.41v-17.01h-9.9v2.55h6.88V366.63z M360.89,369.5v-30.1l0.09-0.09l13.85,30.2h4.57v-34.01h-3.02v29.77   l-0.09,0.09l-13.8-29.87h-4.62v34.01H360.89z M347.51,369.5h3.02v-34.01h-3.02V369.5z M331.83,369.5h3.02v-31.47h8.29v-2.55h-19.6   v2.55h8.29V369.5z M310.91,369.5h3.02v-31.47h8.29v-2.55h-19.6v2.55h8.29V369.5z M295.22,369.5h3.02v-34.01h-3.02V369.5z    M276.38,369.5h3.01V353.3h10.55v-2.54h-10.55v-12.72h11.36v-2.55h-14.37V369.5z M240.05,369.5h7.77   c10.27,0,11.92-5.56,11.92-16.87c0-11.59-1.18-17.15-10.7-17.15h-9V369.5z M243.07,338.03h3.96c8.39,0,9.7,2.82,9.7,12.58   c0,13.9-0.89,16.35-9.99,16.35h-3.67V338.03z M214.38,369.5v-30.1l0.09-0.09l13.85,30.2h4.57v-34.01h-3.02v29.77l-0.09,0.09   l-13.81-29.87h-4.62v34.01H214.38z M188.75,358.01l5.75-19.22h0.09l5.79,19.22H188.75z M192.89,335.49l-10.74,34.01h3.02   l2.69-8.95h13.33l2.73,8.95h3.16l-10.6-34.01H192.89z M168.4,344.11c0-4.9-1.51-9.28-8.57-9.28c-5.56,0-9.28,2.45-9.23,8.34   c0.05,3.39,0.33,5.42,6.93,9.47c4.9,3.02,7.96,4.34,7.96,8.95c0,3.91-1.93,6.03-5.89,6.03c-6.08,0-6.36-3.91-6.36-7.68h-3.11   c-0.28,6.64,2.69,10.22,9.33,10.22c5.94,0,9.05-2.97,9.05-9.05c0-6.6-4.29-7.49-8.48-10.5c-3.86-2.78-6.41-2.92-6.41-7.96   c0-4,2.31-5.28,5.99-5.28c4.62,0,5.65,2.54,5.75,6.74H168.4z M130.15,335.49v34.01h15.73v-2.54h-12.72V353.3h11.83v-2.54h-11.83   v-12.72h12.39v-2.55H130.15z M114.83,365.92h-0.09l-8.06-30.43h-3.2l9.47,34.01h3.77l9.42-34.01h-2.92L114.83,365.92z    M104.51,369.5v-2.54H93.25v-31.47h-3.02v34.01H104.51z M68.1,358.01l5.75-19.22h0.09l5.79,19.22H68.1z M72.24,335.49L61.5,369.5   h3.02l2.69-8.95h13.33l2.73,8.95h3.16l-10.6-34.01H72.24z M50.85,365.92h-0.09l-8.06-30.43h-3.2l9.47,34.01h3.77l9.42-34.01h-2.92   L50.85,365.92z"></path>	</g></g></svg>
+    </a>
+    
+    <nav class="mts-nav-main">
+      <div class="mts-nav-dropdown">
+        <a href="index.html#categories" class="">Products</a>
+        <div class="mts-nav-dropdown-menu"><a href="catalogue/ball-valves.html">Ball Valves</a>
+<a href="catalogue/butterfly-valves.html">Butterfly Valves</a>
+<a href="catalogue/check-valves.html">Check Valves</a>
+<a href="catalogue/gate-valves.html">Gate Valves</a>
+<a href="catalogue/angle-valves.html">Angle Valves</a>
+<a href="catalogue/strainers.html">Y-Strainers</a>
+<a href="catalogue/bibcocks.html">Garden Bibcocks</a>
+<a href="catalogue/expansion-joints.html">Rubber Expansion Joints</a></div>
       </div>
+      <a href="catalogue.html" class="">Catalogue</a>
+      <a href="about.html" class="">Company</a>
+      <a href="news.html" class="">News</a>
+      <div class="mts-nav-dropdown">
+        <a href="resources.html" class="">Resources</a>
+      <a href="knowledge.html">Knowledge</a>
+        <div class="mts-nav-dropdown-menu">
+          <a href="resources.html">Downloads</a>
+          <a href="projects.html">Projects &amp; Events</a>
+          <a href="glossary.html">Technical Glossary</a>
+        </div>
+      </div>
+      <a href="certifications.html" class="">Certifications</a>
+      <a href="where-to-buy.html" class="">Where to Buy</a>
+      <a href="contact.html" class="">Contact</a>
+    </nav>
+    
+    <div class="mts-header-search">
+      <svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+      <input type="search" placeholder="Search">
     </div>
+  </div>
+</div>
+<!-- =========== / MT SHELL HEADER =========== -->
+
+
+<!-- Top bar -->
+
   </div>
 </div>
 
 <!-- Header -->
-<header class="header">
-  <div class="header-inner">
-    <a href="#" class="logo-wrap">
-      <span class="logo">MT</span>
-      <span class="logo-tagline">Valves &amp; Fittings · Dubai</span>
-    </a>
-    <div class="search-bar">
-      <input type="search" placeholder="Search SKU, model or description (e.g. 4114015, ball valve PN-30…)">
-      <button aria-label="Search">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
-          <circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/>
-        </svg>
-      </button>
-    </div>
-    <div class="header-actions">
-      <a href="#" class="header-action">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-        <span>Account</span>
-      </a>
-      <a href="#" class="header-action">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
-        <span>Quotes</span>
-      </a>
-      <a href="#" class="cart-pill">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.7 13.4a2 2 0 002 1.6h9.7a2 2 0 002-1.6L23 6H6"/></svg>
-        0 · AED 0.00
-      </a>
-    </div>
-  </div>
-</header>
+
 
 <!-- Main nav -->
 <nav class="main-nav">
@@ -410,7 +621,7 @@ button { font-family: inherit; cursor: pointer; }
       <div class="stock-row">
         <div class="badge"><div class="dot"></div> <span id="stock-text">210 units in stock</span></div>
         <span class="sep">·</span>
-        <div class="badge">🚚 Delivery: 48h UAE / 72h GCC</div>
+        <div class="badge">🚚 Delivery: 48h Dubai · 24-72h GCC</div>
       </div>
 
       <div class="qty-row">
@@ -440,8 +651,8 @@ button { font-family: inherit; cursor: pointer; }
           Need help with your order?
         </div>
         <div class="meta">Sun-Thu, 8:00-17:30 GST · Technical support in EN/AR/ES</div>
-        <a href="tel:+971500000000">📞 +971 50 000 0000</a>
-        <a href="mailto:dubai@mt-valves.ae">✉ dubai@mt-valves.ae</a>
+        <a href="tel:+97144534693">📞 +971 4 453 4693</a>
+        <a href="mailto:sales@mtmiddleeast.com">✉ sales@mtmiddleeast.com</a>
         <a href="#">💬 Live WhatsApp chat</a>
       </div>
 
@@ -464,6 +675,101 @@ button { font-family: inherit; cursor: pointer; }
 
     </aside>
   </div>
+  <!-- COMPLIANCE & CERTIFICATIONS -->
+  <section class="compliance-section">
+    <style>
+      .compliance-section { max-width: 1280px; margin: 60px auto 0; padding: 0 32px; }
+      .compliance-card {
+        background: #FAFBFC; border: 1px solid #E2E6EB;
+        border-left: 6px solid #2E78D2; border-radius: 8px; padding: 28px 32px;
+      }
+      .compliance-header {
+        display: flex; justify-content: space-between; align-items: flex-start;
+        flex-wrap: wrap; gap: 16px; margin-bottom: 20px;
+      }
+      .compliance-title {
+        font-size: 18px; font-weight: 700; color: #0F2F5C; letter-spacing: 0.5px;
+        text-transform: uppercase; margin: 0 0 6px;
+      }
+      .compliance-sub { font-size: 13px; color: #4A5568; margin: 0; max-width: 720px; }
+      .compliance-link {
+        font-size: 13px; color: #2E78D2; font-weight: 600; text-decoration: none;
+        white-space: nowrap;
+      }
+      .compliance-link:hover { text-decoration: underline; }
+      .compliance-logos {
+        display: grid; grid-template-columns: repeat(9, 1fr); gap: 10px;
+      }
+      .compliance-logo {
+        background: white; border: 1px solid #E2E6EB; border-radius: 6px;
+        padding: 8px 10px; height: 70px;
+        display: flex; align-items: center; justify-content: center;
+        transition: all 0.18s ease; position: relative;
+      }
+      .compliance-logo:hover {
+        border-color: #2E78D2; box-shadow: 0 4px 12px rgba(15,47,92,0.08);
+      }
+      .compliance-logo.top { border-color: #FFD700; border-width: 2px; }
+      .compliance-logo.top::before {
+        content: "★"; position: absolute; top: -7px; right: -7px;
+        background: #FFD700; color: #1F2A44;
+        width: 18px; height: 18px; border-radius: 50%;
+        display: flex; align-items: center; justify-content: center;
+        font-size: 10px; font-weight: 700;
+      }
+      .compliance-logo img { max-width: 100%; max-height: 54px; height: auto; width: auto; object-fit: contain; }
+
+      @media (max-width: 1024px) {
+        .compliance-logos { grid-template-columns: repeat(5, 1fr); }
+      }
+      @media (max-width: 600px) {
+        .compliance-logos { grid-template-columns: repeat(3, 1fr); }
+      }
+    </style>
+
+    <div class="compliance-card">
+      <div class="compliance-header">
+        <div>
+          <h2 class="compliance-title">Compliance &amp; Certifications</h2>
+          <p class="compliance-sub">
+            Tested and approved by the world&#x2019;s most respected water authorities.
+            <strong>Star-marked certifications</strong> carry direct procurement weight in the UAE specifier channel.
+          </p>
+        </div>
+        <a href="certifications.html" class="compliance-link">View all certifications →</a>
+      </div>
+
+      <div class="compliance-logos">
+        <div class="compliance-logo top" title="WRAS — United Kingdom">
+          <img src="assets/certs/Certificacion-WRAS.jpg" alt="WRAS" loading="lazy">
+        </div>
+        <div class="compliance-logo top" title="KIWA KUKreg4 — Netherlands">
+          <img src="assets/certs/Certificado-KIWA.jpg" alt="KIWA KUKreg4" loading="lazy">
+        </div>
+        <div class="compliance-logo top" title="ACS — France">
+          <img src="assets/certs/Certificacion-ACS.jpg" alt="ACS" loading="lazy">
+        </div>
+        <div class="compliance-logo top" title="DVGW — Germany">
+          <img src="assets/certs/Certificacion-DVGW.jpg" alt="DVGW" loading="lazy">
+        </div>
+        <div class="compliance-logo" title="TÜV Rheinland — Germany — ISO 9001 / ISO 14001">
+          <img src="assets/certs/Certificacion-TUV-ISO.jpg" alt="TÜV Rheinland" loading="lazy">
+        </div>
+        <div class="compliance-logo" title="AENOR — Spain">
+          <img src="assets/certs/Certificacion-AENOR-13.jpg" alt="AENOR" loading="lazy">
+        </div>
+        <div class="compliance-logo" title="CSTB — France">
+          <img src="assets/certs/Certificacion-CSTB.jpg" alt="CSTB" loading="lazy">
+        </div>
+        <div class="compliance-logo" title="KOMO — Netherlands">
+          <img src="assets/certs/Certificacion-KOMO.jpg" alt="KOMO" loading="lazy">
+        </div>
+        <div class="compliance-logo" title="PZH — Poland">
+          <img src="assets/certs/Certificacion-PZH.jpg" alt="PZH" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- TABS -->
   <section class="tabs-section">
@@ -494,7 +800,7 @@ button { font-family: inherit; cursor: pointer; }
         <div class="spec-row"><div class="spec-label">EAN / Barcode</div><div class="spec-value mono" id="spec-ean">8435319112823</div></div>
         <div class="spec-row"><div class="spec-label">Master carton</div><div class="spec-value mono"><span id="spec-qtybox">90</span> units / box</div></div>
         <div class="spec-row"><div class="spec-label">HS Code (Customs)</div><div class="spec-value mono">8481.30.91</div></div>
-        <div class="spec-row"><div class="spec-label">Origin</div><div class="spec-value">🇪🇸 Spain (Pallejà, Barcelona)</div></div>
+        <div class="spec-row"><div class="spec-label">Origin</div><div class="spec-value"><svg width="16" height="11" viewBox="0 0 6 4" xmlns="http://www.w3.org/2000/svg" style="display:inline-block;vertical-align:middle;border-radius:1.5px;flex-shrink:0;"><rect width="6" height="4" fill="#AA151B"/><rect y="1" width="6" height="2" fill="#F1BF00"/></svg> Made in Spain</div></div>
         <div class="spec-row"><div class="spec-label">Warranty</div><div class="spec-value">2 years against manufacturing defects</div></div>
       </div>
     </div>
@@ -517,9 +823,9 @@ Working pressure ........ PN-16 (16 bar maximum)<br>
 Temperature ............... -10°C to +110°C<br>
 Standard .................... EN 1213, ISO 9001:2015<br>
 Origin ........................ Manufactured in Spain (EU)<br>
-Manufacturer ............. MT Valves &amp; Fittings, S.L. · Pallejà, Barcelona<br>
+Manufacturer ............. MT Valves &amp; Fittings, S.L. · Barcelona, Spain<br>
 UAE local agent ......... [Authorised distributor name]<br>
-Stock ......................... Available ex-stock Dubai (48h UAE delivery)
+Stock ......................... Available ex-stock Dubai (48h Dubai · 24-72h GCC)
       </div>
     </div>
 
@@ -586,7 +892,7 @@ Stock ......................... Available ex-stock Dubai (48h UAE delivery)
         <div class="cert-card"><div class="cert-badge">ACS</div><div class="name">ACS</div><div class="country">🇫🇷 France · Potable water</div></div>
         <div class="cert-card"><div class="cert-badge">DVG</div><div class="name">DVGW</div><div class="country">🇩🇪 Germany · Gas &amp; water</div></div>
         <div class="cert-card"><div class="cert-badge">WRA</div><div class="name">WRAS</div><div class="country">🇬🇧 UK · BS 6920</div></div>
-        <div class="cert-card"><div class="cert-badge">AEN</div><div class="name">AENOR</div><div class="country">🇪🇸 Spain</div></div>
+        <div class="cert-card"><div class="cert-badge">AEN</div><div class="name">AENOR</div><div class="country"><svg width="16" height="11" viewBox="0 0 6 4" xmlns="http://www.w3.org/2000/svg" style="display:inline-block;vertical-align:middle;border-radius:1.5px;flex-shrink:0;"><rect width="6" height="4" fill="#AA151B"/><rect y="1" width="6" height="2" fill="#F1BF00"/></svg> Spain</div></div>
         <div class="cert-card"><div class="cert-badge">WM</div><div class="name">WaterMark</div><div class="country">🇦🇺 Australia</div></div>
       </div>
     </div>
@@ -622,7 +928,7 @@ Stock ......................... Available ex-stock Dubai (48h UAE delivery)
           <div class="product-card-title">F-F Non-return Valve Light Type With Metal Shutter 1/2”</div>
           <div class="product-card-sku">SKU MT-4215015</div>
           <div class="product-card-price">AED 94.05 <small>incl. VAT</small></div>
-          <div class="product-card-stock">● 504 units in stock · 48h delivery</div>
+          <div class="product-card-stock">● 504 units in stock · 48h Dubai delivery</div>
           <div class="product-card-buttons">
             <button class="btn btn-primary btn-sm">Add to cart</button>
             <button class="btn btn-secondary btn-sm">Add to offer</button>
@@ -636,7 +942,7 @@ Stock ......................... Available ex-stock Dubai (48h UAE delivery)
           <div class="product-card-title">M-F Ball Valve PN-30 Erg. Red Stainless Steel Handle 3/4”</div>
           <div class="product-card-sku">SKU MT-4097020</div>
           <div class="product-card-price">AED 50.61 <small>incl. VAT</small></div>
-          <div class="product-card-stock">● 45 units in stock · 48h delivery</div>
+          <div class="product-card-stock">● 45 units in stock · 48h Dubai delivery</div>
           <div class="product-card-buttons">
             <button class="btn btn-primary btn-sm">Add to cart</button>
             <button class="btn btn-secondary btn-sm">Add to offer</button>
@@ -650,7 +956,7 @@ Stock ......................... Available ex-stock Dubai (48h UAE delivery)
           <div class="product-card-title">Flanged Cast Iron Y Strainer With Stainless Steel Screen 1.8</div>
           <div class="product-card-sku">SKU MT-5110050</div>
           <div class="product-card-price">AED 29.70 <small>incl. VAT</small></div>
-          <div class="product-card-stock">● 5 units in stock · 48h delivery</div>
+          <div class="product-card-stock">● 5 units in stock · 48h Dubai delivery</div>
           <div class="product-card-buttons">
             <button class="btn btn-primary btn-sm">Add to cart</button>
             <button class="btn btn-secondary btn-sm">Add to offer</button>
@@ -662,71 +968,7 @@ Stock ......................... Available ex-stock Dubai (48h UAE delivery)
 </main>
 
 <!-- Footer -->
-<footer class="footer">
-  <div class="footer-inner">
-    <div class="footer-grid">
-      <div>
-        <div class="footer-logo">MT Valves &amp; Fittings</div>
-        <div class="footer-tagline">Spanish manufacturer of valves and fittings for the canalisation and conduction of fluids. European quality, certified worldwide. Serving the GCC market direct from our Dubai logistics hub.</div>
-        <div class="footer-locations">
-          <div class="footer-loc">
-            <strong>🇦🇪 Dubai Hub</strong>
-            Dubai Industrial City<br>
-            Sun-Thu, 08:00-17:30 GST<br>
-            +971 50 000 0000
-          </div>
-          <div class="footer-loc">
-            <strong>🇪🇸 HQ</strong>
-            Pallejà, Barcelona<br>
-            Mon-Fri, 08:00-17:30 CET<br>
-            +34 936 804 980
-          </div>
-        </div>
-      </div>
-      <div>
-        <h4>Catalogue</h4>
-        <ul>
-          <li><a href="#">Ball Valves</a></li>
-          <li><a href="#">Butterfly Valves</a></li>
-          <li><a href="#">Check Valves</a></li>
-          <li><a href="#">Gate Valves</a></li>
-          <li><a href="#">Angle Valves</a></li>
-          <li><a href="#">Y-Strainers</a></li>
-          <li><a href="#">Garden Bibcocks</a></li>
-          <li><a href="#">Expansion Joints</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>For Business</h4>
-        <ul>
-          <li><a href="#">B2B Login</a></li>
-          <li><a href="#">Request Quote</a></li>
-          <li><a href="#">Volume Pricing</a></li>
-          <li><a href="#">Become a Distributor</a></li>
-          <li><a href="#">Specifier Resources</a></li>
-          <li><a href="#">Technical Glossary</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Support</h4>
-        <ul>
-          <li><a href="#">Customer Service</a></li>
-          <li><a href="#">Shipping &amp; Returns</a></li>
-          <li><a href="#">Certifications</a></li>
-          <li><a href="#">Where to Buy</a></li>
-          <li><a href="#">Track Order</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <div>© 2026 MT Valves &amp; Fittings, S.L. · All rights reserved · UAE Trade License [pending]</div>
-      <div>
-        <a href="#">Legal</a> · <a href="#">Privacy</a> · <a href="#">Cookies</a> · <a href="#">PDPL Compliance</a>
-      </div>
-    </div>
-  </div>
-</footer>
+
 
 <script>
 // Variant selector
@@ -779,6 +1021,98 @@ function changeQty(delta) {
   input.value = newVal;
 }
 </script>
+
+<!-- =========== MT SHELL — FOOTER + WA + COOKIES =========== -->
+<div class="mts-mainfooter">
+  <div class="mts-footer-inner">
+    <div class="mts-footer-grid">
+      <div class="mts-footer-brand">
+        <a href="index.html" class="mts-brand-logo"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="Capa_1" x="0px" y="0px" viewBox="0 0 500 500" style="enable-background:new 0 0 500 500;" xml:space="preserve"><style type="text/css">	.st0{fill:#96BCE5;}	.st1{clip-path:url(#SVGID_00000028293389285023033970000009576526279349472417_);fill:#3D75BA;}	.st2{fill:#3D75BA;}			.st3{clip-path:url(#SVGID_00000169523863405724927080000002316061180491850883_);fill:url(#SVGID_00000057128013713373848240000012295056972260004536_);}	.st4{clip-path:url(#SVGID_00000083807938995984377050000009384473108822567319_);fill:#3D75BA;}</style><g>	<polygon class="st0" points="280.44,129.84 300.47,189.96 320.23,189.96 280.19,310.21 340.31,310.21 380.36,189.96 440.47,189.96   460.5,129.84  "></polygon>	<g>		<defs>			<rect id="SVGID_1_" x="39.5" y="129.84" width="421" height="240.32"></rect>		</defs>		<clipPath id="SVGID_00000159447393895895634090000005042513252083627651_">			<use xlink:href="#SVGID_1_" style="overflow:visible;"></use>		</clipPath>		<path style="clip-path:url(#SVGID_00000159447393895895634090000005042513252083627651_);fill:#3D75BA;" d="M396,278.76h3.21   c3.75,0,6.78-1.28,6.78-4.39c0-2.74-1.96-4.57-6.25-4.57c-1.78,0-3.03,0.18-3.75,0.37V278.76z M395.82,295.58h-6.78V265.6   c2.67-0.37,6.43-0.91,11.24-0.91c5.53,0,8.03,0.91,9.99,2.38c1.78,1.28,3.03,3.47,3.03,6.4c0,3.65-2.67,6.03-6.07,7.13v0.37   c2.85,0.91,4.28,3.29,5.17,7.31c0.89,4.57,1.61,6.22,2.14,7.31h-7.14c-0.89-1.1-1.43-3.65-2.32-7.31   c-0.53-3.11-2.32-4.57-6.07-4.57h-3.21V295.58z M400.28,256.09c-12.67,0-22.49,10.78-22.49,23.95c0,13.35,9.82,23.95,22.85,23.95   c12.67,0.19,22.31-10.6,22.31-23.76c0-13.35-9.64-24.13-22.49-24.13H400.28z M400.64,250.06c16.6,0,29.8,13.16,29.8,29.98   c0,16.82-13.21,30.16-29.98,30.16c-16.77,0-30.16-13.34-30.16-30.16c0-16.82,13.39-29.98,30.16-29.98H400.64z"></path>	</g>	<path class="st2" d="M340.31,310.21h0.21l-0.1-0.32L340.31,310.21z M220.27,129.84l-30.15,90.53l-30.15-90.53H99.82L39.75,310.21  h60.12l30.02-90.15l30.02,90.15h0.28h59.84h0.28l30.04-90.19l29.93,89.87l30.06-90.26l-29.91-89.8H220.27z"></path>	<g>		<defs>			<path id="SVGID_00000106861127787646596650000013816297959637074086_" d="M340.31,310.21h0.21l-0.11-0.32L340.31,310.21z     M220.27,129.84l-30.15,90.53l-30.15-90.53H99.82L39.75,310.21h60.12l30.02-90.15l30.02,90.15h0.28h59.84h0.28l30.04-90.19    l29.93,89.87l30.06-90.26l-29.91-89.8H220.27z"></path>		</defs>		<clipPath id="SVGID_00000157298264236242306010000015723931376774020497_">			<use xlink:href="#SVGID_00000106861127787646596650000013816297959637074086_" style="overflow:visible;"></use>		</clipPath>					<linearGradient id="SVGID_00000116205097728882479350000011669946229960376448_" gradientUnits="userSpaceOnUse" x1="-53.3228" y1="674.7147" x2="-50.6375" y2="674.7147" gradientTransform="matrix(0 67.5744 67.5744 0 -45403.3125 3733.0935)">			<stop offset="0" style="stop-color:#3D75BA"></stop>			<stop offset="0.9763" style="stop-color:#322C68"></stop>			<stop offset="1" style="stop-color:#322C68"></stop>		</linearGradient>					<rect x="39.75" y="129.84" style="clip-path:url(#SVGID_00000157298264236242306010000015723931376774020497_);fill:url(#SVGID_00000116205097728882479350000011669946229960376448_);" width="300.77" height="180.37"></rect>	</g>	<g>		<defs>			<rect id="SVGID_00000110471337291933058870000015210727969065086902_" x="39.5" y="129.84" width="421" height="240.32"></rect>		</defs>		<clipPath id="SVGID_00000051345843617841486920000016333128194100502933_">			<use xlink:href="#SVGID_00000110471337291933058870000015210727969065086902_" style="overflow:visible;"></use>		</clipPath>		<path style="clip-path:url(#SVGID_00000051345843617841486920000016333128194100502933_);fill:#3D75BA;" d="M430.1,344.11   c0-4.9-1.51-9.28-8.57-9.28c-5.56,0-9.28,2.45-9.23,8.34c0.05,3.39,0.33,5.42,6.93,9.47c4.9,3.02,7.96,4.34,7.96,8.95   c0,3.91-1.93,6.03-5.89,6.03c-6.08,0-6.36-3.91-6.36-7.68h-3.11c-0.28,6.64,2.69,10.22,9.33,10.22c5.94,0,9.05-2.97,9.05-9.05   c0-6.6-4.29-7.49-8.48-10.5c-3.86-2.78-6.41-2.92-6.41-7.96c0-4,2.31-5.28,5.98-5.28c4.62,0,5.65,2.54,5.75,6.74H430.1z    M402.49,366.63c-1.6,0.61-3.77,0.99-6.36,0.99c-7.35,0-7.26-6.55-7.26-15.12c0-8.57-0.09-15.12,7.26-15.12   c4.76,0,6.69,2.35,6.69,6.83h3.01c0.14-6.6-3.2-9.37-9.7-9.37c-11.07,0-10.27,11.07-10.27,17.67s-0.8,17.67,10.27,17.67   c3.2,0,6.36-0.47,9.38-1.41v-17.01h-9.9v2.55h6.88V366.63z M360.89,369.5v-30.1l0.09-0.09l13.85,30.2h4.57v-34.01h-3.02v29.77   l-0.09,0.09l-13.8-29.87h-4.62v34.01H360.89z M347.51,369.5h3.02v-34.01h-3.02V369.5z M331.83,369.5h3.02v-31.47h8.29v-2.55h-19.6   v2.55h8.29V369.5z M310.91,369.5h3.02v-31.47h8.29v-2.55h-19.6v2.55h8.29V369.5z M295.22,369.5h3.02v-34.01h-3.02V369.5z    M276.38,369.5h3.01V353.3h10.55v-2.54h-10.55v-12.72h11.36v-2.55h-14.37V369.5z M240.05,369.5h7.77   c10.27,0,11.92-5.56,11.92-16.87c0-11.59-1.18-17.15-10.7-17.15h-9V369.5z M243.07,338.03h3.96c8.39,0,9.7,2.82,9.7,12.58   c0,13.9-0.89,16.35-9.99,16.35h-3.67V338.03z M214.38,369.5v-30.1l0.09-0.09l13.85,30.2h4.57v-34.01h-3.02v29.77l-0.09,0.09   l-13.81-29.87h-4.62v34.01H214.38z M188.75,358.01l5.75-19.22h0.09l5.79,19.22H188.75z M192.89,335.49l-10.74,34.01h3.02   l2.69-8.95h13.33l2.73,8.95h3.16l-10.6-34.01H192.89z M168.4,344.11c0-4.9-1.51-9.28-8.57-9.28c-5.56,0-9.28,2.45-9.23,8.34   c0.05,3.39,0.33,5.42,6.93,9.47c4.9,3.02,7.96,4.34,7.96,8.95c0,3.91-1.93,6.03-5.89,6.03c-6.08,0-6.36-3.91-6.36-7.68h-3.11   c-0.28,6.64,2.69,10.22,9.33,10.22c5.94,0,9.05-2.97,9.05-9.05c0-6.6-4.29-7.49-8.48-10.5c-3.86-2.78-6.41-2.92-6.41-7.96   c0-4,2.31-5.28,5.99-5.28c4.62,0,5.65,2.54,5.75,6.74H168.4z M130.15,335.49v34.01h15.73v-2.54h-12.72V353.3h11.83v-2.54h-11.83   v-12.72h12.39v-2.55H130.15z M114.83,365.92h-0.09l-8.06-30.43h-3.2l9.47,34.01h3.77l9.42-34.01h-2.92L114.83,365.92z    M104.51,369.5v-2.54H93.25v-31.47h-3.02v34.01H104.51z M68.1,358.01l5.75-19.22h0.09l5.79,19.22H68.1z M72.24,335.49L61.5,369.5   h3.02l2.69-8.95h13.33l2.73,8.95h3.16l-10.6-34.01H72.24z M50.85,365.92h-0.09l-8.06-30.43h-3.2l9.47,34.01h3.77l9.42-34.01h-2.92   L50.85,365.92z"></path>	</g></g></svg></a>
+        <p class="mts-footer-tag">Spanish multinational since 1994. Specialist in valves and fittings for the canalisation and conduction of fluids across hydrosanitary, industrial and DIY segments.</p>
+        <div class="mts-footer-loc">
+          <div class="mts-footer-loc-row">
+            <span><svg width="22" height="14" viewBox="0 0 12 6" xmlns="http://www.w3.org/2000/svg" style="display:inline-block;vertical-align:middle;border-radius:2px;flex-shrink:0;"><rect width="3" height="6" fill="#EF3340"/><rect x="3" width="9" height="2" fill="#00843D"/><rect x="3" y="2" width="9" height="2" fill="#FFFFFF"/><rect x="3" y="4" width="9" height="2" fill="#000000"/></svg></span>
+            <div>
+              <div class="mts-footer-loc-lab">UAE Hub</div>
+              <div class="mts-footer-loc-txt">BB1 Jumeirah Lakes Towers, Dubai 32765, UAE</div>
+              <div class="mts-footer-loc-sub">Sun–Thu 08:00–17:30 GST · +971 4 453 4693</div>
+            </div>
+          </div>
+          <div class="mts-footer-loc-row">
+            <span><svg width="22" height="14" viewBox="0 0 6 4" xmlns="http://www.w3.org/2000/svg" style="display:inline-block;vertical-align:middle;border-radius:2px;flex-shrink:0;"><rect width="6" height="4" fill="#AA151B"/><rect y="1" width="6" height="2" fill="#F1BF00"/></svg></span>
+            <div>
+              <div class="mts-footer-loc-lab">Headquarters</div>
+              <div class="mts-footer-loc-txt">Barcelona, Spain</div>
+              <div class="mts-footer-loc-sub">Mon–Fri 08:00–17:30 CET · +34 936 804 980</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h4>Categories</h4>
+        <ul><li><a href="catalogue/ball-valves.html">Ball Valves</a></li>
+<li><a href="catalogue/butterfly-valves.html">Butterfly Valves</a></li>
+<li><a href="catalogue/check-valves.html">Check Valves</a></li>
+<li><a href="catalogue/gate-valves.html">Gate Valves</a></li>
+<li><a href="catalogue/angle-valves.html">Angle Valves</a></li>
+<li><a href="catalogue/strainers.html">Y-Strainers</a></li>
+<li><a href="catalogue/bibcocks.html">Garden Bibcocks</a></li>
+<li><a href="catalogue/expansion-joints.html">Rubber Expansion Joints</a></li></ul>
+      </div>
+      <div>
+        <h4>MT Dubai</h4>
+        <ul>
+          <li><a href="catalogue.html">Catalogue</a></li>
+          <li><a href="about.html">Company</a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a href="resources.html">Resources</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="glossary.html">Glossary</a></li>
+          <li><a href="where-to-buy.html">Where to Buy</a></li>
+          <li><a href="certifications.html">Certifications</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Get a Quote</h4>
+        <p style="color:rgba(255,255,255,0.55); font-size:0.92rem; line-height:1.5;">Talk to our Dubai team about pricing, stock and delivery.</p>
+        <a href="contact.html" class="mts-footer-cta">Request Quotation →</a>
+        <a href="https://wa.me/971586125781" class="mts-footer-wa" target="_blank" rel="noopener">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.297-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          WhatsApp Direct
+        </a>
+      </div>
+    </div>
+    <div class="mts-footer-bot">
+      <div>© 2026 MT Valves &amp; Fittings, S.L. · All rights reserved</div>
+      <div class="mts-footer-bot-links">
+        <a href="#">Legal</a><a href="#">Privacy</a><a href="#">Cookies</a><a href="#">Terms</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<a href="https://wa.me/971586125781?text=Hello%20MT%20Dubai" class="mts-wa-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.297-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<div class="mts-cookie-banner" id="cookieBanner">
+  <div class="mts-cookie-banner-text"><strong>We use cookies.</strong> This site uses essential cookies to function and analytics cookies to improve your experience. By accepting, you agree to our <a href="#">privacy policy</a>. Compliant with UAE Personal Data Protection Law (PDPL).</div>
+  <div class="mts-cookie-banner-buttons"><button class="mts-cookie-decline" onclick="cookieResponse(false)">Essential only</button><button class="mts-cookie-accept" onclick="cookieResponse(true)">Accept all</button></div>
+</div>
+<script>
+(function() {
+  function cookieResponse(accept) {
+    try { document.cookie = 'mt_cookie_consent=' + (accept ? 'all' : 'essential') + ';path=/;max-age=' + (60*60*24*180); } catch(e) {}
+    document.getElementById('cookieBanner').classList.remove('show');
+  }
+  window.cookieResponse = cookieResponse;
+  if (document.cookie.indexOf('mt_cookie_consent=') === -1) {
+    setTimeout(function() { document.getElementById('cookieBanner').classList.add('show'); }, 1500);
+  }
+})();
+</script>
+<!-- =========== / MT SHELL FOOTER =========== -->
 
 </body>
 </html>

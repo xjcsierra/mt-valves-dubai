@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Catalogue · MT Valves &amp; Fittings Dubai — AR</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --mt-blue: #1B3A6E; --mt-blue-dark: #0F2547; --mt-blue-light: #E8EFF8;
+  --mt-blue-50: #F4F7FB; --mt-blue-accent: #3D6FC2;
+  --gray-50: #FAFAFA; --gray-100: #F2F2F2; --gray-150: #ECECEC;
+  --gray-200: #E5E5E5; --gray-300: #D0D0D0; --gray-400: #A0A0A0;
+  --gray-600: #595959; --gray-700: #3F3F3F; --gray-800: #2A2A2A; --gray-900: #1A1A1A;
+  --green: #16A34A; --green-bg: #DCFCE7; --green-bd: #BBF7D0;
+  --amber: #D97706; --amber-bg: #FEF3C7;
+  --red: #DC2626; --red-bg: #FEE2E2;
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
+  --shadow-md: 0 4px 14px rgba(0,0,0,0.07);
+  --shadow-lg: 0 12px 32px rgba(0,0,0,0.10);
+  --radius-sm: 4px; --radius-md: 8px; --radius-lg: 12px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: 'IBM Plex Sans', -apple-system, sans-serif; color: var(--gray-800); line-height: 1.5; font-size: 15px; background: white; -webkit-font-smoothing: antialiased; }
+img { max-width: 100%; display: block; }
+a { color: var(--mt-blue); text-decoration: none; }
+a:hover { text-decoration: underline; }
+button { font-family: inherit; cursor: pointer; }
+
+/* Top bar */
+.top-bar { background: var(--gray-900); color: rgba(255,255,255,0.85); padding: 8px 0; font-size: 13px; }
+.top-bar-inner { max-width: 1280px; margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; align-items: center; }
+.top-bar a { color: rgba(255,255,255,0.85); }
+.top-bar a:hover { color: white; text-decoration: none; }
+.top-bar-left, .top-bar-right { display: flex; gap: 24px; align-items: center; }
+.lang-switch { display: flex; gap: 4px; align-items: center; font-size: 12px; }
+.lang-switch a { padding: 2px 8px; border-radius: 3px; }
+.lang-switch a.active { background: rgba(255,255,255,0.15); color: white; }
+
+/* Header */
+.header { background: white; border-bottom: 1px solid var(--gray-200); padding: 18px 0; position: sticky; top: 0; z-index: 100; }
+.header-inner { max-width: 1280px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; gap: 32px; }
+.logo-wrap { display: flex; align-items: baseline; gap: 8px; flex-shrink: 0; text-decoration: none; }
+.logo-wrap:hover { text-decoration: none; }
+.logo { font-weight: 700; font-size: 28px; color: var(--mt-blue); letter-spacing: -1px; line-height: 1; }
+.logo-tagline { font-size: 11px; color: var(--gray-600); font-weight: 500; letter-spacing: 0.5px; text-transform: uppercase; }
+.search-bar { flex: 1; max-width: 580px; position: relative; }
+.search-bar input { width: 100%; padding: 11px 16px; padding-right: 48px; border: 1px solid var(--gray-300); border-radius: var(--radius-sm); font-size: 14px; font-family: inherit; }
+.search-bar input:focus { outline: none; border-color: var(--mt-blue); }
+.search-bar button { position: absolute; right: 4px; top: 4px; background: var(--mt-blue); color: white; border: none; width: 38px; height: 36px; border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; }
+.header-actions { display: flex; gap: 20px; align-items: center; flex-shrink: 0; }
+.header-action { display: flex; flex-direction: column; align-items: center; gap: 2px; font-size: 11px; color: var(--gray-700); cursor: pointer; }
+.header-action svg { width: 22px; height: 22px; stroke-width: 1.6; }
+.cart-pill { background: var(--mt-blue); color: white; padding: 6px 14px; border-radius: 999px; font-size: 13px; font-weight: 500; display: flex; align-items: center; gap: 6px; }
+.cart-pill:hover { text-decoration: none; }
+
+/* Main nav */
+.main-nav { background: white; border-bottom: 1px solid var(--gray-200); }
+.nav-inner { max-width: 1280px; margin: 0 auto; padding: 0 24px; display: flex; gap: 4px; }
+.nav-item { padding: 14px 16px; color: var(--gray-700); text-decoration: none; font-weight: 500; font-size: 14px; border-bottom: 3px solid transparent; transition: all 0.15s; cursor: pointer; }
+.nav-item.active { color: var(--mt-blue); border-bottom-color: var(--mt-blue); }
+.nav-item:hover { color: var(--mt-blue); text-decoration: none; }
+.nav-item .chev { display: inline-block; margin-left: 4px; font-size: 9px; }
+.nav-quote { margin-left: auto; color: var(--mt-blue) !important; font-weight: 600 !important; }
+
+/* Buttons */
+.btn { padding: 12px 20px; border: none; border-radius: var(--radius-sm); font-family: inherit; font-size: 14px; font-weight: 600; cursor: pointer; transition: all 0.15s; display: inline-flex; align-items: center; justify-content: center; gap: 8px; text-decoration: none; line-height: 1; }
+.btn:hover { text-decoration: none; }
+.btn-primary { background: var(--mt-blue); color: white; }
+.btn-primary:hover { background: var(--mt-blue-dark); transform: translateY(-1px); box-shadow: var(--shadow-md); }
+.btn-secondary { background: white; color: var(--mt-blue); border: 2px solid var(--mt-blue); }
+.btn-secondary:hover { background: var(--mt-blue-light); }
+.btn-dark { background: var(--gray-900); color: white; }
+.btn-dark:hover { background: var(--gray-800); }
+.btn-ghost { background: transparent; color: var(--gray-700); border: 1px solid var(--gray-300); }
+.btn-ghost:hover { border-color: var(--mt-blue); color: var(--mt-blue); }
+.btn-sm { padding: 9px 14px; font-size: 13px; }
+.btn-lg { padding: 16px 28px; font-size: 16px; }
+
+/* Breadcrumb */
+.breadcrumb { max-width: 1280px; margin: 0 auto; padding: 16px 24px 8px; font-size: 13px; color: var(--gray-600); display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.breadcrumb a { color: var(--gray-600); }
+.breadcrumb a:hover { color: var(--mt-blue); }
+.breadcrumb .sep { color: var(--gray-300); }
+.breadcrumb .current { color: var(--gray-800); font-weight: 500; }
+
+/* Product card (universal) */
+.product-card { background: white; border: 1px solid var(--gray-200); border-radius: var(--radius-md); overflow: hidden; transition: all 0.15s; display: flex; flex-direction: column; }
+.product-card:hover { box-shadow: var(--shadow-md); border-color: var(--gray-400); transform: translateY(-2px); }
+.product-card-img { background: var(--gray-50); aspect-ratio: 1; display: flex; align-items: center; justify-content: center; padding: 24px; border-bottom: 1px solid var(--gray-150); position: relative; }
+.product-card-img img { max-width: 100%; max-height: 100%; object-fit: contain; }
+.product-card-img .placeholder { width: 80%; aspect-ratio: 1; background: var(--gray-150); border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; color: var(--gray-400); font-size: 11px; }
+.product-card-badge { position: absolute; top: 12px; left: 12px; background: var(--mt-blue); color: white; padding: 4px 10px; font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; border-radius: 3px; }
+.product-card-badge.bestseller { background: #F59E0B; }
+.product-card-badge.sale { background: var(--red); }
+.product-card-body { padding: 16px; flex: 1; display: flex; flex-direction: column; }
+.product-card-cat { font-size: 11px; color: var(--gray-600); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 6px; font-weight: 500; }
+.product-card-title { font-size: 14px; font-weight: 500; line-height: 1.35; margin-bottom: 8px; color: var(--gray-900); min-height: 38px; }
+.product-card-title a { color: inherit; }
+.product-card-title a:hover { color: var(--mt-blue); text-decoration: none; }
+.product-card-sku { font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: var(--gray-600); margin-bottom: 12px; display: flex; justify-content: space-between; align-items: center; }
+.product-card-sku .pn-tag { background: var(--gray-100); padding: 2px 6px; border-radius: 3px; font-size: 10px; }
+.product-card-specs { display: flex; flex-wrap: wrap; gap: 4px; margin-bottom: 12px; }
+.product-card-specs .spec-pill { background: var(--gray-100); color: var(--gray-700); padding: 3px 8px; font-size: 11px; border-radius: 3px; }
+.product-card-price { font-size: 22px; font-weight: 700; color: var(--gray-900); margin-bottom: 4px; letter-spacing: -0.5px; }
+.product-card-price small { font-size: 13px; color: var(--gray-600); font-weight: 500; }
+.product-card-price-vat { font-size: 11px; color: var(--gray-600); margin-bottom: 10px; }
+.product-card-stock { font-size: 11px; color: var(--green); margin-bottom: 14px; font-weight: 500; display: flex; align-items: center; gap: 4px; }
+.product-card-stock::before { content: ""; width: 7px; height: 7px; background: var(--green); border-radius: 50%; }
+.product-card-stock.low { color: var(--amber); }
+.product-card-stock.low::before { background: var(--amber); }
+.product-card-buttons { display: flex; flex-direction: column; gap: 6px; margin-top: auto; }
+
+/* Footer */
+.footer { background: var(--gray-900); color: rgba(255,255,255,0.7); margin-top: 80px; padding: 56px 0 24px; }
+.footer-inner { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
+.footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 40px; }
+.footer h4 { color: white; font-size: 13px; font-weight: 600; margin-bottom: 16px; text-transform: uppercase; letter-spacing: 0.6px; }
+.footer ul { list-style: none; }
+.footer li { margin-bottom: 8px; font-size: 13px; }
+.footer a { color: rgba(255,255,255,0.7); }
+.footer a:hover { color: white; text-decoration: underline; }
+.footer-bottom { padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.1); display: flex; justify-content: space-between; font-size: 12px; flex-wrap: wrap; gap: 12px; }
+.footer-logo { color: white; font-size: 22px; font-weight: 700; margin-bottom: 12px; letter-spacing: -1px; }
+.footer-tagline { font-size: 13px; line-height: 1.6; max-width: 360px; margin-bottom: 16px; }
+.footer-locations { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; font-size: 12px; }
+.footer-loc strong { color: white; display: block; margin-bottom: 4px; font-size: 13px; }
+
+/* Section */
+.section { padding: 64px 0; }
+.section-narrow { padding: 48px 0; }
+.container { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
+.section-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 32px; flex-wrap: wrap; gap: 16px; }
+.section-header h2 { font-size: 28px; font-weight: 600; color: var(--gray-900); letter-spacing: -0.5px; }
+.section-header .sub { font-size: 14px; color: var(--gray-600); margin-top: 4px; max-width: 520px; }
+.section-header-link { font-size: 14px; color: var(--mt-blue); font-weight: 500; }
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+  .top-bar-left a:nth-child(1), .top-bar-left a:nth-child(2) { display: none; }
+  .header-actions .header-action span { display: none; }
+  .search-bar { display: none; }
+  .nav-inner { overflow-x: auto; }
+  .nav-quote { margin-left: 0 !important; }
+  .container { padding: 0 16px; }
+  .section { padding: 40px 0; }
+  .section-header h2 { font-size: 22px; }
+  .footer-grid { grid-template-columns: 1fr; gap: 28px; }
+  .footer-locations { grid-template-columns: 1fr; }
+}
+
+/* === MANUFACTURER AESTHETIC (matches live mt-valves-dubai/catalogue.html) === */
+.top-bar { display: none; }
+
+.header { padding: 24px 0; border-bottom: 1px solid var(--gray-150); box-shadow: none; }
+.header-inner { max-width: 1320px; }
+.logo-wrap { flex-direction: column; align-items: flex-start; gap: 0; }
+.logo { font-size: 38px; font-weight: 700; color: var(--mt-blue); letter-spacing: -1.5px; line-height: 1; position: relative; }
+.logo::after { content: "®"; font-size: 12px; vertical-align: super; margin-left: 4px; font-weight: 400; }
+.logo-tagline { font-size: 10px; color: var(--mt-blue); font-weight: 600; letter-spacing: 2px; text-transform: uppercase; line-height: 1; margin-top: 4px; display: block; }
+
+.search-bar { position: relative; }
+.search-bar input { border: 1px solid var(--gray-300); border-radius: 4px; padding: 12px 16px 12px 44px; }
+.search-bar::before { content: "🔍"; position: absolute; left: 14px; top: 50%; transform: translateY(-50%); color: var(--mt-blue); z-index: 1; pointer-events: none; }
+.search-bar input::placeholder { font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gray-400); }
+.search-bar button { display: none; }
+
+.cart-pill { background: var(--mt-blue); border-radius: 4px; }
+
+.main-nav { background: white; border-bottom: 1px solid var(--gray-150); }
+.nav-inner { max-width: 1320px; justify-content: center; gap: 4px; }
+.nav-item { padding: 18px 22px; font-size: 12px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gray-700); border-bottom-width: 2px; }
+.nav-item:hover { color: var(--mt-blue); }
+.nav-item.active { color: var(--mt-blue); border-bottom-color: var(--mt-blue); }
+.nav-item .chev { font-size: 8px; opacity: 0.6; margin-left: 6px; }
+.nav-quote { color: white !important; background: var(--mt-blue); padding: 10px 18px !important; border-radius: 4px; margin-left: 16px; font-size: 11px !important; }
+.nav-quote:hover { background: var(--mt-blue-dark) !important; color: white !important; text-decoration: none; }
+
+/* Page title section */
+.cat-title-section { padding: 56px 24px 32px; text-align: center; max-width: 1320px; margin: 0 auto; }
+.cat-title-eyebrow { font-size: 12px; color: var(--mt-blue); font-weight: 600; letter-spacing: 2.5px; text-transform: uppercase; margin-bottom: 16px; }
+.cat-title-section h1 { font-size: 48px; font-weight: 700; color: var(--mt-blue); letter-spacing: -1px; margin-bottom: 16px; line-height: 1.1; }
+.cat-title-section .lead { font-size: 16px; color: var(--gray-700); line-height: 1.6; max-width: 760px; margin: 0 auto; }
+.cat-title-section .cat-meta { display: flex; gap: 56px; justify-content: center; margin-top: 40px; padding-top: 32px; border-top: 1px solid var(--gray-150); flex-wrap: wrap; }
+.cat-meta-item { text-align: center; }
+.cat-meta-num { font-size: 32px; font-weight: 700; color: var(--mt-blue); letter-spacing: -0.5px; line-height: 1; margin-bottom: 6px; }
+.cat-meta-label { font-size: 11px; color: var(--gray-600); letter-spacing: 1.5px; text-transform: uppercase; font-weight: 500; }
+
+/* Section divider */
+.section-divider { max-width: 1320px; margin: 80px auto 40px; padding: 0 24px; display: flex; align-items: center; gap: 24px; }
+.section-divider-line { flex: 1; height: 1px; background: var(--gray-200); }
+.section-divider h2 { font-size: 14px; color: var(--mt-blue); font-weight: 700; letter-spacing: 3px; text-transform: uppercase; padding: 0 8px; white-space: nowrap; }
+.section-divider-sub { font-size: 11px; color: var(--gray-500); font-weight: 500; letter-spacing: 1.5px; text-transform: uppercase; padding: 0 8px; }
+
+/* Hero category grid (4 cols, large cards) */
+.hero-grid-wrap { max-width: 1320px; margin: 0 auto; padding: 0 24px; }
+.hero-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+
+.hero-card { background: white; border-radius: 4px; overflow: hidden; transition: all 0.25s ease; cursor: pointer; text-decoration: none; color: inherit; display: block; position: relative; }
+.hero-card:hover { box-shadow: 0 16px 40px rgba(15,37,71,0.12); transform: translateY(-3px); text-decoration: none; }
+.hero-card-img { background: var(--gray-50); aspect-ratio: 1; padding: 36px; display: flex; align-items: center; justify-content: center; position: relative; }
+.hero-card-img img { max-width: 100%; max-height: 100%; object-fit: contain; }
+.hero-card-img .placeholder { width: 60%; aspect-ratio: 1; background: var(--gray-150); border-radius: 4px; display: flex; align-items: center; justify-content: center; color: var(--gray-400); font-size: 11px; }
+
+/* Subtle tier badge top-right of image */
+.hero-tier-badge { position: absolute; top: 16px; right: 16px; padding: 5px 11px; font-size: 9.5px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.2px; border-radius: 2px; }
+.hero-tier-badge.t1 { background: rgba(22,163,74,0.1); color: #15803D; }
+.hero-tier-badge.t2 { background: rgba(217,119,6,0.1); color: #A16207; }
+.hero-tier-badge.t3 { background: rgba(37,99,235,0.1); color: #1E40AF; }
+
+.hero-card-body { padding: 28px 24px 24px; }
+.hero-card-title { font-size: 21px; font-weight: 700; color: var(--mt-blue); letter-spacing: 1px; text-transform: uppercase; line-height: 1.2; margin-bottom: 14px; }
+.hero-card-desc { font-size: 13.5px; color: var(--gray-700); line-height: 1.6; min-height: 80px; margin-bottom: 24px; }
+.hero-card-divider { border: none; border-top: 1.5px dotted var(--gray-300); margin: 0 0 18px 0; }
+.hero-card-cta { display: flex; justify-content: space-between; align-items: center; }
+.hero-card-cta-text { font-size: 12px; font-weight: 600; color: var(--mt-blue); letter-spacing: 1.8px; text-transform: uppercase; }
+.hero-card-cta-arrow { color: var(--mt-blue); font-size: 18px; transition: transform 0.2s; }
+.hero-card:hover .hero-card-cta-arrow { transform: translateX(6px); }
+
+/* Tier breakdown row (small monospace below CTA) */
+.hero-card-tiers { display: flex; gap: 12px; margin-top: 14px; padding-top: 12px; border-top: 1px solid var(--gray-100); font-size: 10.5px; color: var(--gray-500); font-family: 'IBM Plex Mono', monospace; }
+.hero-card-tier { display: flex; align-items: center; gap: 4px; }
+.hero-card-tier .tier-dot { width: 7px; height: 7px; border-radius: 50%; }
+.hero-card-tier .tier-dot.t1 { background: #16A34A; }
+.hero-card-tier .tier-dot.t2 { background: #D97706; }
+.hero-card-tier .tier-dot.t3 { background: #2563EB; }
+.hero-card-tier.zero { opacity: 0.35; }
+
+/* Tier explainer (corporate banner) */
+.tier-explainer { max-width: 1320px; margin: 80px auto 0; padding: 0 24px; }
+.tier-explainer-inner { background: var(--mt-blue); color: white; border-radius: 4px; padding: 56px 48px; }
+.tier-explainer-eyebrow { font-size: 12px; letter-spacing: 2.5px; text-transform: uppercase; opacity: 0.7; margin-bottom: 16px; font-weight: 600; }
+.tier-explainer h2 { font-size: 32px; font-weight: 600; letter-spacing: -0.5px; line-height: 1.2; margin-bottom: 20px; max-width: 720px; }
+.tier-explainer p { font-size: 15px; line-height: 1.6; opacity: 0.85; max-width: 820px; margin-bottom: 40px; }
+.tier-explainer-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+.tier-explainer-card { padding-top: 24px; border-top: 2px solid rgba(255,255,255,0.25); }
+.tier-explainer-card-num { font-size: 36px; font-weight: 700; letter-spacing: -1px; line-height: 1; margin-bottom: 12px; }
+.tier-explainer-card-label { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; opacity: 0.7; font-weight: 600; margin-bottom: 8px; }
+.tier-explainer-card-desc { font-size: 13px; line-height: 1.55; opacity: 0.85; }
+
+/* Extended catalogue section */
+.extended-section { background: var(--gray-50); padding: 72px 0; margin-top: 80px; border-top: 1px solid var(--gray-150); }
+.extended-inner { max-width: 1320px; margin: 0 auto; padding: 0 24px; }
+.extended-section h2 { font-size: 14px; color: var(--mt-blue); font-weight: 700; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 8px; }
+.extended-section .lead { font-size: 28px; font-weight: 600; color: var(--gray-900); letter-spacing: -0.5px; line-height: 1.25; max-width: 920px; margin-bottom: 16px; }
+.extended-section .desc { font-size: 15px; color: var(--gray-700); line-height: 1.6; max-width: 820px; margin-bottom: 40px; }
+.extended-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.ext-card { background: white; border: 1px solid var(--gray-200); border-radius: 4px; padding: 24px; transition: all 0.2s; cursor: pointer; text-decoration: none; color: inherit; display: block; }
+.ext-card:hover { border-color: var(--mt-blue); box-shadow: 0 4px 16px rgba(15,37,71,0.08); text-decoration: none; }
+.ext-card-icon { font-size: 26px; margin-bottom: 14px; }
+.ext-card-title { font-size: 12px; font-weight: 700; color: var(--mt-blue); letter-spacing: 1.2px; text-transform: uppercase; margin-bottom: 10px; }
+.ext-card-meta { font-size: 12.5px; color: var(--gray-700); margin-bottom: 14px; line-height: 1.5; min-height: 56px; }
+.ext-card-meta strong { color: var(--gray-900); display: block; margin-bottom: 4px; }
+.ext-card-cta { font-size: 11px; font-weight: 600; color: var(--mt-blue); letter-spacing: 1.5px; text-transform: uppercase; }
+
+/* Footer CTA */
+.footer-cta-section { padding: 88px 24px; text-align: center; max-width: 880px; margin: 0 auto; }
+.footer-cta-eyebrow { font-size: 12px; color: var(--mt-blue); font-weight: 600; letter-spacing: 2.5px; text-transform: uppercase; margin-bottom: 16px; }
+.footer-cta-section h2 { font-size: 36px; font-weight: 600; color: var(--gray-900); letter-spacing: -0.5px; margin-bottom: 16px; line-height: 1.2; }
+.footer-cta-section p { font-size: 15px; color: var(--gray-700); line-height: 1.6; margin-bottom: 32px; }
+.footer-cta-buttons { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+
+@media (max-width: 1024px) {
+  .nav-inner { justify-content: flex-start; overflow-x: auto; }
+  .hero-grid { grid-template-columns: repeat(2, 1fr); }
+  .extended-grid { grid-template-columns: repeat(2, 1fr); }
+  .tier-explainer-grid { grid-template-columns: 1fr; }
+  .cat-title-section h1 { font-size: 32px; }
+  .extended-section .lead { font-size: 22px; }
+  .footer-cta-section h2 { font-size: 26px; }
+  .tier-explainer-inner { padding: 40px 28px; }
+  .tier-explainer h2 { font-size: 24px; }
+}
+@media (max-width: 640px) {
+  .header-actions .header-action span { display: none; }
+  .hero-grid, .extended-grid { grid-template-columns: 1fr; }
+  .cat-title-section { padding: 32px 16px; }
+  .cat-title-section h1 { font-size: 26px; }
+  .cat-meta { gap: 24px !important; }
+  .cat-meta-num { font-size: 24px; }
+  .section-divider { margin: 56px auto 28px; flex-wrap: wrap; }
+}
+</style>
+
+<!-- MT Shell: header/footer assets -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/styles.css">
+<link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+<link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png">
+<link rel="alternate" hreflang="en" href="https://xjcsierra.github.io/mt-valves-dubai/MT_Catalogue.html">
+<link rel="alternate" hreflang="ar" href="https://xjcsierra.github.io/mt-valves-dubai/ar/MT_Catalogue.html">
+<link rel="alternate" hreflang="x-default" href="https://xjcsierra.github.io/mt-valves-dubai/MT_Catalogue.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/rtl.css">
+
+</head>
+<body>
+<div style="background:#FEF3C7;border-bottom:2px solid #F59E0B;color:#92400E;padding:10px 24px;text-align:center;font-size:0.875rem;font-family:'Cairo',sans-serif;direction:rtl;position:relative;z-index:9999;">
+🚧 <strong style="color:#78350F;">معاينة AR — مسودة</strong> · هذه نسخة معاينة للنسخة العربية. تتطلب مراجعة لغوية من ناطق أصلي قبل النشر النهائي.
+</div>
+
+<!-- =========== MT SHELL — TOPBAR + HEADER =========== -->
+<div class="mts-topbar">
+  <div class="mts-topbar-inner">
+    <div class="mts-topbar-left">
+      <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a>
+      <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+      <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg></a>
+    </div>
+    <div class="mts-topbar-center">
+      <span>📞 +971 4 453 4693</span>
+      <span>📧 sales@mtmiddleeast.com</span>
+      <span><svg width="22" height="14" viewBox="0 0 12 6" xmlns="http://www.w3.org/2000/svg" style="display:inline-block;vertical-align:middle;border-radius:2px;flex-shrink:0;"><rect width="3" height="6" fill="#EF3340"/><rect x="3" width="9" height="2" fill="#00843D"/><rect x="3" y="2" width="9" height="2" fill="#FFFFFF"/><rect x="3" y="4" width="9" height="2" fill="#000000"/></svg> أبراج بحيرات جميرا</span>
+    </div>
+    <div class="topbar-right">
+      <a href="../MT_Catalogue.html" class="">EN</a>
+      <a href="MT_Catalogue.html" class=" active">AR</a>
+    </div>
+  </div>
+
+<div class="mts-mainheader">
+  <div class="mts-header-inner">
+    <a href="index.html" class="mts-brand-logo" aria-label="MT Valves & Fittings">
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="Capa_1" x="0px" y="0px" viewBox="0 0 500 500" style="enable-background:new 0 0 500 500;" xml:space="preserve"><style type="text/css">	.st0{fill:#96BCE5;}	.st1{clip-path:url(#SVGID_00000028293389285023033970000009576526279349472417_);fill:#3D75BA;}	.st2{fill:#3D75BA;}			.st3{clip-path:url(#SVGID_00000169523863405724927080000002316061180491850883_);fill:url(#SVGID_00000057128013713373848240000012295056972260004536_);}	.st4{clip-path:url(#SVGID_00000083807938995984377050000009384473108822567319_);fill:#3D75BA;}</style><g>	<polygon class="st0" points="280.44,129.84 300.47,189.96 320.23,189.96 280.19,310.21 340.31,310.21 380.36,189.96 440.47,189.96   460.5,129.84  "></polygon>	<g>		<defs>			<rect id="SVGID_1_" x="39.5" y="129.84" width="421" height="240.32"></rect>		</defs>		<clipPath id="SVGID_00000159447393895895634090000005042513252083627651_">			<use xlink:href="#SVGID_1_" style="overflow:visible;"></use>		</clipPath>		<path style="clip-path:url(#SVGID_00000159447393895895634090000005042513252083627651_);fill:#3D75BA;" d="M396,278.76h3.21   c3.75,0,6.78-1.28,6.78-4.39c0-2.74-1.96-4.57-6.25-4.57c-1.78,0-3.03,0.18-3.75,0.37V278.76z M395.82,295.58h-6.78V265.6   c2.67-0.37,6.43-0.91,11.24-0.91c5.53,0,8.03,0.91,9.99,2.38c1.78,1.28,3.03,3.47,3.03,6.4c0,3.65-2.67,6.03-6.07,7.13v0.37   c2.85,0.91,4.28,3.29,5.17,7.31c0.89,4.57,1.61,6.22,2.14,7.31h-7.14c-0.89-1.1-1.43-3.65-2.32-7.31   c-0.53-3.11-2.32-4.57-6.07-4.57h-3.21V295.58z M400.28,256.09c-12.67,0-22.49,10.78-22.49,23.95c0,13.35,9.82,23.95,22.85,23.95   c12.67,0.19,22.31-10.6,22.31-23.76c0-13.35-9.64-24.13-22.49-24.13H400.28z M400.64,250.06c16.6,0,29.8,13.16,29.8,29.98   c0,16.82-13.21,30.16-29.98,30.16c-16.77,0-30.16-13.34-30.16-30.16c0-16.82,13.39-29.98,30.16-29.98H400.64z"></path>	</g>	<path class="st2" d="M340.31,310.21h0.21l-0.1-0.32L340.31,310.21z M220.27,129.84l-30.15,90.53l-30.15-90.53H99.82L39.75,310.21  h60.12l30.02-90.15l30.02,90.15h0.28h59.84h0.28l30.04-90.19l29.93,89.87l30.06-90.26l-29.91-89.8H220.27z"></path>	<g>		<defs>			<path id="SVGID_00000106861127787646596650000013816297959637074086_" d="M340.31,310.21h0.21l-0.11-0.32L340.31,310.21z     M220.27,129.84l-30.15,90.53l-30.15-90.53H99.82L39.75,310.21h60.12l30.02-90.15l30.02,90.15h0.28h59.84h0.28l30.04-90.19    l29.93,89.87l30.06-90.26l-29.91-89.8H220.27z"></path>		</defs>		<clipPath id="SVGID_00000157298264236242306010000015723931376774020497_">			<use xlink:href="#SVGID_00000106861127787646596650000013816297959637074086_" style="overflow:visible;"></use>		</clipPath>					<linearGradient id="SVGID_00000116205097728882479350000011669946229960376448_" gradientUnits="userSpaceOnUse" x1="-53.3228" y1="674.7147" x2="-50.6375" y2="674.7147" gradientTransform="matrix(0 67.5744 67.5744 0 -45403.3125 3733.0935)">			<stop offset="0" style="stop-color:#3D75BA"></stop>			<stop offset="0.9763" style="stop-color:#322C68"></stop>			<stop offset="1" style="stop-color:#322C68"></stop>		</linearGradient>					<rect x="39.75" y="129.84" style="clip-path:url(#SVGID_00000157298264236242306010000015723931376774020497_);fill:url(#SVGID_00000116205097728882479350000011669946229960376448_);" width="300.77" height="180.37"></rect>	</g>	<g>		<defs>			<rect id="SVGID_00000110471337291933058870000015210727969065086902_" x="39.5" y="129.84" width="421" height="240.32"></rect>		</defs>		<clipPath id="SVGID_00000051345843617841486920000016333128194100502933_">			<use xlink:href="#SVGID_00000110471337291933058870000015210727969065086902_" style="overflow:visible;"></use>		</clipPath>		<path style="clip-path:url(#SVGID_00000051345843617841486920000016333128194100502933_);fill:#3D75BA;" d="M430.1,344.11   c0-4.9-1.51-9.28-8.57-9.28c-5.56,0-9.28,2.45-9.23,8.34c0.05,3.39,0.33,5.42,6.93,9.47c4.9,3.02,7.96,4.34,7.96,8.95   c0,3.91-1.93,6.03-5.89,6.03c-6.08,0-6.36-3.91-6.36-7.68h-3.11c-0.28,6.64,2.69,10.22,9.33,10.22c5.94,0,9.05-2.97,9.05-9.05   c0-6.6-4.29-7.49-8.48-10.5c-3.86-2.78-6.41-2.92-6.41-7.96c0-4,2.31-5.28,5.98-5.28c4.62,0,5.65,2.54,5.75,6.74H430.1z    M402.49,366.63c-1.6,0.61-3.77,0.99-6.36,0.99c-7.35,0-7.26-6.55-7.26-15.12c0-8.57-0.09-15.12,7.26-15.12   c4.76,0,6.69,2.35,6.69,6.83h3.01c0.14-6.6-3.2-9.37-9.7-9.37c-11.07,0-10.27,11.07-10.27,17.67s-0.8,17.67,10.27,17.67   c3.2,0,6.36-0.47,9.38-1.41v-17.01h-9.9v2.55h6.88V366.63z M360.89,369.5v-30.1l0.09-0.09l13.85,30.2h4.57v-34.01h-3.02v29.77   l-0.09,0.09l-13.8-29.87h-4.62v34.01H360.89z M347.51,369.5h3.02v-34.01h-3.02V369.5z M331.83,369.5h3.02v-31.47h8.29v-2.55h-19.6   v2.55h8.29V369.5z M310.91,369.5h3.02v-31.47h8.29v-2.55h-19.6v2.55h8.29V369.5z M295.22,369.5h3.02v-34.01h-3.02V369.5z    M276.38,369.5h3.01V353.3h10.55v-2.54h-10.55v-12.72h11.36v-2.55h-14.37V369.5z M240.05,369.5h7.77   c10.27,0,11.92-5.56,11.92-16.87c0-11.59-1.18-17.15-10.7-17.15h-9V369.5z M243.07,338.03h3.96c8.39,0,9.7,2.82,9.7,12.58   c0,13.9-0.89,16.35-9.99,16.35h-3.67V338.03z M214.38,369.5v-30.1l0.09-0.09l13.85,30.2h4.57v-34.01h-3.02v29.77l-0.09,0.09   l-13.81-29.87h-4.62v34.01H214.38z M188.75,358.01l5.75-19.22h0.09l5.79,19.22H188.75z M192.89,335.49l-10.74,34.01h3.02   l2.69-8.95h13.33l2.73,8.95h3.16l-10.6-34.01H192.89z M168.4,344.11c0-4.9-1.51-9.28-8.57-9.28c-5.56,0-9.28,2.45-9.23,8.34   c0.05,3.39,0.33,5.42,6.93,9.47c4.9,3.02,7.96,4.34,7.96,8.95c0,3.91-1.93,6.03-5.89,6.03c-6.08,0-6.36-3.91-6.36-7.68h-3.11   c-0.28,6.64,2.69,10.22,9.33,10.22c5.94,0,9.05-2.97,9.05-9.05c0-6.6-4.29-7.49-8.48-10.5c-3.86-2.78-6.41-2.92-6.41-7.96   c0-4,2.31-5.28,5.99-5.28c4.62,0,5.65,2.54,5.75,6.74H168.4z M130.15,335.49v34.01h15.73v-2.54h-12.72V353.3h11.83v-2.54h-11.83   v-12.72h12.39v-2.55H130.15z M114.83,365.92h-0.09l-8.06-30.43h-3.2l9.47,34.01h3.77l9.42-34.01h-2.92L114.83,365.92z    M104.51,369.5v-2.54H93.25v-31.47h-3.02v34.01H104.51z M68.1,358.01l5.75-19.22h0.09l5.79,19.22H68.1z M72.24,335.49L61.5,369.5   h3.02l2.69-8.95h13.33l2.73,8.95h3.16l-10.6-34.01H72.24z M50.85,365.92h-0.09l-8.06-30.43h-3.2l9.47,34.01h3.77l9.42-34.01h-2.92   L50.85,365.92z"></path>	</g></g></svg>
+    </a>
+    
+    <nav class="mts-nav-main">
+      <div class="mts-nav-dropdown">
+        <a href="index.html#categories" class="">المنتجات</a>
+        <div class="mts-nav-dropdown-menu"><a href="../catalogue/ball-valves.html">صمامات كروية</a>
+<a href="../catalogue/butterfly-valves.html">صمامات الفراشة</a>
+<a href="../catalogue/check-valves.html">صمامات عدم رجوع</a>
+<a href="../catalogue/gate-valves.html">صمامات بوابة</a>
+<a href="../catalogue/angle-valves.html">صمامات الزاوية</a>
+<a href="../catalogue/strainers.html">مصافي Y</a>
+<a href="../catalogue/bibcocks.html">صنابير الحدائق</a>
+<a href="../catalogue/expansion-joints.html">وصلات تمدد مطاطية</a></div>
+      </div>
+      <a href="catalogue.html" class="">الكتالوج</a>
+      <a href="about.html" class="">الشركة</a>
+      <a href="news.html" class="">الأخبار</a>
+      <div class="mts-nav-dropdown">
+        <a href="resources.html" class="">الموارد</a>
+      <a href="knowledge.html">المعرفة</a>
+        <div class="mts-nav-dropdown-menu">
+          <a href="resources.html">التحميلات</a>
+          <a href="projects.html">المشاريع والفعاليات</a>
+          <a href="glossary.html">مسرد المصطلحات الفنية</a>
+        </div>
+      </div>
+      <a href="certifications.html" class="">الشهادات</a>
+      <a href="where-to-buy.html" class="">أماكن الشراء</a>
+      <a href="contact.html" class="">اتصل بنا</a>
+    </nav>
+    
+    <div class="mts-header-search">
+      <svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+      <input type="search" placeholder="Search">
+    </div>
+  </div>
+</div>
+<!-- =========== / MT SHELL HEADER =========== -->
+
+
+
+
+<nav class="main-nav">
+  <div class="nav-inner">
+    <a class="nav-item" href="#">المنتجات <span class="chev">▼</span></a>
+    <a class="nav-item active" href="#">الكتالوج</a>
+    <a class="nav-item" href="#">الشركة</a>
+    <a class="nav-item" href="#">الأخبار</a>
+    <a class="nav-item" href="#">الموارد <span class="chev">▼</span></a>
+    <a class="nav-item" href="#">الشهادات</a>
+    <a class="nav-item" href="#">أماكن الشراء</a>
+    <a class="nav-item" href="#">اتصل بنا</a>
+    <a class="nav-item nav-quote" href="MT_Cart_Quote.html">اطلب عرض سعر</a>
+  </div>
+</nav>
+
+<section class="cat-title-section">
+  <div class="cat-title-eyebrow">— Complete Range —</div>
+  <h1>الكتالوج</h1>
+  <p class="lead">High-quality industrial valves and fittings, manufactured in Spain since 1994 and delivered across the GCC from our Dubai logistics hub. Browse the complete MT range — from forged brass ball valves to ductile cast iron butterfly valves and stainless steel components.</p>
+  <div class="cat-meta">
+    <div class="cat-meta-item"><div class="cat-meta-num">4,596</div><div class="cat-meta-label">مرجع</div></div>
+    <div class="cat-meta-item"><div class="cat-meta-num">16</div><div class="cat-meta-label">فئات الصمامات</div></div>
+    <div class="cat-meta-item"><div class="cat-meta-num">12</div><div class="cat-meta-label">الشهادات</div></div>
+    <div class="cat-meta-item"><div class="cat-meta-num">6</div><div class="cat-meta-label">اللغات</div></div>
+    <div class="cat-meta-item"><div class="cat-meta-num">1994</div><div class="cat-meta-label">سنة التأسيس</div></div>
+  </div>
+</section>
+
+<div class="section-divider">
+  <div class="section-divider-line"></div>
+  <h2>G1 · Hidrosanitario</h2>
+  <span class="section-divider-sub">Brass valves for plumbing &amp; sanitary networks</span>
+  <div class="section-divider-line"></div>
+</div>
+<div class="hero-grid-wrap"><div class="hero-grid"><a href="MT_Listing.html" class="hero-card">
+  <div class="hero-card-img">
+    <img src="https://d7rh5s3nxmpy4.cloudfront.net/CMP8164/8/4074.jpg" alt="Ball Valves PN-30" loading="lazy" onerror="this.style.opacity=0.3">
+    <span class="hero-tier-badge t1">في مخزون دبي</span>
+  </div>
+  <div class="hero-card-body">
+    <h3 class="hero-card-title">Ball Valves PN-30</h3>
+    <p class="hero-card-desc">Forged brass ball valves rated for 30 bar working pressure. F-F and M-F threaded ends, red/blue/black colour-coded handles in steel or stainless steel.</p>
+    <hr class="hero-card-divider">
+    <div class="hero-card-cta">
+      <span class="hero-card-cta-text">46 References</span>
+      <span class="hero-card-cta-arrow">→</span>
+    </div>
+    <div class="hero-card-tiers"><span class="hero-card-tier"><span class="tier-dot t1"></span>29 Dubai</span><span class="hero-card-tier"><span class="tier-dot t2"></span>17 EU</span></div>
+  </div>
+</a><a href="#" class="hero-card">
+  <div class="hero-card-img">
+    <img src="https://d7rh5s3nxmpy4.cloudfront.net/CMP8164/9/4091.jpg" alt="Ball Valves PN-25" loading="lazy" onerror="this.style.opacity=0.3">
+    <span class="hero-tier-badge t1">في مخزون دبي</span>
+  </div>
+  <div class="hero-card-body">
+    <h3 class="hero-card-title">Ball Valves PN-25</h3>
+    <p class="hero-card-desc">Brass ball valves PN-25 for residential plumbing networks. Red and blue handle variants, ergonomic carbon steel or butterfly handles.</p>
+    <hr class="hero-card-divider">
+    <div class="hero-card-cta">
+      <span class="hero-card-cta-text">30 References</span>
+      <span class="hero-card-cta-arrow">→</span>
+    </div>
+    <div class="hero-card-tiers"><span class="hero-card-tier"><span class="tier-dot t1"></span>30 Dubai</span><span class="hero-card-tier zero"><span class="tier-dot t2"></span>0 EU</span></div>
+  </div>
+</a><a href="MT_PDP_Mockup.html" class="hero-card">
+  <div class="hero-card-img">
+    <img src="https://d7rh5s3nxmpy4.cloudfront.net/CMP8164/16/4114.jpg" alt="Check Valves" loading="lazy" onerror="this.style.opacity=0.3">
+    <span class="hero-tier-badge t1">في مخزون دبي</span>
+  </div>
+  <div class="hero-card-body">
+    <h3 class="hero-card-title">صمامات عدم رجوع</h3>
+    <p class="hero-card-desc">صمامات عدم الرجوع والقرص من النحاس المطروق. أنواع ثقيلة وخفيفة بحاجز معدني لمنع التدفق العكسي بشكل موثوق.</p>
+    <hr class="hero-card-divider">
+    <div class="hero-card-cta">
+      <span class="hero-card-cta-text">18 References</span>
+      <span class="hero-card-cta-arrow">→</span>
+    </div>
+    <div class="hero-card-tiers"><span class="hero-card-tier"><span class="tier-dot t1"></span>18 Dubai</span><span class="hero-card-tier zero"><span class="tier-dot t2"></span>0 EU</span></div>
+  </div>
+</a><a href="#" class="hero-card">
+  <div class="hero-card-img">
+    <img src="https://d7rh5s3nxmpy4.cloudfront.net/CMP8164/1/4400-4400.jpg" alt="Angle Valves" loading="lazy" onerror="this.style.opacity=0.3">
+    <span class="hero-tier-badge t1">في مخزون دبي</span>
+  </div>
+  <div class="hero-card-body">
+    <h3 class="hero-card-title">صمامات الزاوية</h3>
+    <p class="hero-card-desc">Brass angle valves for sanitary connections — bidet, washing machine, dishwasher. Standard and decorative chrome models.</p>
+    <hr class="hero-card-divider">
+    <div class="hero-card-cta">
+      <span class="hero-card-cta-text">14 References</span>
+      <span class="hero-card-cta-arrow">→</span>
+    </div>
+    <div class="hero-card-tiers"><span class="hero-card-tier"><span class="tier-dot t1"></span>12 Dubai</span><span class="hero-card-tier"><span class="tier-dot t2"></span>2 EU</span></div>
+  </div>
+</a><a href="#" class="hero-card">
+  <div class="hero-card-img">
+    <img src="https://d7rh5s3nxmpy4.cloudfront.net/CMP8164/3/4111-4111_0.jpg" alt="Bibcocks &amp;amp; Garden Taps" loading="lazy" onerror="this.style.opacity=0.3">
+    <span class="hero-tier-badge t1">في مخزون دبي</span>
+  </div>
+  <div class="hero-card-body">
+    <h3 class="hero-card-title">Bibcocks &amp; Garden Taps</h3>
+    <p class="hero-card-desc">صنابير حدائق نحاسية للاستخدام الخارجي بمقبض ذراع أحمر. مثالية للري ووصلات الخرطوم وتركيبات الحدائق.</p>
+    <hr class="hero-card-divider">
+    <div class="hero-card-cta">
+      <span class="hero-card-cta-text">11 References</span>
+      <span class="hero-card-cta-arrow">→</span>
+    </div>
+    <div class="hero-card-tiers"><span class="hero-card-tier"><span class="tier-dot t1"></span>6 Dubai</span><span class="hero-card-tier"><span class="tier-dot t2"></span>5 EU</span></div>
+  </div>
+</a><a href="#" class="hero-card">
+  <div class="hero-card-img">
+    <img src="https://d7rh5s3nxmpy4.cloudfront.net/CMP8164/17/4113.jpg" alt="Gate Valves (Brass)" loading="lazy" onerror="this.style.opacity=0.3">
+    <span class="hero-tier-badge t1">في مخزون دبي</span>
+  </div>
+  <div class="hero-card-body">
+    <h3 class="hero-card-title">صمامات البوابة (نحاس)</h3>
+    <p class="hero-card-desc">صمامات بوابة نحاسية مسننة لشبكات المياه والتدفئة والصناعية. هيكل مدمج مع مقبض يدوي معدني.</p>
+    <hr class="hero-card-divider">
+    <div class="hero-card-cta">
+      <span class="hero-card-cta-text">9 References</span>
+      <span class="hero-card-cta-arrow">→</span>
+    </div>
+    <div class="hero-card-tiers"><span class="hero-card-tier"><span class="tier-dot t1"></span>5 Dubai</span><span class="hero-card-tier"><span class="tier-dot t2"></span>4 EU</span></div>
+  </div>
+</a><a href="#" class="hero-card">
+  <div class="hero-card-img">
+    <img src="https://d7rh5s3nxmpy4.cloudfront.net/CMP8164/12/4222.jpg" alt="Concealed “Carla” Valves" loading="lazy" onerror="this.style.opacity=0.3">
+    <span class="hero-tier-badge t1">في مخزون دبي</span>
+  </div>
+  <div class="hero-card-body">
+    <h3 class="hero-card-title">Concealed “Carla” Valves</h3>
+    <p class="hero-card-desc">صمامات كروية نحاسية طويلة العنق للتركيبات المخفية خلف الجدران أو داخل الأثاث. مقابض مكعبة وقياسية بطلاء كروم.</p>
+    <hr class="hero-card-divider">
+    <div class="hero-card-cta">
+      <span class="hero-card-cta-text">5 References</span>
+      <span class="hero-card-cta-arrow">→</span>
+    </div>
+    <div class="hero-card-tiers"><span class="hero-card-tier"><span class="tier-dot t1"></span>3 Dubai</span><span class="hero-card-tier"><span class="tier-dot t2"></span>2 EU</span></div>
+  </div>
+</a><a href="#" class="hero-card">
+  <div class="hero-card-img">
+    <img src="https://d7rh5s3nxmpy4.cloudfront.net/CMP8164/2/4409-4409.jpg" alt="Decorative Angle Valves" loading="lazy" onerror="this.style.opacity=0.3">
+    <span class="hero-tier-badge t1">في مخزون دبي</span>
+  </div>
+  <div class="hero-card-body">
+    <h3 class="hero-card-title">صمامات زاوية ديكورية</h3>
+    <p class="hero-card-desc">صمامات زاوية ديكورية فاخرة بآلية click-clack. طلاء كروم مصقول لتركيبات الحمامات الراقية.</p>
+    <hr class="hero-card-divider">
+    <div class="hero-card-cta">
+      <span class="hero-card-cta-text">8 References</span>
+      <span class="hero-card-cta-arrow">→</span>
+    </div>
+    <div class="hero-card-tiers"><span class="hero-card-tier"><span class="tier-dot t1"></span>3 Dubai</span><span class="hero-card-tier"><span class="tier-dot t2"></span>5 EU</span></div>
+  </div>
+</a></div></div>
+
+<div class="section-divider">
+  <div class="section-divider-line"></div>
+  <h2>G2 · Industrial</h2>
+  <span class="section-divider-sub">Cast iron valves for HVAC, industrial process &amp; water systems</span>
+  <div class="section-divider-line"></div>
+</div>
+<div class="hero-grid-wrap"><div class="hero-grid"><a href="MT_Listing_Extended.html" class="hero-card">
+  <div class="hero-card-img">
+    <img src="https://d7rh5s3nxmpy4.cloudfront.net/CMP8164/4/51140-511420.jpg" alt="Butterfly Valves (Gold)" loading="lazy" onerror="this.style.opacity=0.3">
+    <span class="hero-tier-badge t1">في مخزون دبي</span>
+  </div>
+  <div class="hero-card-body">
+    <h3 class="hero-card-title">صمامات الفراشة (Gold)</h3>
+    <p class="hero-card-desc">Wafer butterfly valves Gold series — ductile cast iron body GGG40, stainless steel disc, EPDM/NBR seat for HVAC and water networks.</p>
+    <hr class="hero-card-divider">
+    <div class="hero-card-cta">
+      <span class="hero-card-cta-text">93 References</span>
+      <span class="hero-card-cta-arrow">→</span>
+    </div>
+    <div class="hero-card-tiers"><span class="hero-card-tier"><span class="tier-dot t1"></span>9 Dubai</span><span class="hero-card-tier"><span class="tier-dot t2"></span>84 EU</span></div>
+  </div>
+</a><a href="#" class="hero-card">
+  <div class="hero-card-img">
+    <img src="https://d7rh5s3nxmpy4.cloudfront.net/CMP8164/5/5116-5116.jpg" alt="Cast Iron Check Valves" loading="lazy" onerror="this.style.opacity=0.3">
+    <span class="hero-tier-badge t1">في مخزون دبي</span>
+  </div>
+  <div class="hero-card-body">
+    <h3 class="hero-card-title">صمامات عدم رجوع من الحديد الزهر</h3>
+    <p class="hero-card-desc">صمامات عدم رجوع بقرص مزدوج وكرة من الحديد الزهر مع داخليات من الفولاذ المقاوم للصدأ. أطراف شفاهية لتطبيقات المياه والعمليات الصناعيةcations.</p>
+    <hr class="hero-card-divider">
+    <div class="hero-card-cta">
+      <span class="hero-card-cta-text">22 References</span>
+      <span class="hero-card-cta-arrow">→</span>
+    </div>
+    <div class="hero-card-tiers"><span class="hero-card-tier"><span class="tier-dot t1"></span>11 Dubai</span><span class="hero-card-tier"><span class="tier-dot t2"></span>11 EU</span></div>
+  </div>
+</a><a href="#" class="hero-card">
+  <div class="hero-card-img">
+    <img src="https://d7rh5s3nxmpy4.cloudfront.net/CMP8164/6/5113-5113.jpg" alt="Cast Iron Gate Valves" loading="lazy" onerror="this.style.opacity=0.3">
+    <span class="hero-tier-badge t1">في مخزون دبي</span>
+  </div>
+  <div class="hero-card-body">
+    <h3 class="hero-card-title">صمامات بوابة من الحديد الزهر</h3>
+    <p class="hero-card-desc">EPDM resilient wedge gate valves with flanged ends. Cast iron body for industrial water distribution and large diameter networks.</p>
+    <hr class="hero-card-divider">
+    <div class="hero-card-cta">
+      <span class="hero-card-cta-text">14 References</span>
+      <span class="hero-card-cta-arrow">→</span>
+    </div>
+    <div class="hero-card-tiers"><span class="hero-card-tier"><span class="tier-dot t1"></span>6 Dubai</span><span class="hero-card-tier"><span class="tier-dot t2"></span>8 EU</span></div>
+  </div>
+</a><a href="#" class="hero-card">
+  <div class="hero-card-img">
+    <img src="https://d7rh5s3nxmpy4.cloudfront.net/CMP8164/5/5110-5110.jpg" alt="Y-Strainers" loading="lazy" onerror="this.style.opacity=0.3">
+    <span class="hero-tier-badge t1">في مخزون دبي</span>
+  </div>
+  <div class="hero-card-body">
+    <h3 class="hero-card-title">مصافي Y</h3>
+    <p class="hero-card-desc">مصافي على شكل Y من الحديد الزهر مع شبكة من الفولاذ المقاوم للصدأ. أطراف شفاهية، غطاء قابل للإزالة لسهولة الصيانة والتنظيف.</p>
+    <hr class="hero-card-divider">
+    <div class="hero-card-cta">
+      <span class="hero-card-cta-text">12 References</span>
+      <span class="hero-card-cta-arrow">→</span>
+    </div>
+    <div class="hero-card-tiers"><span class="hero-card-tier"><span class="tier-dot t1"></span>5 Dubai</span><span class="hero-card-tier"><span class="tier-dot t2"></span>7 EU</span></div>
+  </div>
+</a><a href="#" class="hero-card">
+  <div class="hero-card-img">
+    <img src="https://d7rh5s3nxmpy4.cloudfront.net/CMP8164/2/5120-5120.jpg" alt="Rubber Expansion Joints" loading="lazy" onerror="this.style.opacity=0.3">
+    <span class="hero-tier-badge t1">في مخزون دبي</span>
+  </div>
+  <div class="hero-card-body">
+    <h3 class="hero-card-title">وصلات تمدد مطاطية</h3>
+    <p class="hero-card-desc">Single-arch rubber expansion joints for vibration absorption. Threaded and flanged versions in EPDM and NBR rubber compounds.</p>
+    <hr class="hero-card-divider">
+    <div class="hero-card-cta">
+      <span class="hero-card-cta-text">39 References</span>
+      <span class="hero-card-cta-arrow">→</span>
+    </div>
+    <div class="hero-card-tiers"><span class="hero-card-tier"><span class="tier-dot t1"></span>14 Dubai</span><span class="hero-card-tier"><span class="tier-dot t2"></span>25 EU</span></div>
+  </div>
+</a></div></div>
+
+<div class="section-divider">
+  <div class="section-divider-line"></div>
+  <h2>G2 · Inoxidable</h2>
+  <span class="section-divider-sub">Stainless steel valves for hygienic, chemical &amp; high-corrosion applications</span>
+  <div class="section-divider-line"></div>
+</div>
+<div class="hero-grid-wrap"><div class="hero-grid"><a href="#" class="hero-card">
+  <div class="hero-card-img">
+    <img src="https://d7rh5s3nxmpy4.cloudfront.net/CMP8164/8/5128-5128.jpg" alt="Stainless Steel Flanged Ball" loading="lazy" onerror="this.style.opacity=0.3">
+    <span class="hero-tier-badge t1">في مخزون دبي</span>
+  </div>
+  <div class="hero-card-body">
+    <h3 class="hero-card-title">صمام كروي شفاهي من الفولاذ المقاوم للصدأ</h3>
+    <p class="hero-card-desc">Two-piece stainless steel flanged ball valves PN-40 for industrial process and chemical applications. AISI 316 body and ball.</p>
+    <hr class="hero-card-divider">
+    <div class="hero-card-cta">
+      <span class="hero-card-cta-text">12 References</span>
+      <span class="hero-card-cta-arrow">→</span>
+    </div>
+    <div class="hero-card-tiers"><span class="hero-card-tier"><span class="tier-dot t1"></span>12 Dubai</span><span class="hero-card-tier zero"><span class="tier-dot t2"></span>0 EU</span></div>
+  </div>
+</a><a href="#" class="hero-card">
+  <div class="hero-card-img">
+    <img src="https://d7rh5s3nxmpy4.cloudfront.net/CMP8164/1/0910.jpg" alt="Stainless Steel 2-Piece Ball" loading="lazy" onerror="this.style.opacity=0.3">
+    <span class="hero-tier-badge t1">في مخزون دبي</span>
+  </div>
+  <div class="hero-card-body">
+    <h3 class="hero-card-title">Stainless Steel 2-Piece Ball</h3>
+    <p class="hero-card-desc">Threaded 2-piece stainless steel ball valves with red and blue handle variants. Full bore design, PN-40 working pressure.</p>
+    <hr class="hero-card-divider">
+    <div class="hero-card-cta">
+      <span class="hero-card-cta-text">55 References</span>
+      <span class="hero-card-cta-arrow">→</span>
+    </div>
+    <div class="hero-card-tiers"><span class="hero-card-tier"><span class="tier-dot t1"></span>12 Dubai</span><span class="hero-card-tier"><span class="tier-dot t2"></span>43 EU</span></div>
+  </div>
+</a><a href="#" class="hero-card">
+  <div class="hero-card-img">
+    <img src="https://d7rh5s3nxmpy4.cloudfront.net/CMP8164/3/310912.jpg" alt="Stainless Steel 3-Piece (Stock Cuba)" loading="lazy" onerror="this.style.opacity=0.3">
+    <span class="hero-tier-badge t3">تصنيع حسب الطلب</span>
+  </div>
+  <div class="hero-card-body">
+    <h3 class="hero-card-title">Stainless Steel 3-Piece (Stock Cuba)</h3>
+    <p class="hero-card-desc">Threaded 3-piece stainless steel ball valves with full-bore design. Available with mounting platform for actuators (ISO 5211).</p>
+    <hr class="hero-card-divider">
+    <div class="hero-card-cta">
+      <span class="hero-card-cta-text">0 References</span>
+      <span class="hero-card-cta-arrow">→</span>
+    </div>
+    <div class="hero-card-tiers"><span class="hero-card-tier zero"><span class="tier-dot t1"></span>0 Dubai</span><span class="hero-card-tier zero"><span class="tier-dot t2"></span>0 EU</span></div>
+  </div>
+</a></div></div>
+
+<section class="tier-explainer">
+  <div class="tier-explainer-inner">
+    <div class="tier-explainer-eyebrow">ثلاث مستويات تنفيذ</div>
+    <h2>From 48-hour Dubai delivery to made-to-order specialty configurations.</h2>
+    <p>Every reference in the MT catalogue is available across one of three fulfillment paths — designed for the realities of the GCC market. Stock locally for fast-moving SKUs, ship from Spain for the extended range, manufacture-to-order for project-specific configurations.</p>
+    <div class="tier-explainer-grid">
+      <div class="tier-explainer-card">
+        <div class="tier-explainer-card-num">221</div>
+        <div class="tier-explainer-card-label">Tier 1 · Dubai Stock</div>
+        <div class="tier-explainer-card-desc">High-rotation references stocked locally at our Jumeirah Lakes Towers warehouse. 48-hour delivery within UAE, 72-hour across GCC. Standard PVP, payment by card / COD / invoice.</div>
+      </div>
+      <div class="tier-explainer-card">
+        <div class="tier-explainer-card-num">1,132</div>
+        <div class="tier-explainer-card-label">Tier 2 · European Stock</div>
+        <div class="tier-explainer-card-desc">Extended valves and core fittings shipped from our Barcelona facility. Consolidated weekly DHL/sea freight, 7-15 day delivery. Pricing +12% logistics, customs handled by MT.</div>
+      </div>
+      <div class="tier-explainer-card">
+        <div class="tier-explainer-card-num">3,243</div>
+        <div class="tier-explainer-card-label">Tier 3 · Made-to-Order</div>
+        <div class="tier-explainer-card-desc">Specialty configurations and project-volume orders. 4-6 week production lead time at MT factory. Quote-only with project pricing, MOQ may apply, custom certificates available.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="extended-section">
+  <div class="extended-inner">
+    <h2>كتالوج PIM موسع</h2>
+    <div class="lead">Beyond valves: the complete MT range covers fittings, manifolds, spare parts and complementary components for the full fluid-conduction system.</div>
+    <p class="desc">For project specifiers and B2B procurement, the extended catalogue includes 2,500+ fittings (brass threaded, stainless steel press, PPR, compression, galvanised) and 1,300+ accessories. Most are Tier 3 made-to-order — request a quote for project pricing, MOQ &amp; lead times.</p>
+    <div class="extended-grid">
+      <a href="#" class="ext-card">
+        <div class="ext-card-icon">🔧</div>
+        <div class="ext-card-title">تجهيزات نحاسية مسننة</div>
+        <div class="ext-card-meta"><strong>344 references</strong>Elbows, tees, reducers, bushings, plugs &amp; caps in BSP/NPT</div>
+        <div class="ext-card-cta">Browse →</div>
+      </a>
+      <a href="#" class="ext-card">
+        <div class="ext-card-icon">🔩</div>
+        <div class="ext-card-title">Stainless Steel Press</div>
+        <div class="ext-card-meta"><strong>611 references</strong>AISI 304/316 press fittings · M-profile · potable, gas, compressed air</div>
+        <div class="ext-card-cta">Browse →</div>
+      </a>
+      <a href="#" class="ext-card">
+        <div class="ext-card-icon">🟢</div>
+        <div class="ext-card-title">تجهيزات PPR</div>
+        <div class="ext-card-meta"><strong>279 references</strong>Green &amp; blue polypropylene · DVGW certified · welded</div>
+        <div class="ext-card-cta">Browse →</div>
+      </a>
+      <a href="#" class="ext-card">
+        <div class="ext-card-icon">⚙️</div>
+        <div class="ext-card-title">Compression &amp; Press</div>
+        <div class="ext-card-meta"><strong>405 references</strong>PEX, multilayer pipe fittings, manifolds &amp; metal-to-plastic</div>
+        <div class="ext-card-cta">Browse →</div>
+      </a>
+      <a href="#" class="ext-card">
+        <div class="ext-card-icon">📐</div>
+        <div class="ext-card-title">فولاذ مجلفن</div>
+        <div class="ext-card-meta"><strong>296 references</strong>Hot-dip galvanised carbon steel for irrigation &amp; industrial water</div>
+        <div class="ext-card-cta">Browse →</div>
+      </a>
+      <a href="#" class="ext-card">
+        <div class="ext-card-icon">🔌</div>
+        <div class="ext-card-title">Tubes &amp; Flexibles</div>
+        <div class="ext-card-meta"><strong>108 references</strong>Stainless steel tubes 304/316 &amp; flexible braided connectors</div>
+        <div class="ext-card-cta">Browse →</div>
+      </a>
+      <a href="#" class="ext-card">
+        <div class="ext-card-icon">🔄</div>
+        <div class="ext-card-title">قطع الغيار</div>
+        <div class="ext-card-meta"><strong>132 references</strong>مقاعد وشبكات وأختام ومقابض بديلة لصمامات MT</div>
+        <div class="ext-card-cta">Browse →</div>
+      </a>
+      <a href="#" class="ext-card">
+        <div class="ext-card-icon">📦</div>
+        <div class="ext-card-title">مكونات أخرى</div>
+        <div class="ext-card-meta"><strong>1,109 references</strong>Manifolds, gaskets, brackets &amp; miscellaneous fittings</div>
+        <div class="ext-card-cta">Browse →</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="footer-cta-section">
+  <div class="footer-cta-eyebrow">— Project Procurement —</div>
+  <h2>Need help finding the right reference?</h2>
+  <p>Our Dubai technical team can identify the correct MT references for your project, prepare a consolidated quote across all three fulfillment tiers, and align certifications with UAE/GCC compliance requirements (ESMA, Dubai Municipality, SASO).</p>
+  <div class="footer-cta-buttons">
+    <a href="MT_Cart_Quote.html" class="btn btn-primary btn-lg">Request a Project Quote</a>
+    <a href="#" class="btn btn-ghost btn-lg">Download PDF Catalogue 2026</a>
+    <a href="tel:+97144534693" class="btn btn-ghost btn-lg">Call Dubai · +971 4 453 4693</a>
+  </div>
+</section>
+
+<!-- Footer -->
+
+<!-- =========== MT SHELL — FOOTER + WA + COOKIES =========== -->
+<div class="mts-mainfooter">
+  <div class="mts-footer-inner">
+    <div class="mts-footer-grid">
+      <div class="mts-footer-brand">
+        <a href="index.html" class="mts-brand-logo"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="Capa_1" x="0px" y="0px" viewBox="0 0 500 500" style="enable-background:new 0 0 500 500;" xml:space="preserve"><style type="text/css">	.st0{fill:#96BCE5;}	.st1{clip-path:url(#SVGID_00000028293389285023033970000009576526279349472417_);fill:#3D75BA;}	.st2{fill:#3D75BA;}			.st3{clip-path:url(#SVGID_00000169523863405724927080000002316061180491850883_);fill:url(#SVGID_00000057128013713373848240000012295056972260004536_);}	.st4{clip-path:url(#SVGID_00000083807938995984377050000009384473108822567319_);fill:#3D75BA;}</style><g>	<polygon class="st0" points="280.44,129.84 300.47,189.96 320.23,189.96 280.19,310.21 340.31,310.21 380.36,189.96 440.47,189.96   460.5,129.84  "></polygon>	<g>		<defs>			<rect id="SVGID_1_" x="39.5" y="129.84" width="421" height="240.32"></rect>		</defs>		<clipPath id="SVGID_00000159447393895895634090000005042513252083627651_">			<use xlink:href="#SVGID_1_" style="overflow:visible;"></use>		</clipPath>		<path style="clip-path:url(#SVGID_00000159447393895895634090000005042513252083627651_);fill:#3D75BA;" d="M396,278.76h3.21   c3.75,0,6.78-1.28,6.78-4.39c0-2.74-1.96-4.57-6.25-4.57c-1.78,0-3.03,0.18-3.75,0.37V278.76z M395.82,295.58h-6.78V265.6   c2.67-0.37,6.43-0.91,11.24-0.91c5.53,0,8.03,0.91,9.99,2.38c1.78,1.28,3.03,3.47,3.03,6.4c0,3.65-2.67,6.03-6.07,7.13v0.37   c2.85,0.91,4.28,3.29,5.17,7.31c0.89,4.57,1.61,6.22,2.14,7.31h-7.14c-0.89-1.1-1.43-3.65-2.32-7.31   c-0.53-3.11-2.32-4.57-6.07-4.57h-3.21V295.58z M400.28,256.09c-12.67,0-22.49,10.78-22.49,23.95c0,13.35,9.82,23.95,22.85,23.95   c12.67,0.19,22.31-10.6,22.31-23.76c0-13.35-9.64-24.13-22.49-24.13H400.28z M400.64,250.06c16.6,0,29.8,13.16,29.8,29.98   c0,16.82-13.21,30.16-29.98,30.16c-16.77,0-30.16-13.34-30.16-30.16c0-16.82,13.39-29.98,30.16-29.98H400.64z"></path>	</g>	<path class="st2" d="M340.31,310.21h0.21l-0.1-0.32L340.31,310.21z M220.27,129.84l-30.15,90.53l-30.15-90.53H99.82L39.75,310.21  h60.12l30.02-90.15l30.02,90.15h0.28h59.84h0.28l30.04-90.19l29.93,89.87l30.06-90.26l-29.91-89.8H220.27z"></path>	<g>		<defs>			<path id="SVGID_00000106861127787646596650000013816297959637074086_" d="M340.31,310.21h0.21l-0.11-0.32L340.31,310.21z     M220.27,129.84l-30.15,90.53l-30.15-90.53H99.82L39.75,310.21h60.12l30.02-90.15l30.02,90.15h0.28h59.84h0.28l30.04-90.19    l29.93,89.87l30.06-90.26l-29.91-89.8H220.27z"></path>		</defs>		<clipPath id="SVGID_00000157298264236242306010000015723931376774020497_">			<use xlink:href="#SVGID_00000106861127787646596650000013816297959637074086_" style="overflow:visible;"></use>		</clipPath>					<linearGradient id="SVGID_00000116205097728882479350000011669946229960376448_" gradientUnits="userSpaceOnUse" x1="-53.3228" y1="674.7147" x2="-50.6375" y2="674.7147" gradientTransform="matrix(0 67.5744 67.5744 0 -45403.3125 3733.0935)">			<stop offset="0" style="stop-color:#3D75BA"></stop>			<stop offset="0.9763" style="stop-color:#322C68"></stop>			<stop offset="1" style="stop-color:#322C68"></stop>		</linearGradient>					<rect x="39.75" y="129.84" style="clip-path:url(#SVGID_00000157298264236242306010000015723931376774020497_);fill:url(#SVGID_00000116205097728882479350000011669946229960376448_);" width="300.77" height="180.37"></rect>	</g>	<g>		<defs>			<rect id="SVGID_00000110471337291933058870000015210727969065086902_" x="39.5" y="129.84" width="421" height="240.32"></rect>		</defs>		<clipPath id="SVGID_00000051345843617841486920000016333128194100502933_">			<use xlink:href="#SVGID_00000110471337291933058870000015210727969065086902_" style="overflow:visible;"></use>		</clipPath>		<path style="clip-path:url(#SVGID_00000051345843617841486920000016333128194100502933_);fill:#3D75BA;" d="M430.1,344.11   c0-4.9-1.51-9.28-8.57-9.28c-5.56,0-9.28,2.45-9.23,8.34c0.05,3.39,0.33,5.42,6.93,9.47c4.9,3.02,7.96,4.34,7.96,8.95   c0,3.91-1.93,6.03-5.89,6.03c-6.08,0-6.36-3.91-6.36-7.68h-3.11c-0.28,6.64,2.69,10.22,9.33,10.22c5.94,0,9.05-2.97,9.05-9.05   c0-6.6-4.29-7.49-8.48-10.5c-3.86-2.78-6.41-2.92-6.41-7.96c0-4,2.31-5.28,5.98-5.28c4.62,0,5.65,2.54,5.75,6.74H430.1z    M402.49,366.63c-1.6,0.61-3.77,0.99-6.36,0.99c-7.35,0-7.26-6.55-7.26-15.12c0-8.57-0.09-15.12,7.26-15.12   c4.76,0,6.69,2.35,6.69,6.83h3.01c0.14-6.6-3.2-9.37-9.7-9.37c-11.07,0-10.27,11.07-10.27,17.67s-0.8,17.67,10.27,17.67   c3.2,0,6.36-0.47,9.38-1.41v-17.01h-9.9v2.55h6.88V366.63z M360.89,369.5v-30.1l0.09-0.09l13.85,30.2h4.57v-34.01h-3.02v29.77   l-0.09,0.09l-13.8-29.87h-4.62v34.01H360.89z M347.51,369.5h3.02v-34.01h-3.02V369.5z M331.83,369.5h3.02v-31.47h8.29v-2.55h-19.6   v2.55h8.29V369.5z M310.91,369.5h3.02v-31.47h8.29v-2.55h-19.6v2.55h8.29V369.5z M295.22,369.5h3.02v-34.01h-3.02V369.5z    M276.38,369.5h3.01V353.3h10.55v-2.54h-10.55v-12.72h11.36v-2.55h-14.37V369.5z M240.05,369.5h7.77   c10.27,0,11.92-5.56,11.92-16.87c0-11.59-1.18-17.15-10.7-17.15h-9V369.5z M243.07,338.03h3.96c8.39,0,9.7,2.82,9.7,12.58   c0,13.9-0.89,16.35-9.99,16.35h-3.67V338.03z M214.38,369.5v-30.1l0.09-0.09l13.85,30.2h4.57v-34.01h-3.02v29.77l-0.09,0.09   l-13.81-29.87h-4.62v34.01H214.38z M188.75,358.01l5.75-19.22h0.09l5.79,19.22H188.75z M192.89,335.49l-10.74,34.01h3.02   l2.69-8.95h13.33l2.73,8.95h3.16l-10.6-34.01H192.89z M168.4,344.11c0-4.9-1.51-9.28-8.57-9.28c-5.56,0-9.28,2.45-9.23,8.34   c0.05,3.39,0.33,5.42,6.93,9.47c4.9,3.02,7.96,4.34,7.96,8.95c0,3.91-1.93,6.03-5.89,6.03c-6.08,0-6.36-3.91-6.36-7.68h-3.11   c-0.28,6.64,2.69,10.22,9.33,10.22c5.94,0,9.05-2.97,9.05-9.05c0-6.6-4.29-7.49-8.48-10.5c-3.86-2.78-6.41-2.92-6.41-7.96   c0-4,2.31-5.28,5.99-5.28c4.62,0,5.65,2.54,5.75,6.74H168.4z M130.15,335.49v34.01h15.73v-2.54h-12.72V353.3h11.83v-2.54h-11.83   v-12.72h12.39v-2.55H130.15z M114.83,365.92h-0.09l-8.06-30.43h-3.2l9.47,34.01h3.77l9.42-34.01h-2.92L114.83,365.92z    M104.51,369.5v-2.54H93.25v-31.47h-3.02v34.01H104.51z M68.1,358.01l5.75-19.22h0.09l5.79,19.22H68.1z M72.24,335.49L61.5,369.5   h3.02l2.69-8.95h13.33l2.73,8.95h3.16l-10.6-34.01H72.24z M50.85,365.92h-0.09l-8.06-30.43h-3.2l9.47,34.01h3.77l9.42-34.01h-2.92   L50.85,365.92z"></path>	</g></g></svg></a>
+        <p class="mts-footer-tag">شركة إسبانية متعددة الجنسيات منذ 1994. متخصصة في الصمامات والوصلات لنقل وتوزيع السوائل في قطاعات الصرف الصحي والصناعة والأعمال المنزلية.</p>
+        <div class="mts-footer-loc">
+          <div class="mts-footer-loc-row">
+            <span><svg width="22" height="14" viewBox="0 0 12 6" xmlns="http://www.w3.org/2000/svg" style="display:inline-block;vertical-align:middle;border-radius:2px;flex-shrink:0;"><rect width="3" height="6" fill="#EF3340"/><rect x="3" width="9" height="2" fill="#00843D"/><rect x="3" y="2" width="9" height="2" fill="#FFFFFF"/><rect x="3" y="4" width="9" height="2" fill="#000000"/></svg></span>
+            <div>
+              <div class="mts-footer-loc-lab">مركز الإمارات</div>
+              <div class="mts-footer-loc-txt">BB1 Jumeirah Lakes Towers, Dubai 32765, UAE</div>
+              <div class="mts-footer-loc-sub">الأحد - الخميس 08:00–17:30 (توقيت الخليج) · +971 4 453 4693</div>
+            </div>
+          </div>
+          <div class="mts-footer-loc-row">
+            <span><svg width="22" height="14" viewBox="0 0 6 4" xmlns="http://www.w3.org/2000/svg" style="display:inline-block;vertical-align:middle;border-radius:2px;flex-shrink:0;"><rect width="6" height="4" fill="#AA151B"/><rect y="1" width="6" height="2" fill="#F1BF00"/></svg></span>
+            <div>
+              <div class="mts-footer-loc-lab">المقر الرئيسي</div>
+              <div class="mts-footer-loc-txt">برشلونة، إسبانيا</div>
+              <div class="mts-footer-loc-sub">الإثنين - الجمعة 08:00–17:30 (توقيت أوروبا الوسطى) · +34 936 804 980</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h4>الفئات</h4>
+        <ul><li><a href="../catalogue/ball-valves.html">صمامات كروية</a></li>
+<li><a href="../catalogue/butterfly-valves.html">صمامات الفراشة</a></li>
+<li><a href="../catalogue/check-valves.html">صمامات عدم رجوع</a></li>
+<li><a href="../catalogue/gate-valves.html">صمامات بوابة</a></li>
+<li><a href="../catalogue/angle-valves.html">صمامات الزاوية</a></li>
+<li><a href="../catalogue/strainers.html">مصافي Y</a></li>
+<li><a href="../catalogue/bibcocks.html">صنابير الحدائق</a></li>
+<li><a href="../catalogue/expansion-joints.html">وصلات تمدد مطاطية</a></li></ul>
+      </div>
+      <div>
+        <h4>MT دبي</h4>
+        <ul>
+          <li><a href="catalogue.html">الكتالوج</a></li>
+          <li><a href="about.html">الشركة</a></li>
+          <li><a href="news.html">الأخبار</a></li>
+          <li><a href="resources.html">الموارد</a></li>
+          <li><a href="projects.html">المشاريع</a></li>
+          <li><a href="glossary.html">المصطلحات</a></li>
+          <li><a href="where-to-buy.html">أماكن الشراء</a></li>
+          <li><a href="certifications.html">الشهادات</a></li>
+          <li><a href="contact.html">اتصل بنا</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>احصل على عرض سعر</h4>
+        <p style="color:rgba(255,255,255,0.55); font-size:0.92rem; line-height:1.5;">تحدث مع فريقنا في دبي حول الأسعار والمخزون والتوصيل.</p>
+        <a href="contact.html" class="mts-footer-cta">Request Quotation →</a>
+        <a href="https://wa.me/971586125781" class="mts-footer-wa" target="_blank" rel="noopener">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.297-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          واتساب مباشر
+        </a>
+      </div>
+    </div>
+    <div class="mts-footer-bot">
+      <div>© 2026 MT Valves &amp; Fittings, S.L. · All rights reserved</div>
+      <div class="mts-footer-bot-links">
+        <a href="#">Legal</a><a href="#">الخصوصية</a><a href="#">ملفات تعريف الارتباط</a><a href="#">Terms</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<a href="https://wa.me/971586125781?text=Hello%20MT%20Dubai" class="mts-wa-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.297-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<div class="mts-cookie-banner" id="cookieBanner">
+  <div class="mts-cookie-banner-text"><strong>نستخدم ملفات تعريف الارتباط.</strong> This site uses essential cookies to function and analytics cookies to improve your experience. By accepting, you agree to our <a href="#">سياسة الخصوصية</a>. Compliant with UAE Personal Data Protection Law (PDPL).</div>
+  <div class="mts-cookie-banner-buttons"><button class="mts-cookie-decline" onclick="cookieResponse(false)">الأساسية فقط</button><button class="mts-cookie-accept" onclick="cookieResponse(true)">قبول الكل</button></div>
+</div>
+<script>
+(function() {
+  function cookieResponse(accept) {
+    try { document.cookie = 'mt_cookie_consent=' + (accept ? 'all' : 'essential') + ';path=/;max-age=' + (60*60*24*180); } catch(e) {}
+    document.getElementById('cookieBanner').classList.remove('show');
+  }
+  window.cookieResponse = cookieResponse;
+  if (document.cookie.indexOf('mt_cookie_consent=') === -1) {
+    setTimeout(function() { document.getElementById('cookieBanner').classList.add('show'); }, 1500);
+  }
+})();
+</script>
+<!-- =========== / MT SHELL FOOTER =========== -->
+
+</body></html>
