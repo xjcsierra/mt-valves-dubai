@@ -7202,3 +7202,83 @@ footer ul li a:hover { color: var(--mt-blue-light); }
 @media (max-width: 900px) {
   .cat-tech-intro-grid { grid-template-columns: 1fr; gap: 24px; }
 }
+
+/* ========================================================
+   v14.5.1 — Cart icon + badge in topbar (added Apr 29 2026)
+   ======================================================== */
+.topbar-right .cart-link,
+.mts-topbar-right .cart-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+  color: inherit;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  padding: 4px 10px;
+  border: 1.5px solid rgba(255, 255, 255, 0.25);
+  border-radius: 999px;
+  margin-left: 14px;
+  transition: background 0.15s ease, border-color 0.15s ease;
+  white-space: nowrap;
+}
+.topbar-right .cart-link:hover,
+.mts-topbar-right .cart-link:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+.topbar-right .cart-link svg,
+.mts-topbar-right .cart-link svg {
+  width: 16px;
+  height: 16px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 2;
+}
+.cart-badge {
+  display: none;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 5px;
+  align-items: center;
+  justify-content: center;
+  background: #E63946;
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 800;
+  border-radius: 9px;
+  line-height: 1;
+}
+
+/* ========================================================
+   v14.5.2 — Hero/Featured slider spacing fix (Apr 29 2026)
+   Reduce excess whitespace between text column and product image.
+   ======================================================== */
+.featured-slider { padding: 60px 0 70px !important; }
+.featured-head { margin-bottom: 32px !important; }
+.featured-stage { min-height: 420px !important; }
+.featured-slide { gap: 24px !important; align-items: center !important; }
+.featured-slide-content {
+  padding-left: 32px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+}
+.featured-slide-content > *:last-child { margin-bottom: 0 !important; }
+.featured-slide-desc { margin-bottom: 22px !important; max-width: 480px !important; }
+.featured-meta { margin-bottom: 24px !important; }
+.featured-slide-img {
+  padding: 12px 24px !important;
+  align-items: center !important;
+}
+.featured-slide-img img {
+  max-height: 360px !important;
+}
+@media (max-width: 900px) {
+  .featured-stage { min-height: auto !important; }
+  .featured-slide { grid-template-columns: 1fr !important; gap: 12px !important; }
+  .featured-slide-content { padding-left: 0 !important; padding: 0 16px !important; }
+  .featured-slide-img { padding: 8px !important; }
+  .featured-slide-img img { max-height: 240px !important; }
+}
