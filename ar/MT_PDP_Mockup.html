@@ -124,7 +124,7 @@ button { font-family: inherit; cursor: pointer; }
 .variant-option.selected { background: var(--mt-blue); color: white; border-color: var(--mt-blue); box-shadow: 0 0 0 3px rgba(41,125,224,0.15); }
 .variant-option.low-stock::after { content: ""; position: absolute; top: 4px; right: 4px; width: 6px; height: 6px; background: var(--amber); border-radius: 50%; }
 
-/* Price */
+/* السعر */
 .price-block { margin-bottom: 18px; padding-bottom: 18px; border-bottom: 1px solid var(--gray-150); }
 .price-main { font-size: 38px; font-weight: 700; color: var(--gray-900); letter-spacing: -1.2px; line-height: 1; }
 .price-currency { font-size: 18px; color: var(--gray-600); margin-right: 4px; font-weight: 500; }
@@ -192,7 +192,7 @@ button { font-family: inherit; cursor: pointer; }
 .tender-block strong { color: var(--mt-blue-dark); font-weight: 600; }
 .tender-copy { position: absolute; top: 16px; right: 16px; }
 
-/* Datasheet */
+/* ورقة البيانات */
 .download-list { max-width: 720px; display: grid; gap: 8px; }
 .download-link { display: flex; align-items: center; gap: 16px; padding: 14px 16px; border: 1px solid var(--gray-200); border-radius: var(--radius-md); text-decoration: none; color: var(--gray-800); transition: all 0.15s; background: white; }
 .download-link:hover { border-color: var(--mt-blue); background: var(--mt-blue-light); text-decoration: none; }
@@ -481,7 +481,7 @@ button { font-family: inherit; cursor: pointer; }
     <div class="topbar-right">
       <a href="../MT_PDP_Mockup.html" class="">EN</a>
       <a href="MT_PDP_Mockup.html" class=" active">AR</a>
-    <a href="../MT_Cart_Quote.html" class="cart-link" aria-label="Shopping cart"><svg viewBox="0 0 24 24"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.7 13.4a2 2 0 002 1.6h9.7a2 2 0 002-1.6L23 6H6"/></svg><span>Cart</span><span class="cart-badge">0</span></a></div>
+    <a href="../MT_السلة_Quote.html" class="cart-link" aria-label="Shopping cart"><svg viewBox="0 0 24 24"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.7 13.4a2 2 0 002 1.6h9.7a2 2 0 002-1.6L23 6H6"/></svg><span>السلة</span><span class="cart-badge">0</span></a></div>
   </div>
 
 <div class="mts-mainheader">
@@ -621,7 +621,7 @@ button { font-family: inherit; cursor: pointer; }
           <span class="price-currency">AED</span><span id="price-display">49.50</span>
         </div>
         <div class="price-vat">
-          incl. 5% VAT: <strong>AED <span id="price-vat-display">51.98</span></strong> · per unit
+          incl. 5% VAT: <strong>AED <span id="price-vat-display">51.98</span></strong> · للوحدة
         </div>
         <div class="price-tier">📊 أسعار الكميات متوفرة — انظر مستويات B2B</div>
       </div>
@@ -667,9 +667,9 @@ button { font-family: inherit; cursor: pointer; }
       <div class="info-card icon-row" style="border-top:none;padding-top:14px;margin-top:0">
         <div class="label">طرق الدفع</div>
         <div class="icons">
-          <span class="icon-pill">💳 Card</span>
-          <span class="icon-pill">💵 COD</span>
-          <span class="icon-pill">📄 Invoice (B2B)</span>
+          <span class="icon-pill">💳 بطاقة</span>
+          <span class="icon-pill">💵 الدفع عند الاستلام</span>
+          <span class="icon-pill">📄 فاتورة (B2B)</span>
           <span class="icon-pill">Tabby</span>
           <span class="icon-pill">Tamara</span>
         </div>
@@ -740,7 +740,7 @@ button { font-family: inherit; cursor: pointer; }
         <div>
           <h2 class="compliance-title">التوافق والشهادات</h2>
           <p class="compliance-sub">
-            Tested and approved by the world&#x2019;s most respected water authorities.
+            Tested و approved by the world&#x2019;s most respected water authorities.
             <strong>شهادات معلَّمة بنجمة</strong> carry direct procurement weight in the UAE specifier channel.
           </p>
         </div>
@@ -792,7 +792,7 @@ button { font-family: inherit; cursor: pointer; }
     <!-- Description tab -->
     <div class="tab-panel active" id="description">
       <p class="desc-summary">
-        <strong>Heavy-duty F-F brass non-return valve with metal shutter</strong> for reliable backflow prevention in residential and commercial water installations. Forged brass body for high working pressure, robust metal shutter, and threaded female-female ends in BSP standard. Designed and manufactured in Spain since 1994 under ISO 9001 &amp; 14001 certified processes.
+        <strong>Heavy-duty F-F brass non-return valve with metal shutter</strong> for reliable backflow prevention in residential و commercial water installations. Forged brass body for high working pressure, robust metal shutter, و threaded female-female ends in BSP standard. Designed و manufactured in Spain since 1994 under ISO 9001 &amp; 14001 certified processes.
       </p>
       <div class="spec-table">
         <div class="spec-row"><div class="spec-label">القطر الاسمي</div><div class="spec-value mono"><span id="spec-dn">DN15</span> · <span id="spec-size">1/2"</span></div></div>
@@ -820,7 +820,7 @@ button { font-family: inherit; cursor: pointer; }
         Copy this text directly into your project tender, BoQ, or RFQ documentation. Verified to MT manufacturing specifications.
       </p>
       <div class="tender-block">
-        <button class="btn copy-btn tender-copy">📋 Copy</button>
+        <button class="btn copy-btn tender-copy">📋 نسخ</button>
 <strong>MT Non-Return Valve — Heavy Type, Metal Shutter</strong><br>
 Type ........................ <strong id="tender-sku">MT-4114015</strong><br>
 Description ............... F-F threaded brass lift check valve, heavy duty with metal shutter<br>
@@ -841,14 +841,14 @@ Stock ......................... Available ex-stock Dubai (48h Dubai · 24-72h GC
     <div class="tab-panel" id="datasheet">
       <h3 style="font-size:18px;margin-bottom:12px;color:var(--gray-900)">الوثائق الفنية</h3>
       <p style="color:var(--gray-600);margin-bottom:20px;font-size:14px;max-width:760px">
-        All documents are available in EN, ES and AR. Click to download or request via email.
+        All documents are available in EN, ES و AR. Click to download or request via email.
       </p>
       <div class="download-list">
         <a href="#" class="download-link">
           <div class="download-icon">PDF</div>
           <div class="download-info">
-            <div class="title">MT-4114 Heavy Non-Return Valve · Technical Datasheet</div>
-            <div class="meta">EN/ES · 2.4 MB · Updated April 2026</div>
+            <div class="title">MT-4114 Heavy Non-Return Valve · Technical ورقة البيانات</div>
+            <div class="meta">EN/ES · 2.4 MB · Updated أبريل 2026</div>
           </div>
           <div class="download-arrow">→</div>
         </a>
@@ -891,7 +891,7 @@ Stock ......................... Available ex-stock Dubai (48h Dubai · 24-72h GC
     <div class="tab-panel" id="certifications">
       <h3 style="font-size:18px;margin-bottom:12px;color:var(--gray-900)">Certifications &amp; Approvals</h3>
       <p style="color:var(--gray-600);margin-bottom:24px;font-size:14px;max-width:760px">
-        This product is certified by the following national and international bodies. All certificates available for download under the Data Sheet tab.
+        This product is certified by the following national و international bodies. All certificates available for download under the Data Sheet tab.
       </p>
       <div class="cert-grid">
         <div class="cert-card"><div class="cert-badge">CE</div><div class="name">معتمد CE</div><div class="country">الاتحاد الأوروبي</div></div>
@@ -909,7 +909,7 @@ Stock ......................... Available ex-stock Dubai (48h Dubai · 24-72h GC
     <div class="tab-panel" id="compliance">
       <h3 style="font-size:18px;margin-bottom:12px;color:var(--gray-900)">UAE Compliance &amp; Local Standards</h3>
       <p style="color:var(--gray-600);margin-bottom:24px;font-size:14px;max-width:760px">
-        Ready for UAE market with local compliance pathway and Dubai Municipality (DM) registration in progress.
+        Ready for UAE market with local compliance pathway و Dubai Municipality (DM) registration in progress.
       </p>
       <div class="spec-table">
         <div class="spec-row"><div class="spec-label">مطابقة ESMA</div><div class="spec-value">✅ ECAS-registered (UAE.S 5009 / IEC equivalent)</div></div>
@@ -939,7 +939,7 @@ Stock ......................... Available ex-stock Dubai (48h Dubai · 24-72h GC
           <div class="product-card-stock">● 504 units متوفر · توصيل خلال 48 ساعة في دبي</div>
           <div class="product-card-buttons">
             <button class="btn btn-primary btn-sm">أضف إلى السلة</button>
-            <button class="btn btn-secondary btn-sm">Add to offer</button>
+            <button class="btn btn-secondary btn-sm">أضف إلى العرض</button>
           </div>
         </div>
       </article>
@@ -953,7 +953,7 @@ Stock ......................... Available ex-stock Dubai (48h Dubai · 24-72h GC
           <div class="product-card-stock">● 45 units متوفر · توصيل خلال 48 ساعة في دبي</div>
           <div class="product-card-buttons">
             <button class="btn btn-primary btn-sm">أضف إلى السلة</button>
-            <button class="btn btn-secondary btn-sm">Add to offer</button>
+            <button class="btn btn-secondary btn-sm">أضف إلى العرض</button>
           </div>
         </div>
       </article>
@@ -967,7 +967,7 @@ Stock ......................... Available ex-stock Dubai (48h Dubai · 24-72h GC
           <div class="product-card-stock">● 5 units متوفر · توصيل خلال 48 ساعة في دبي</div>
           <div class="product-card-buttons">
             <button class="btn btn-primary btn-sm">أضف إلى السلة</button>
-            <button class="btn btn-secondary btn-sm">Add to offer</button>
+            <button class="btn btn-secondary btn-sm">أضف إلى العرض</button>
           </div>
         </div>
       </article>
@@ -1012,7 +1012,7 @@ function copySKU() {
   const sku = document.getElementById('current-sku').textContent;
   navigator.clipboard.writeText(sku).then(() => {
     const lbl = document.getElementById('copy-label');
-    lbl.textContent = '✓ Copied';
+    lbl.textContent = '✓ تم النسخ';
     document.querySelector('.copy-btn').classList.add('copied');
     setTimeout(() => { lbl.textContent = 'Copy'; document.querySelector('.copy-btn').classList.remove('copied'); }, 1800);
   });
@@ -1042,7 +1042,7 @@ function changeQty(delta) {
             <span><svg width="22" height="14" viewBox="0 0 12 6" xmlns="http://www.w3.org/2000/svg" style="display:inline-block;vertical-align:middle;border-radius:2px;flex-shrink:0;"><rect width="3" height="6" fill="#EF3340"/><rect x="3" width="9" height="2" fill="#00843D"/><rect x="3" y="2" width="9" height="2" fill="#FFFFFF"/><rect x="3" y="4" width="9" height="2" fill="#000000"/></svg></span>
             <div>
               <div class="mts-footer-loc-lab">مركز الإمارات</div>
-              <div class="mts-footer-loc-txt">BB1 Jumeirah Lakes Towers, Dubai 32765, UAE</div>
+              <div class="mts-footer-loc-txt">BB1 أبراج بحيرات جميرا، دبي 32765، الإمارات</div>
               <div class="mts-footer-loc-sub">الأحد - الخميس 08:00–17:30 (توقيت الخليج) · +971 4 453 4693</div>
             </div>
           </div>
@@ -1084,7 +1084,7 @@ function changeQty(delta) {
       <div>
         <h4>احصل على عرض سعر</h4>
         <p style="color:rgba(255,255,255,0.55); font-size:0.92rem; line-height:1.5;">تحدث مع فريقنا في دبي حول الأسعار والمخزون والتوصيل.</p>
-        <a href="contact.html" class="mts-footer-cta">Request Quotation →</a>
+        <a href="contact.html" class="mts-footer-cta">طلب عرض سعر ←</a>
         <a href="https://wa.me/971586125781" class="mts-footer-wa" target="_blank" rel="noopener">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.297-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
           واتساب مباشر
@@ -1092,9 +1092,9 @@ function changeQty(delta) {
       </div>
     </div>
     <div class="mts-footer-bot">
-      <div>© 2026 MT Valves &amp; Fittings, S.L. · All rights reserved</div>
+      <div>© 2026 MT Valves &amp; Fittings, S.L. · جميع الحقوق محفوظة</div>
       <div class="mts-footer-bot-links">
-        <a href="#">Legal</a><a href="#">الخصوصية</a><a href="#">ملفات تعريف الارتباط</a><a href="#">Terms</a>
+        <a href="#">قانوني</a><a href="#">الخصوصية</a><a href="#">ملفات تعريف الارتباط</a><a href="#">الشروط</a>
       </div>
     </div>
   </div>
@@ -1105,7 +1105,7 @@ function changeQty(delta) {
 </a>
 
 <div class="mts-cookie-banner" id="cookieBanner">
-  <div class="mts-cookie-banner-text"><strong>نستخدم ملفات تعريف الارتباط.</strong> This site uses essential cookies to function and analytics cookies to improve your experience. By accepting, you agree to our <a href="#">سياسة الخصوصية</a>. Compliant with UAE Personal Data Protection Law (PDPL).</div>
+  <div class="mts-cookie-banner-text"><strong>نستخدم ملفات تعريف الارتباط.</strong> يستخدم هذا الموقع ملفات تعريف ارتباط أساسية لتشغيله وملفات تحليلية لتحسين تجربتك. بقبولك فإنك توافق على <a href="#">سياسة الخصوصية</a>. متوافق مع قانون حماية البيانات الشخصية في الإمارات (PDPL).</div>
   <div class="mts-cookie-banner-buttons"><button class="mts-cookie-decline" onclick="cookieResponse(false)">الأساسية فقط</button><button class="mts-cookie-accept" onclick="cookieResponse(true)">قبول الكل</button></div>
 </div>
 <script>

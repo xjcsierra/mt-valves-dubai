@@ -1,0 +1,33 @@
+<svg viewBox="0 0 400 240" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <linearGradient id="g8" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F1F5F9"/><stop offset="1" stop-color="#E2E8F0"/>
+    </linearGradient>
+    <linearGradient id="metal8" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3B82F6"/><stop offset="0.5" stop-color="#1E40AF"/><stop offset="1" stop-color="#0F172A"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="240" fill="url(#g8)"/>
+  <rect x="0" y="155" width="80" height="36" fill="#CBD5E1" stroke="#1F5FA8" stroke-width="1.2"/>
+  <rect x="80" y="135" width="14" height="76" fill="url(#metal8)" stroke="#0F172A" stroke-width="1.5"/>
+  <!-- characteristic globe body (round/spherical shape) -->
+  <ellipse cx="200" cy="155" rx="100" ry="64" fill="url(#metal8)" stroke="#0F172A" stroke-width="2"/>
+  <!-- internal seat/disc -->
+  <ellipse cx="200" cy="155" rx="14" ry="3" fill="#94A3B8"/>
+  <line x1="200" y1="155" x2="200" y2="120" stroke="#0F172A" stroke-width="2"/>
+  <!-- bonnet -->
+  <rect x="180" y="74" width="40" height="46" fill="url(#metal8)" stroke="#0F172A" stroke-width="1.5"/>
+  <rect x="306" y="135" width="14" height="76" fill="url(#metal8)" stroke="#0F172A" stroke-width="1.5"/>
+  <rect x="320" y="155" width="80" height="36" fill="#CBD5E1" stroke="#1F5FA8" stroke-width="1.2"/>
+  <!-- handwheel -->
+  <rect x="196" y="36" width="8" height="38" fill="#0F172A"/>
+  <circle cx="200" cy="32" r="22" fill="none" stroke="#0B4F7A" stroke-width="3"/>
+  <circle cx="200" cy="32" r="6" fill="#0B4F7A"/>
+  <g stroke="#0B4F7A" stroke-width="2.5" stroke-linecap="round">
+    <line x1="178" y1="32" x2="222" y2="32"/>
+    <line x1="200" y1="10" x2="200" y2="54"/>
+    <line x1="184" y1="16" x2="216" y2="48"/>
+    <line x1="184" y1="48" x2="216" y2="16"/>
+  </g>
+  <text x="200" y="226" text-anchor="middle" fill="#0F172A" font-family="monospace" font-size="11" font-weight="700">GLOBE VALVE · BS 1873 · API 623</text>
+</svg>

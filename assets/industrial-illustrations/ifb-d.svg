@@ -1,0 +1,32 @@
+<svg viewBox="0 0 400 240" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <linearGradient id="g2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#EFF6FF"/><stop offset="1" stop-color="#DBEAFE"/>
+    </linearGradient>
+    <linearGradient id="metal2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#60A5FA"/><stop offset="0.5" stop-color="#2563EB"/><stop offset="1" stop-color="#1E3A8A"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="240" fill="url(#g2)"/>
+  <rect x="0" y="115" width="76" height="36" fill="#CBD5E1" stroke="#1F5FA8" stroke-width="1.2"/>
+  <!-- DIN flange (round with bolts arranged radially) -->
+  <ellipse cx="86" cy="133" rx="6" ry="42" fill="url(#metal2)" stroke="#0B4F7A" stroke-width="1.8"/>
+  <g fill="#0F172A">
+    <circle cx="86" cy="100" r="2.2"/><circle cx="86" cy="115" r="2.2"/>
+    <circle cx="86" cy="151" r="2.2"/><circle cx="86" cy="166" r="2.2"/>
+  </g>
+  <rect x="92" y="78" width="190" height="110" rx="6" fill="url(#metal2)" stroke="#0B4F7A" stroke-width="1.8"/>
+  <line x1="187" y1="78" x2="187" y2="188" stroke="#0B4F7A" stroke-width="1" stroke-dasharray="2,2"/>
+  <circle cx="187" cy="133" r="22" fill="#94A3B8" stroke="#0B4F7A" stroke-width="1.5"/>
+  <ellipse cx="187" cy="133" rx="22" ry="8" fill="#1F5FA8" opacity="0.6"/>
+  <ellipse cx="288" cy="133" rx="6" ry="42" fill="url(#metal2)" stroke="#0B4F7A" stroke-width="1.8"/>
+  <g fill="#0F172A">
+    <circle cx="288" cy="100" r="2.2"/><circle cx="288" cy="115" r="2.2"/>
+    <circle cx="288" cy="151" r="2.2"/><circle cx="288" cy="166" r="2.2"/>
+  </g>
+  <rect x="294" y="115" width="106" height="36" fill="#CBD5E1" stroke="#1F5FA8" stroke-width="1.2"/>
+  <rect x="183" y="48" width="8" height="32" fill="#0B4F7A"/>
+  <rect x="143" y="36" width="100" height="14" rx="3" fill="#FCD34D" stroke="#92400E" stroke-width="1.5"/>
+  <circle cx="187" cy="43" r="6" fill="#0B4F7A"/>
+  <text x="200" y="220" text-anchor="middle" fill="#0B4F7A" font-family="monospace" font-size="11" font-weight="700">DIN EN 1092-1 · PN 16/40</text>
+</svg>

@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Shopping Cart · MT Valves Dubai</title>
+  <meta name="description" content="Request a quotation for industrial valves and fittings. MT Middle East — official UAE distributor of MT Valves &amp; Fittings España.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
@@ -302,7 +303,8 @@ button { font-family: inherit; cursor: pointer; }
 <a href="catalogue/angle-valves.html">Angle Valves</a>
 <a href="catalogue/strainers.html">Y-Strainers</a>
 <a href="catalogue/bibcocks.html">Garden Bibcocks</a>
-<a href="catalogue/expansion-joints.html">Rubber Expansion Joints</a></div>
+<a href="catalogue/expansion-joints.html">Rubber Expansion Joints</a>
+<a href="catalogue/industrial-valves.html" class="nav-new"><strong>Industrial Valves</strong> <span class="nav-badge">NEW</span></a></div>
       </div>
       <a href="catalogue.html" class="">Catalogue</a>
       <a href="about.html" class="">Company</a>
@@ -443,7 +445,7 @@ button { font-family: inherit; cursor: pointer; }
       <div class="form-row">
         <div class="form-group">
           <label>Business email <span class="req">*</span></label>
-          <input type="email" required placeholder="john@company.ae">
+          <input type="email" required placeholder="sales@mtmiddleeast.com">
         </div>
         <div class="form-group">
           <label>Phone <span class="req">*</span></label>
@@ -676,10 +678,16 @@ document.getElementById('quote-modal').addEventListener('click', function(e) {
     var html = '';
     var totalUnits = 0;
     var subtotal = 0;
+    var quoteOnlyCount = 0;
     cart.forEach(function(item) {
       totalUnits += item.qty;
-      var lineSubtotal = item.priceAED * item.qty;
-      subtotal += lineSubtotal;
+      if (item.quoteOnly) {
+        quoteOnlyCount++;
+      } else {
+        var lineSubtotal = item.priceAED * item.qty;
+        subtotal += lineSubtotal;
+      }
+      var lineSubtotal = item.quoteOnly ? 0 : (item.priceAED * item.qty);
       html += '<div class="cart-item">'
         + '<div class="cart-item-img"><img src="' + escapeHtml(item.image) + '" alt="' + escapeHtml(item.title) + '" onerror="this.style.opacity=0.3"></div>'
         + '<div class="cart-item-info">'
@@ -688,18 +696,17 @@ document.getElementById('quote-modal').addEventListener('click', function(e) {
             + '<span class="sku">SKU MT-' + escapeHtml(item.sku) + '</span>'
             + (item.category ? '<span>· ' + escapeHtml(item.category) + '</span>' : '')
           + '</div>'
-          + '<div class="stock-status">In stock · 48h Dubai delivery</div>'
+          + (item.quoteOnly ? '<div class="stock-status" style="color:#0B4F7A">📋 Quote on request</div>' : '<div class="stock-status">Available · 24-48h delivery</div>')
         + '</div>'
         + '<div class="qty-stepper">'
           + '<button onclick="MT_Cart.updateQty(\'' + escapeHtml(item.sku) + '\', ' + Math.max(1, item.qty-1) + ')">−</button>'
           + '<input type="number" value="' + item.qty + '" min="1" onchange="MT_Cart.updateQty(\'' + escapeHtml(item.sku) + '\', this.value)">'
           + '<button onclick="MT_Cart.updateQty(\'' + escapeHtml(item.sku) + '\', ' + (item.qty+1) + ')">+</button>'
         + '</div>'
-        + '<div class="cart-item-price">'
-          + '<span class="unit">AED ' + fmt(item.priceAED) + '</span>'
-          + '<span style="font-size:11px;color:#aaa">/ unit</span>'
-        + '</div>'
-        + '<div class="cart-item-subtotal">AED ' + fmt(lineSubtotal) + '<div class="vat-line">excl. VAT</div></div>'
+        + (item.quoteOnly
+            ? '<div class="cart-item-price"><span class="unit" style="color:#0B4F7A;font-weight:600;font-size:13px">Quote</span><span style="font-size:11px;color:#aaa">on request</span></div>'
+            : '<div class="cart-item-price"><span class="unit">AED ' + fmt(item.priceAED) + '</span><span style="font-size:11px;color:#aaa">/ unit</span></div>')
+        + (item.quoteOnly ? '<div class="cart-item-subtotal" style="color:#0B4F7A;font-weight:600">Quote<div class="vat-line">on request</div></div>' : '<div class="cart-item-subtotal">AED ' + fmt(lineSubtotal) + '<div class="vat-line">excl. VAT</div></div>')
         + '<button class="cart-remove" onclick="MT_Cart.removeFromCart(\'' + escapeHtml(item.sku) + '\')" title="Remove">×</button>'
       + '</div>';
     });
@@ -709,7 +716,13 @@ document.getElementById('quote-modal').addEventListener('click', function(e) {
     var vat = subtotal * 0.05;
     var total = subtotal + shipping + vat;
 
-    if (summaryText) summaryText.textContent = cart.length + ' different item' + (cart.length>1?'s':'') + ' · ' + totalUnits + ' units total · all ready for 48h Dubai dispatch · 24-72h GCC';
+    if (summaryText) {
+      var summary = cart.length + ' different item' + (cart.length>1?'s':'') + ' · ' + totalUnits + ' units total';
+      if (quoteOnlyCount > 0) {
+        summary += ' · ' + quoteOnlyCount + ' on quote request';
+      }
+      summaryText.textContent = summary;
+    }
     if (subtotalLabel) subtotalLabel.textContent = 'Subtotal (' + totalUnits + ' units)';
     if (subtotalEl) subtotalEl.textContent = 'AED ' + fmt(subtotal);
     if (shippingEl) shippingEl.textContent = shipping === 0 ? 'FREE' : 'AED ' + fmt(shipping);

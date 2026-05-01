@@ -41,6 +41,7 @@
         image: product.image || '',
         url: product.url || '',
         qty: qty,
+        quoteOnly: !!product.quoteOnly,
         addedAt: Date.now()
       });
     }
