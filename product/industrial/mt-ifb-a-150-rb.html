@@ -15,6 +15,12 @@
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../../assets/styles.css">
 <link rel="icon" type="image/svg+xml" href="../../assets/favicon.svg">
+<!-- F4: DATASHEET PDF GENERATOR -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" crossorigin="anonymous" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.8.1/jspdf.plugin.autotable.min.js" crossorigin="anonymous" defer></script>
+<script src="../../assets/datasheet-generator.js" defer></script>
+<!-- /F4 -->
+  <link rel="stylesheet" href="../../assets/industries-nav.css">
 </head>
 <body>
 
@@ -162,6 +168,101 @@
     </div>
 
     <div class="fergo-cta-stack">
+
+<!-- F3: COMPARE BUTTON -->
+<style>
+.mt-pdp-compare {margin:12px 0;padding:14px 18px;background:#F8FAFC;border:1px solid #E2E8F0;border-radius:10px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;}
+.mt-pdp-compare-text {font-size:12px;color:#475569;}
+.mt-pdp-compare-text strong {color:#0F2F5C;}
+.mt-pdp-compare-btn {padding:8px 16px;border-radius:6px;font-size:12px;font-weight:700;cursor:pointer;border:1.5px solid #1B3A6E;background:white;color:#1B3A6E;font-family:inherit;}
+.mt-pdp-compare-btn:hover {background:#1B3A6E;color:white;}
+.mt-pdp-compare-btn.added {background:#C8102E;color:white;border-color:#C8102E;}
+.mt-pdp-compare-go {font-size:11px;color:#C8102E;text-decoration:none;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;}
+</style>
+<div class="mt-pdp-compare" id="mt-pdp-compare-block">
+  <div class="mt-pdp-compare-text"><strong>Compare with similar products</strong><br>Add up to 4 products to compare side-by-side.</div>
+  <button id="mt-pdp-compare-btn" class="mt-pdp-compare-btn" data-sku="MT-IFB-A-150-RB">+ Add to compare</button>
+</div>
+<script>
+(function(){
+  const STORAGE_KEY='mt_compare_skus';
+  const sku='MT-IFB-A-150-RB';
+  const btn=document.getElementById('mt-pdp-compare-btn');
+  function getList(){try{return JSON.parse(localStorage.getItem(STORAGE_KEY)||'[]')}catch(e){return[]}}
+  function setList(a){localStorage.setItem(STORAGE_KEY,JSON.stringify(a))}
+  function refresh(){
+    const list=getList();
+    if(list.includes(sku)){btn.textContent='✓ Added · Remove';btn.classList.add('added')}
+    else{btn.textContent='+ Add to compare';btn.classList.remove('added')}
+    let goLink=document.getElementById('mt-pdp-compare-go');
+    const block=document.getElementById('mt-pdp-compare-block');
+    if(list.length>=2){
+      if(!goLink){goLink=document.createElement('a');goLink.id='mt-pdp-compare-go';goLink.className='mt-pdp-compare-go';block.appendChild(goLink)}
+      goLink.href='../../configurator.html?compare='+list.join(',');
+      goLink.textContent='View '+list.length+' in comparator →';
+    }else if(goLink){goLink.remove()}
+  }
+  btn.addEventListener('click',()=>{
+    let list=getList();
+    if(list.includes(sku)){list=list.filter(s=>s!==sku)}
+    else{if(list.length>=4){alert('Up to 4 products can be compared at once.');return}list.push(sku)}
+    setList(list);refresh();
+  });
+  refresh();
+})();
+</script>
+<!-- /F3 -->
+
+
+<!-- F5: PROJECT PRICING -->
+<style>
+.mt-project-pricing {
+  margin: 14px 0;
+  background: linear-gradient(135deg, #0F2F5C 0%, #1F5FA8 100%);
+  color: white;
+  border-radius: 10px;
+  padding: 18px 22px;
+}
+.mt-project-pricing h4 {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 0 0 6px;
+  opacity: 0.9;
+}
+.mt-project-pricing p {
+  margin: 6px 0;
+  font-size: 13px;
+  line-height: 1.5;
+  opacity: 0.95;
+}
+.mt-project-pricing .features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 10px;
+}
+.mt-project-pricing .feature {
+  background: rgba(255,255,255,0.15);
+  border-radius: 4px;
+  padding: 4px 10px;
+  font-size: 11px;
+  font-weight: 700;
+}
+</style>
+<div class="mt-project-pricing">
+  <h4>📐 Project Pricing</h4>
+  <p>Custom-engineered industrial valves are quoted per project specification. Our engineering team prepares pricing based on materials, certification requirements, lead time, and quantity.</p>
+  <div class="features">
+    <span class="feature">📋 BOM-based quoting</span>
+    <span class="feature">⏱ 24h response</span>
+    <span class="feature">🔧 Engineering support</span>
+    <span class="feature">🌍 Worldwide delivery</span>
+  </div>
+</div>
+<!-- /F5 -->
+
       <button onclick="MT_Cart && MT_Cart.addToCart({sku:'MT-IFB-A-150-RB',title:'Floating Ball Valve ANSI Class 150 · Reduced Bore',category:'Industrial Valves',priceAED:0,priceUSD:0,qty:1,quoteOnly:true,image:'../../assets/industrial-illustrations/ifb-a-card.jpg',url:window.location.pathname}); this.innerHTML='✓ Added to quote'; this.disabled=true; this.style.background='#15803D'; setTimeout(()=>{this.innerHTML='🛒 Add to quote request'; this.disabled=false; this.style.background='';}, 2500);" class="fergo-btn-cart" style="display:flex;align-items:center;justify-content:center;gap:8px;border:none;cursor:pointer;font-family:inherit;">🛒 Add to quote request</button>
       <a href="../../contact.html?sku=MT-IFB-A-150-RB" class="fergo-btn-offer" style="text-decoration:none;text-align:center;justify-content:center;">📨 Request quotation by email</a>
       <a href="mailto:sales@mtmiddleeast.com?subject=MT%2DIFB%2DA%2D150%2DRB%20Datasheet%20%26%203D%20Models" class="fergo-btn-offer">📥 Download datasheet &amp; 3D</a>

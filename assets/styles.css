@@ -209,7 +209,7 @@ header.main {
   position: relative;
   min-height: 620px;
   background: linear-gradient(rgba(15,47,92,0.78), rgba(10,31,61,0.85)),
-              url('https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=1800&q=80')
+              url('hero-home.jpg')
               center / cover;
   color: white;
   display: flex;
@@ -2273,7 +2273,7 @@ header.main {
 /* ========== INNER PAGE STYLES ========== */
 .page-hero {
   background: linear-gradient(rgba(15,47,92,0.85), rgba(10,31,61,0.92)),
-              url('https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=1800&q=80')
+              url('hero-home.jpg')
               center / cover;
   color: white;
   padding: 80px 0;
@@ -3332,7 +3332,7 @@ header.main {
   position: relative;
   min-height: 620px;
   background: linear-gradient(rgba(15,47,92,0.78), rgba(10,31,61,0.85)),
-              url('https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=1800&q=80')
+              url('hero-home.jpg')
               center / cover;
   color: white;
   display: flex;
@@ -5396,7 +5396,7 @@ header.main {
 /* ========== INNER PAGE STYLES ========== */
 .page-hero {
   background: linear-gradient(rgba(15,47,92,0.85), rgba(10,31,61,0.92)),
-              url('https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=1800&q=80')
+              url('hero-home.jpg')
               center / cover;
   color: white;
   padding: 80px 0;
@@ -7764,4 +7764,22 @@ footer ul li a:hover { color: var(--mt-blue-light); }
   .ind-quick-stats { grid-template-columns: 1fr; }
   .ind-specs-grid { grid-template-columns: 1fr; }
   .ind-spec-row { grid-template-columns: 110px 1fr; }
+}
+
+
+/* Mobile hero home — uses portrait crop for better composition on small screens */
+@media (max-width: 768px) {
+  .hero {
+    background: linear-gradient(rgba(15,47,92,0.78), rgba(10,31,61,0.85)),
+                url('hero-home-mobile.jpg')
+                center / cover;
+    min-height: 520px;
+  }
+  .hero-inner {
+    padding: 60px 24px;
+  }
+  .hero-stats {
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
 }

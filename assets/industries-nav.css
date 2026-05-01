@@ -1,0 +1,29 @@
+/* Industries dropdown menu */
+.fergo-nav-dropdown { position: relative; }
+.fergo-nav-dropdown:hover .fergo-nav-submenu { display: block; }
+.fergo-nav-submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  border: 1px solid #E2E8F0;
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(15,47,92,0.15);
+  list-style: none;
+  padding: 8px 0;
+  margin: 0;
+  min-width: 240px;
+  z-index: 1000;
+}
+.fergo-nav-submenu li { display: block; }
+.fergo-nav-submenu li a {
+  display: block;
+  padding: 10px 18px;
+  color: #0F2F5C;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+  transition: background 0.15s;
+}
+.fergo-nav-submenu li a:hover { background: #F1F5F9; color: #1F5FA8; }

@@ -24,6 +24,7 @@
 <link rel="alternate" hreflang="en" href="https://xjcsierra.github.io/mt-valves-dubai/contact.html">
 <link rel="alternate" hreflang="ar" href="https://xjcsierra.github.io/mt-valves-dubai/ar/contact.html">
 <link rel="alternate" hreflang="x-default" href="https://xjcsierra.github.io/mt-valves-dubai/contact.html">
+  <link rel="stylesheet" href="../assets/industries-nav.css">
 </head>
 <body>
 <div style="background:#FEF3C7;border-bottom:2px solid #F59E0B;color:#92400E;padding:10px 24px;text-align:center;font-size:0.875rem;font-family:'Cairo',sans-serif;direction:rtl;position:relative;z-index:9999;">
@@ -107,7 +108,7 @@
 
 <section class="contact-page">
   <div class="contact-inner">
-    <form class="contact-form" action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
+    <form class="contact-form" action="mailto:sales@mtmiddleeast.com" method="POST" enctype="text/plain" onsubmit="event.preventDefault();var f=this;var subject='Quote request from MT website - '+(f.company.value||f.name.value);var body=Object.keys(f.elements).map(k=>{var e=f.elements[k];if(!e.name||!e.value)return null;return e.name.toUpperCase()+':\n'+e.value;}).filter(Boolean).join('\n\n');window.location.href='mailto:sales@mtmiddleeast.com?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);return false;">
       <div class="form-row">
         <div class="form-field">
           <label for="name">Full Name *</label>

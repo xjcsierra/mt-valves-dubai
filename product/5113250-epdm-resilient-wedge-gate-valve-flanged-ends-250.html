@@ -15,6 +15,95 @@
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../assets/styles.css">
 <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+
+<style>
+.mt-size-selector {
+  margin: 18px 0;
+  padding: 16px 18px;
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  border-radius: 10px;
+}
+.mt-size-selector-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 12px;
+}
+.mt-size-selector-label {
+  font-size: 11px;
+  font-weight: 700;
+  color: #64748B;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.mt-size-selector-current {
+  font-size: 13px;
+  font-weight: 700;
+  color: #1B3A6E;
+}
+.mt-size-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.mt-size-btn {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 64px;
+  padding: 8px 12px;
+  background: white;
+  border: 1.5px solid #E2E8F0;
+  border-radius: 8px;
+  cursor: pointer;
+  text-decoration: none;
+  color: #1B3A6E;
+  font-family: inherit;
+  transition: all 0.15s ease;
+}
+.mt-size-btn:hover {
+  border-color: #1F5FA8;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 6px rgba(31, 95, 168, 0.12);
+}
+.mt-size-btn.active {
+  background: #1B3A6E;
+  border-color: #1B3A6E;
+  color: white;
+  box-shadow: 0 2px 6px rgba(27, 58, 110, 0.25);
+}
+.mt-size-btn-inches {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1;
+}
+.mt-size-btn-dn {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  margin-top: 3px;
+  opacity: 0.75;
+}
+.mt-size-btn.active .mt-size-btn-dn {
+  opacity: 0.9;
+}
+@media (max-width: 600px) {
+  .mt-size-btn {
+    min-width: 52px;
+    padding: 6px 8px;
+  }
+  .mt-size-btn-inches { font-size: 12px; }
+  .mt-size-btn-dn { font-size: 9px; }
+}
+</style>
+<!-- F4: DATASHEET PDF GENERATOR -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" crossorigin="anonymous" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.8.1/jspdf.plugin.autotable.min.js" crossorigin="anonymous" defer></script>
+<script src="../assets/datasheet-generator.js" defer></script>
+<!-- /F4 -->
+  <link rel="stylesheet" href="../assets/industries-nav.css">
 </head>
 <body>
 
@@ -109,11 +198,300 @@
       <button class="fergo-copy-btn" onclick="navigator.clipboard.writeText('MT-5113250'); this.innerHTML='✓ Copied'; setTimeout(()=>this.innerHTML='📋 Copy', 1500)">📋 Copy</button>
     </div>
 
+    
+    <!-- F1: SIZE SELECTOR -->
+    <div class="mt-size-selector" id="mt-size-selector">
+      <div class="mt-size-selector-header">
+        <span class="mt-size-selector-label">Size — Nominal Width</span>
+        <span class="mt-size-selector-current">10" · DN250</span>
+      </div>
+      <div class="mt-size-buttons">
+        <a href="5113050-epdm-resilient-wedge-gate-valve-flanged-ends-dn-50.html" class="mt-size-btn" title="View 2" (DN50) — Ref 5113050">
+          <span class="mt-size-btn-inches">2"</span>
+          <span class="mt-size-btn-dn">DN50</span>
+        </a>
+<a href="5113080-epdm-resilient-wedge-gate-valve-flanged-ends-80.html" class="mt-size-btn" title="View 3" (DN80) — Ref 5113080">
+          <span class="mt-size-btn-inches">3"</span>
+          <span class="mt-size-btn-dn">DN80</span>
+        </a>
+<a href="5113100-epdm-resilient-wedge-gate-valve-flanged-ends-100.html" class="mt-size-btn" title="View 4" (DN100) — Ref 5113100">
+          <span class="mt-size-btn-inches">4"</span>
+          <span class="mt-size-btn-dn">DN100</span>
+        </a>
+<a href="5113150-epdm-resilient-wedge-gate-valve-flanged-ends-150.html" class="mt-size-btn" title="View 6" (DN150) — Ref 5113150">
+          <span class="mt-size-btn-inches">6"</span>
+          <span class="mt-size-btn-dn">DN150</span>
+        </a>
+<a href="5113200-epdm-resilient-wedge-gate-valve-flanged-ends-200.html" class="mt-size-btn" title="View 8" (DN200) — Ref 5113200">
+          <span class="mt-size-btn-inches">8"</span>
+          <span class="mt-size-btn-dn">DN200</span>
+        </a>
+<span class="mt-size-btn active" title="Current selection">
+          <span class="mt-size-btn-inches">10"</span>
+          <span class="mt-size-btn-dn">DN250</span>
+        </span>
+      </div>
+    </div>
+    <!-- /F1 -->
+    
+<!-- F3: COMPARE BUTTON -->
+<style>
+.mt-pdp-compare {
+  margin: 12px 0;
+  padding: 14px 18px;
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.mt-pdp-compare-text {
+  font-size: 12px;
+  color: #475569;
+}
+.mt-pdp-compare-text strong { color: #0F2F5C; }
+.mt-pdp-compare-btn {
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  border: 1.5px solid #1B3A6E;
+  background: white;
+  color: #1B3A6E;
+  font-family: inherit;
+  transition: all 0.15s;
+}
+.mt-pdp-compare-btn:hover {
+  background: #1B3A6E;
+  color: white;
+}
+.mt-pdp-compare-btn.added {
+  background: #C8102E;
+  color: white;
+  border-color: #C8102E;
+}
+.mt-pdp-compare-go {
+  font-size: 11px;
+  color: #C8102E;
+  text-decoration: none;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.mt-pdp-compare-go:hover { text-decoration: underline; }
+</style>
+<div class="mt-pdp-compare" id="mt-pdp-compare-block">
+  <div class="mt-pdp-compare-text">
+    <strong>Compare with similar products</strong><br>
+    Add up to 4 products to compare specifications side-by-side.
+  </div>
+  <button id="mt-pdp-compare-btn" class="mt-pdp-compare-btn" data-sku="5113250">+ Add to compare</button>
+</div>
+<script>
+(function(){
+  const STORAGE_KEY = 'mt_compare_skus';
+  const sku = '5113250';
+  const btn = document.getElementById('mt-pdp-compare-btn');
+  
+  function getList() {
+    try { return JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]'); }
+    catch(e){ return []; }
+  }
+  function setList(arr) {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(arr));
+  }
+  function refresh() {
+    const list = getList();
+    const isInList = list.includes(sku);
+    if (isInList) {
+      btn.textContent = '✓ Added · Remove';
+      btn.classList.add('added');
+    } else {
+      btn.textContent = '+ Add to compare';
+      btn.classList.remove('added');
+    }
+    
+    // Add a "Go to comparison" link if there's at least 2 in list
+    let goLink = document.getElementById('mt-pdp-compare-go');
+    const block = document.getElementById('mt-pdp-compare-block');
+    if (list.length >= 2) {
+      if (!goLink) {
+        goLink = document.createElement('a');
+        goLink.id = 'mt-pdp-compare-go';
+        goLink.className = 'mt-pdp-compare-go';
+        goLink.href = '../configurator.html?compare=' + list.join(',');
+        goLink.textContent = 'View ' + list.length + ' in comparator →';
+        block.appendChild(goLink);
+      } else {
+        goLink.href = '../configurator.html?compare=' + list.join(',');
+        goLink.textContent = 'View ' + list.length + ' in comparator →';
+      }
+    } else if (goLink) {
+      goLink.remove();
+    }
+  }
+  btn.addEventListener('click', () => {
+    let list = getList();
+    if (list.includes(sku)) {
+      list = list.filter(s => s !== sku);
+    } else {
+      if (list.length >= 4) {
+        alert('You can compare up to 4 products. Visit the configurator to manage your selection.');
+        return;
+      }
+      list.push(sku);
+    }
+    setList(list);
+    refresh();
+  });
+  refresh();
+})();
+</script>
+<!-- /F3 -->
+
+
     <div class="fergo-price-block">
       <div class="fergo-price-label">Price</div>
       <div class="fergo-price-main"><span class="currency">AED</span>2310.00</div>
       <div class="fergo-price-vat">€ 538.46 · Indicative price, exclusive of UAE VAT 5%. Volume discounts available on request.</div>
     </div>
+
+    
+<!-- F5: VOLUME PRICING TIERS -->
+<style>
+.mt-volume-pricing {
+  margin: 14px 0;
+  background: white;
+  border: 1px solid #E2E8F0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.mt-volume-header {
+  background: linear-gradient(135deg, #0F2F5C 0%, #1F5FA8 100%);
+  color: white;
+  padding: 10px 16px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.mt-volume-header span.icon {
+  background: rgba(255,255,255,0.2);
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 10px;
+}
+.mt-volume-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  font-size: 12px;
+}
+.mt-volume-cell {
+  padding: 10px 6px;
+  text-align: center;
+  border-right: 1px solid #F1F5F9;
+  position: relative;
+}
+.mt-volume-cell:last-child { border-right: none; }
+.mt-volume-cell.current {
+  background: #FEF3C7;
+}
+.mt-volume-cell .qty {
+  font-size: 10px;
+  color: #64748B;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+}
+.mt-volume-cell .price {
+  font-weight: 800;
+  color: #0F2F5C;
+  font-size: 14px;
+  line-height: 1.1;
+}
+.mt-volume-cell .price-currency {
+  font-size: 9px;
+  color: #64748B;
+  font-weight: 700;
+  margin-right: 1px;
+}
+.mt-volume-cell .discount {
+  font-size: 9px;
+  color: #C8102E;
+  font-weight: 700;
+  margin-top: 2px;
+}
+.mt-volume-cell .discount.zero { color: #94A3B8; }
+.mt-volume-cell.contact {
+  background: #F8FAFC;
+}
+.mt-volume-cell.contact .price {
+  font-size: 11px;
+  color: #1F5FA8;
+}
+.mt-volume-footnote {
+  font-size: 10px;
+  color: #94A3B8;
+  padding: 6px 16px;
+  border-top: 1px solid #F1F5F9;
+  background: #FAFBFC;
+  text-align: center;
+  font-style: italic;
+}
+@media (max-width: 600px) {
+  .mt-volume-grid {
+    grid-template-columns: repeat(5, 1fr);
+    font-size: 10px;
+  }
+  .mt-volume-cell { padding: 8px 2px; }
+  .mt-volume-cell .qty { font-size: 8px; }
+  .mt-volume-cell .price { font-size: 11px; }
+  .mt-volume-cell .discount { font-size: 8px; }
+}
+</style>
+<div class="mt-volume-pricing">
+  <div class="mt-volume-header">
+    <span>Volume Pricing</span>
+    <span class="icon">B2B Discount</span>
+  </div>
+  <div class="mt-volume-grid">
+    <div class="mt-volume-cell current">
+      <div class="qty">1–9</div>
+      <div class="price"><span class="price-currency">AED</span>2,310</div>
+      <div class="discount zero">Base</div>
+    </div>
+    <div class="mt-volume-cell">
+      <div class="qty">10–49</div>
+      <div class="price"><span class="price-currency">AED</span>2,194</div>
+      <div class="discount">−5%</div>
+    </div>
+    <div class="mt-volume-cell">
+      <div class="qty">50–99</div>
+      <div class="price"><span class="price-currency">AED</span>2,079</div>
+      <div class="discount">−10%</div>
+    </div>
+    <div class="mt-volume-cell">
+      <div class="qty">100–499</div>
+      <div class="price"><span class="price-currency">AED</span>1,964</div>
+      <div class="discount">−15%</div>
+    </div>
+    <div class="mt-volume-cell contact">
+      <div class="qty">500+</div>
+      <div class="price">Custom Quote</div>
+      <div class="discount">Contact us</div>
+    </div>
+  </div>
+  <div class="mt-volume-footnote">Indicative tiered pricing. Final prices subject to project conditions, certification requirements and stock availability.</div>
+</div>
+<!-- /F5 -->
 
     <div class="fergo-availability-row">
       <div>
@@ -153,7 +531,7 @@
         <span class="icon-3d">3D</span>
         3D Model
       </a>
-      <a href="#datasheet" class="fergo-aux-btn">
+      <a href="#" onclick="event.preventDefault(); MT_Datasheet && MT_Datasheet.handleClick(event); return false;" class="fergo-aux-btn" style="cursor:pointer">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="13" x2="15" y2="13"/><line x1="9" y1="17" x2="15" y2="17"/></svg>
         Data sheet
       </a>
